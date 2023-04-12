@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clients));
-            add_client = new Button();
+            btn_add_client = new Button();
             SuspendLayout();
             // 
-            // add_client
+            // btn_add_client
             // 
-            add_client.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            add_client.Image = (Image)resources.GetObject("add_client.Image");
-            add_client.Location = new Point(22, 23);
-            add_client.Name = "add_client";
-            add_client.Size = new Size(151, 76);
-            add_client.TabIndex = 2;
-            add_client.Text = "Adicionar Cliente";
-            add_client.TextImageRelation = TextImageRelation.ImageAboveText;
-            add_client.UseVisualStyleBackColor = true;
-            add_client.Click += add_client_Click;
+            btn_add_client.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_add_client.Image = (Image)resources.GetObject("btn_add_client.Image");
+            btn_add_client.Location = new Point(22, 23);
+            btn_add_client.Name = "btn_add_client";
+            btn_add_client.Size = new Size(151, 76);
+            btn_add_client.TabIndex = 2;
+            btn_add_client.Text = "Adicionar Cliente";
+            btn_add_client.TextImageRelation = TextImageRelation.ImageAboveText;
+            btn_add_client.UseVisualStyleBackColor = true;
+            btn_add_client.Click += add_client_Click;
             // 
             // Clients
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(add_client);
+            Controls.Add(btn_add_client);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Clients";
             Text = "Clientes";
@@ -60,6 +60,6 @@
 
         #endregion
 
-        private Button add_client;
+        private Button btn_add_client;
     }
 }

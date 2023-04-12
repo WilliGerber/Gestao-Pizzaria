@@ -29,58 +29,58 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Flavours));
-            add_flavours = new Button();
-            pizzas_sizes = new Button();
-            add_ingredients = new Button();
+            btn_add_flavours = new Button();
+            btn_pizzas_sizes = new Button();
+            btn_add_ingredients = new Button();
             SuspendLayout();
             // 
-            // add_flavours
+            // btn_add_flavours
             // 
-            add_flavours.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            add_flavours.Image = (Image)resources.GetObject("add_flavours.Image");
-            add_flavours.Location = new Point(378, 23);
-            add_flavours.Name = "add_flavours";
-            add_flavours.Size = new Size(151, 76);
-            add_flavours.TabIndex = 3;
-            add_flavours.Text = "Adicionar Pizzas";
-            add_flavours.TextImageRelation = TextImageRelation.ImageAboveText;
-            add_flavours.UseVisualStyleBackColor = true;
-            add_flavours.Click += add_flavours_Click;
+            btn_add_flavours.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_add_flavours.Image = (Image)resources.GetObject("btn_add_flavours.Image");
+            btn_add_flavours.Location = new Point(378, 23);
+            btn_add_flavours.Name = "btn_add_flavours";
+            btn_add_flavours.Size = new Size(151, 76);
+            btn_add_flavours.TabIndex = 3;
+            btn_add_flavours.Text = "Adicionar Pizzas";
+            btn_add_flavours.TextImageRelation = TextImageRelation.ImageAboveText;
+            btn_add_flavours.UseVisualStyleBackColor = true;
+            btn_add_flavours.Click += add_flavours_Click;
             // 
-            // pizzas_sizes
+            // btn_pizzas_sizes
             // 
-            pizzas_sizes.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            pizzas_sizes.Image = (Image)resources.GetObject("pizzas_sizes.Image");
-            pizzas_sizes.Location = new Point(200, 23);
-            pizzas_sizes.Name = "pizzas_sizes";
-            pizzas_sizes.Size = new Size(151, 76);
-            pizzas_sizes.TabIndex = 4;
-            pizzas_sizes.Text = "Adicionar Tamanhos";
-            pizzas_sizes.TextImageRelation = TextImageRelation.ImageAboveText;
-            pizzas_sizes.UseVisualStyleBackColor = true;
-            pizzas_sizes.Click += pizzas_sizes_Click;
+            btn_pizzas_sizes.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_pizzas_sizes.Image = (Image)resources.GetObject("btn_pizzas_sizes.Image");
+            btn_pizzas_sizes.Location = new Point(200, 23);
+            btn_pizzas_sizes.Name = "btn_pizzas_sizes";
+            btn_pizzas_sizes.Size = new Size(151, 76);
+            btn_pizzas_sizes.TabIndex = 4;
+            btn_pizzas_sizes.Text = "Adicionar Tamanhos";
+            btn_pizzas_sizes.TextImageRelation = TextImageRelation.ImageAboveText;
+            btn_pizzas_sizes.UseVisualStyleBackColor = true;
+            btn_pizzas_sizes.Click += pizzas_sizes_Click;
             // 
-            // add_ingredients
+            // btn_add_ingredients
             // 
-            add_ingredients.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            add_ingredients.Image = (Image)resources.GetObject("add_ingredients.Image");
-            add_ingredients.Location = new Point(24, 23);
-            add_ingredients.Name = "add_ingredients";
-            add_ingredients.Size = new Size(151, 76);
-            add_ingredients.TabIndex = 5;
-            add_ingredients.Text = "Adicionar Ingredientes";
-            add_ingredients.TextImageRelation = TextImageRelation.ImageAboveText;
-            add_ingredients.UseVisualStyleBackColor = true;
-            add_ingredients.Click += add_ingredients_Click;
+            btn_add_ingredients.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_add_ingredients.Image = (Image)resources.GetObject("btn_add_ingredients.Image");
+            btn_add_ingredients.Location = new Point(24, 23);
+            btn_add_ingredients.Name = "btn_add_ingredients";
+            btn_add_ingredients.Size = new Size(151, 76);
+            btn_add_ingredients.TabIndex = 5;
+            btn_add_ingredients.Text = "Adicionar Ingredientes";
+            btn_add_ingredients.TextImageRelation = TextImageRelation.ImageAboveText;
+            btn_add_ingredients.UseVisualStyleBackColor = true;
+            btn_add_ingredients.Click += add_ingredients_Click;
             // 
             // Flavours
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(add_ingredients);
-            Controls.Add(pizzas_sizes);
-            Controls.Add(add_flavours);
+            Controls.Add(btn_add_ingredients);
+            Controls.Add(btn_pizzas_sizes);
+            Controls.Add(btn_add_flavours);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Flavours";
             Text = "Pizzas";
@@ -90,8 +90,8 @@
 
         #endregion
 
-        private Button add_flavours;
-        private Button pizzas_sizes;
-        private Button add_ingredients;
+        private Button btn_add_flavours;
+        private Button btn_pizzas_sizes;
+        private Button btn_add_ingredients;
     }
 }

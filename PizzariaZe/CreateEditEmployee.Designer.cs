@@ -28,42 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            name = new Label();
+            lbl_name = new Label();
             name_textBox = new TextBox();
             cpf_textBox = new TextBox();
-            cpf = new Label();
+            lbl_cpf = new Label();
             street_textBox = new TextBox();
-            street = new Label();
+            lbl_street = new Label();
             dateTimePicker1 = new DateTimePicker();
             birth_date_textBox = new TextBox();
-            birth_date = new Label();
-            start_date = new Label();
+            lbl_birth_date = new Label();
+            lbl_start_date = new Label();
             start_date_textBox = new TextBox();
             dateTimePicker2 = new DateTimePicker();
             neighborhood_textBox = new TextBox();
-            neighborhood = new Label();
+            lbl_neighborhood = new Label();
             textBox1 = new TextBox();
-            house_number = new Label();
+            lbl_house_number = new Label();
             adress_complement_textBox = new TextBox();
-            adress_complement = new Label();
+            lbl_adress_complement = new Label();
             celphone_textBox = new TextBox();
-            celphone = new Label();
+            lbl_celphone = new Label();
             email_textBox = new TextBox();
-            Email = new Label();
+            lbl_Email = new Label();
             password_textBox = new TextBox();
-            password = new Label();
-            cancel = new Button();
-            save = new Button();
+            lbl_password = new Label();
+            btn_cancel = new Button();
+            btn_save = new Button();
             SuspendLayout();
             // 
-            // name
+            // lbl_name
             // 
-            name.AutoSize = true;
-            name.Location = new Point(31, 47);
-            name.Name = "name";
-            name.Size = new Size(40, 15);
-            name.TabIndex = 0;
-            name.Text = "Nome";
+            lbl_name.AutoSize = true;
+            lbl_name.Location = new Point(31, 47);
+            lbl_name.Name = "lbl_name";
+            lbl_name.Size = new Size(45, 15);
+            lbl_name.TabIndex = 0;
+            lbl_name.Text = "Nome*";
             // 
             // name_textBox
             // 
@@ -79,15 +79,15 @@
             cpf_textBox.Size = new Size(349, 23);
             cpf_textBox.TabIndex = 2;
             // 
-            // cpf
+            // lbl_cpf
             // 
-            cpf.AutoSize = true;
-            cpf.FlatStyle = FlatStyle.Popup;
-            cpf.Location = new Point(408, 47);
-            cpf.Name = "cpf";
-            cpf.Size = new Size(28, 15);
-            cpf.TabIndex = 2;
-            cpf.Text = "CPF";
+            lbl_cpf.AutoSize = true;
+            lbl_cpf.FlatStyle = FlatStyle.Popup;
+            lbl_cpf.Location = new Point(408, 47);
+            lbl_cpf.Name = "lbl_cpf";
+            lbl_cpf.Size = new Size(33, 15);
+            lbl_cpf.TabIndex = 2;
+            lbl_cpf.Text = "CPF*";
             // 
             // street_textBox
             // 
@@ -96,14 +96,14 @@
             street_textBox.Size = new Size(349, 23);
             street_textBox.TabIndex = 5;
             // 
-            // street
+            // lbl_street
             // 
-            street.AutoSize = true;
-            street.Location = new Point(408, 110);
-            street.Name = "street";
-            street.Size = new Size(27, 15);
-            street.TabIndex = 4;
-            street.Text = "Rua";
+            lbl_street.AutoSize = true;
+            lbl_street.Location = new Point(408, 110);
+            lbl_street.Name = "lbl_street";
+            lbl_street.Size = new Size(32, 15);
+            lbl_street.TabIndex = 4;
+            lbl_street.Text = "Rua*";
             // 
             // dateTimePicker1
             // 
@@ -119,23 +119,23 @@
             birth_date_textBox.Size = new Size(145, 23);
             birth_date_textBox.TabIndex = 3;
             // 
-            // birth_date
+            // lbl_birth_date
             // 
-            birth_date.AutoSize = true;
-            birth_date.Location = new Point(31, 110);
-            birth_date.Name = "birth_date";
-            birth_date.Size = new Size(98, 15);
-            birth_date.TabIndex = 8;
-            birth_date.Text = "Data Nascimento";
+            lbl_birth_date.AutoSize = true;
+            lbl_birth_date.Location = new Point(31, 110);
+            lbl_birth_date.Name = "lbl_birth_date";
+            lbl_birth_date.Size = new Size(103, 15);
+            lbl_birth_date.TabIndex = 8;
+            lbl_birth_date.Text = "Data Nascimento*";
             // 
-            // start_date
+            // lbl_start_date
             // 
-            start_date.AutoSize = true;
-            start_date.Location = new Point(224, 110);
-            start_date.Name = "start_date";
-            start_date.Size = new Size(86, 15);
-            start_date.TabIndex = 11;
-            start_date.Text = "Data Admissão";
+            lbl_start_date.AutoSize = true;
+            lbl_start_date.Location = new Point(224, 110);
+            lbl_start_date.Name = "lbl_start_date";
+            lbl_start_date.Size = new Size(91, 15);
+            lbl_start_date.TabIndex = 11;
+            lbl_start_date.Text = "Data Admissão*";
             // 
             // start_date_textBox
             // 
@@ -158,14 +158,14 @@
             neighborhood_textBox.Size = new Size(349, 23);
             neighborhood_textBox.TabIndex = 6;
             // 
-            // neighborhood
+            // lbl_neighborhood
             // 
-            neighborhood.AutoSize = true;
-            neighborhood.Location = new Point(31, 180);
-            neighborhood.Name = "neighborhood";
-            neighborhood.Size = new Size(38, 15);
-            neighborhood.TabIndex = 14;
-            neighborhood.Text = "Bairro";
+            lbl_neighborhood.AutoSize = true;
+            lbl_neighborhood.Location = new Point(31, 180);
+            lbl_neighborhood.Name = "lbl_neighborhood";
+            lbl_neighborhood.Size = new Size(43, 15);
+            lbl_neighborhood.TabIndex = 14;
+            lbl_neighborhood.Text = "Bairro*";
             // 
             // textBox1
             // 
@@ -174,14 +174,14 @@
             textBox1.Size = new Size(145, 23);
             textBox1.TabIndex = 7;
             // 
-            // house_number
+            // lbl_house_number
             // 
-            house_number.AutoSize = true;
-            house_number.Location = new Point(408, 180);
-            house_number.Name = "house_number";
-            house_number.Size = new Size(51, 15);
-            house_number.TabIndex = 16;
-            house_number.Text = "Número";
+            lbl_house_number.AutoSize = true;
+            lbl_house_number.Location = new Point(408, 180);
+            lbl_house_number.Name = "lbl_house_number";
+            lbl_house_number.Size = new Size(56, 15);
+            lbl_house_number.TabIndex = 16;
+            lbl_house_number.Text = "Número*";
             // 
             // adress_complement_textBox
             // 
@@ -190,14 +190,14 @@
             adress_complement_textBox.Size = new Size(145, 23);
             adress_complement_textBox.TabIndex = 8;
             // 
-            // adress_complement
+            // lbl_adress_complement
             // 
-            adress_complement.AutoSize = true;
-            adress_complement.Location = new Point(612, 180);
-            adress_complement.Name = "adress_complement";
-            adress_complement.Size = new Size(84, 15);
-            adress_complement.TabIndex = 18;
-            adress_complement.Text = "Complemento";
+            lbl_adress_complement.AutoSize = true;
+            lbl_adress_complement.Location = new Point(612, 180);
+            lbl_adress_complement.Name = "lbl_adress_complement";
+            lbl_adress_complement.Size = new Size(84, 15);
+            lbl_adress_complement.TabIndex = 18;
+            lbl_adress_complement.Text = "Complemento";
             // 
             // celphone_textBox
             // 
@@ -206,14 +206,14 @@
             celphone_textBox.Size = new Size(349, 23);
             celphone_textBox.TabIndex = 9;
             // 
-            // celphone
+            // lbl_celphone
             // 
-            celphone.AutoSize = true;
-            celphone.Location = new Point(31, 248);
-            celphone.Name = "celphone";
-            celphone.Size = new Size(44, 15);
-            celphone.TabIndex = 20;
-            celphone.Text = "Celular";
+            lbl_celphone.AutoSize = true;
+            lbl_celphone.Location = new Point(31, 248);
+            lbl_celphone.Name = "lbl_celphone";
+            lbl_celphone.Size = new Size(49, 15);
+            lbl_celphone.TabIndex = 20;
+            lbl_celphone.Text = "Celular*";
             // 
             // email_textBox
             // 
@@ -222,14 +222,14 @@
             email_textBox.Size = new Size(349, 23);
             email_textBox.TabIndex = 10;
             // 
-            // Email
+            // lbl_Email
             // 
-            Email.AutoSize = true;
-            Email.Location = new Point(31, 321);
-            Email.Name = "Email";
-            Email.Size = new Size(41, 15);
-            Email.TabIndex = 22;
-            Email.Text = "E-mail";
+            lbl_Email.AutoSize = true;
+            lbl_Email.Location = new Point(31, 321);
+            lbl_Email.Name = "lbl_Email";
+            lbl_Email.Size = new Size(41, 15);
+            lbl_Email.TabIndex = 22;
+            lbl_Email.Text = "E-mail";
             // 
             // password_textBox
             // 
@@ -239,72 +239,72 @@
             password_textBox.Size = new Size(349, 23);
             password_textBox.TabIndex = 11;
             // 
-            // password
+            // lbl_password
             // 
-            password.AutoSize = true;
-            password.Location = new Point(408, 321);
-            password.Name = "password";
-            password.Size = new Size(39, 15);
-            password.TabIndex = 24;
-            password.Text = "Senha";
+            lbl_password.AutoSize = true;
+            lbl_password.Location = new Point(408, 321);
+            lbl_password.Name = "lbl_password";
+            lbl_password.Size = new Size(39, 15);
+            lbl_password.TabIndex = 24;
+            lbl_password.Text = "Senha";
             // 
-            // cancel
+            // btn_cancel
             // 
-            cancel.BackColor = Color.FromArgb(254, 152, 152);
-            cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
-            cancel.FlatStyle = FlatStyle.Flat;
-            cancel.Location = new Point(31, 403);
-            cancel.Name = "cancel";
-            cancel.Size = new Size(138, 35);
-            cancel.TabIndex = 25;
-            cancel.Text = "Cancelar";
-            cancel.UseVisualStyleBackColor = false;
+            btn_cancel.BackColor = Color.FromArgb(254, 152, 152);
+            btn_cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
+            btn_cancel.FlatStyle = FlatStyle.Flat;
+            btn_cancel.Location = new Point(31, 403);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.Size = new Size(138, 35);
+            btn_cancel.TabIndex = 25;
+            btn_cancel.Text = "Cancelar";
+            btn_cancel.UseVisualStyleBackColor = false;
             // 
-            // save
+            // btn_save
             // 
-            save.BackColor = Color.FromArgb(210, 229, 209);
-            save.FlatAppearance.BorderColor = Color.FromArgb(167, 212, 167);
-            save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
-            save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
-            save.FlatStyle = FlatStyle.Flat;
-            save.Location = new Point(619, 403);
-            save.Name = "save";
-            save.Size = new Size(138, 35);
-            save.TabIndex = 26;
-            save.Text = "Salvar";
-            save.UseVisualStyleBackColor = false;
+            btn_save.BackColor = Color.FromArgb(210, 229, 209);
+            btn_save.FlatAppearance.BorderColor = Color.FromArgb(167, 212, 167);
+            btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
+            btn_save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
+            btn_save.FlatStyle = FlatStyle.Flat;
+            btn_save.Location = new Point(619, 403);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(138, 35);
+            btn_save.TabIndex = 26;
+            btn_save.Text = "Salvar";
+            btn_save.UseVisualStyleBackColor = false;
             // 
             // CreateEditEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(save);
-            Controls.Add(cancel);
+            Controls.Add(btn_save);
+            Controls.Add(btn_cancel);
             Controls.Add(password_textBox);
-            Controls.Add(password);
+            Controls.Add(lbl_password);
             Controls.Add(email_textBox);
-            Controls.Add(Email);
+            Controls.Add(lbl_Email);
             Controls.Add(celphone_textBox);
-            Controls.Add(celphone);
+            Controls.Add(lbl_celphone);
             Controls.Add(adress_complement_textBox);
-            Controls.Add(adress_complement);
+            Controls.Add(lbl_adress_complement);
             Controls.Add(textBox1);
-            Controls.Add(house_number);
+            Controls.Add(lbl_house_number);
             Controls.Add(neighborhood_textBox);
-            Controls.Add(neighborhood);
+            Controls.Add(lbl_neighborhood);
             Controls.Add(start_date_textBox);
             Controls.Add(dateTimePicker2);
-            Controls.Add(start_date);
-            Controls.Add(birth_date);
+            Controls.Add(lbl_start_date);
+            Controls.Add(lbl_birth_date);
             Controls.Add(birth_date_textBox);
             Controls.Add(dateTimePicker1);
             Controls.Add(street_textBox);
-            Controls.Add(street);
+            Controls.Add(lbl_street);
             Controls.Add(cpf_textBox);
-            Controls.Add(cpf);
+            Controls.Add(lbl_cpf);
             Controls.Add(name_textBox);
-            Controls.Add(name);
+            Controls.Add(lbl_name);
             Name = "CreateEditEmployee";
             StartPosition = FormStartPosition.CenterParent;
             Text = "CreateEditEmployee";
@@ -314,31 +314,31 @@
 
         #endregion
 
-        private Label name;
+        private Label lbl_name;
         private TextBox name_textBox;
         private TextBox cpf_textBox;
-        private Label cpf;
+        private Label lbl_cpf;
         private TextBox street_textBox;
-        private Label street;
+        private Label lbl_street;
         private DateTimePicker dateTimePicker1;
         private TextBox birth_date_textBox;
-        private Label birth_date;
-        private Label start_date;
+        private Label lbl_birth_date;
+        private Label lbl_start_date;
         private TextBox start_date_textBox;
         private DateTimePicker dateTimePicker2;
         private TextBox neighborhood_textBox;
-        private Label neighborhood;
+        private Label lbl_neighborhood;
         private TextBox textBox1;
-        private Label house_number;
+        private Label lbl_house_number;
         private TextBox adress_complement_textBox;
-        private Label adress_complement;
+        private Label lbl_adress_complement;
         private TextBox celphone_textBox;
-        private Label celphone;
+        private Label lbl_celphone;
         private TextBox email_textBox;
-        private Label Email;
+        private Label lbl_Email;
         private TextBox password_textBox;
-        private Label password;
-        private Button cancel;
-        private Button save;
+        private Label lbl_password;
+        private Button btn_cancel;
+        private Button btn_save;
     }
 }

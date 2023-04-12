@@ -58,7 +58,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="add_order.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_add_order.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAudJREFUaEPt
         mT2KFUEUhV88gS5gDIwF92BmYCIYKA6CIIpLMNNcUBkXIKaTDJMYmIiZgSAMkxmIuSCuQM8HXjgUr7vr
@@ -76,7 +76,7 @@
         /OYZ7xiT1aDatGnTlHa7f/CTxZVa239lAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="add_client.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_add_client.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAfBJREFUaEPt
         mM9HZlEch99taVnRakgMLaLV0BQx2mQWiUjtW020GGkx1D4mGm1aFNEmEom0alGrRIyMRswmkVrMn1DP
@@ -90,7 +90,7 @@
         IpFIJFKQRuMFMxaTQPN8Cj8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_opened_orders.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAOJJREFUaEPt
         180JAkEMhuG9WYEVeLMKO9OTPdiCNyuwAm/2syYsA8MYf77sSLL4PfCCLBKysg46EBGlNSYLZg2JDGYN

@@ -1,4 +1,5 @@
-﻿using System;
+using PizzariaDoZe;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace PizzariaZe
         public Employees()
         {
             InitializeComponent();
+
+            #region idioma/região interface - satellite assembly
+            // com base no idioma/região escolhido pelo usuário,
+            // ajusta as propriedades dos componentes da tela com base no conteúdo do arquivo resources
+            Functions.AjustaResourcesControl(this);
+            //ajuste manual de campos ou mensagens para o usuário que não puderam ser automatizadas acima
+            this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");
+            #endregion
         }
 
         private void add_employee_Click(object sender, EventArgs e)

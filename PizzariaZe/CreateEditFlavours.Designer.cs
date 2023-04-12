@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateEditFlavours));
             add_type = new Button();
             type_comboBox = new ComboBox();
-            save = new Button();
-            cancel = new Button();
-            type = new Label();
+            btn_save = new Button();
+            btn_cancel = new Button();
+            lbl_type = new Label();
             name_textBox = new TextBox();
-            name = new Label();
+            lbl_name = new Label();
             button1 = new Button();
             class_comboBox = new ComboBox();
-            categ = new Label();
+            lbl_category = new Label();
             checkedListBox1 = new CheckedListBox();
             add_ingredients = new Button();
-            label1 = new Label();
+            lbl_ingredients = new Label();
             SuspendLayout();
             // 
             // add_type
@@ -64,41 +64,41 @@
             type_comboBox.Size = new Size(125, 23);
             type_comboBox.TabIndex = 64;
             // 
-            // save
+            // btn_save
             // 
-            save.BackColor = Color.FromArgb(210, 229, 209);
-            save.FlatAppearance.BorderColor = Color.FromArgb(167, 212, 167);
-            save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
-            save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
-            save.FlatStyle = FlatStyle.Flat;
-            save.Location = new Point(250, 388);
-            save.Name = "save";
-            save.Size = new Size(138, 35);
-            save.TabIndex = 63;
-            save.Text = "Salvar";
-            save.UseVisualStyleBackColor = false;
+            btn_save.BackColor = Color.FromArgb(210, 229, 209);
+            btn_save.FlatAppearance.BorderColor = Color.FromArgb(167, 212, 167);
+            btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
+            btn_save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
+            btn_save.FlatStyle = FlatStyle.Flat;
+            btn_save.Location = new Point(250, 388);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(138, 35);
+            btn_save.TabIndex = 63;
+            btn_save.Text = "Salvar";
+            btn_save.UseVisualStyleBackColor = false;
             // 
-            // cancel
+            // btn_cancel
             // 
-            cancel.BackColor = Color.FromArgb(254, 152, 152);
-            cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
-            cancel.FlatStyle = FlatStyle.Flat;
-            cancel.Location = new Point(39, 388);
-            cancel.Name = "cancel";
-            cancel.Size = new Size(138, 35);
-            cancel.TabIndex = 62;
-            cancel.Text = "Cancelar";
-            cancel.UseVisualStyleBackColor = false;
+            btn_cancel.BackColor = Color.FromArgb(254, 152, 152);
+            btn_cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
+            btn_cancel.FlatStyle = FlatStyle.Flat;
+            btn_cancel.Location = new Point(39, 388);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.Size = new Size(138, 35);
+            btn_cancel.TabIndex = 62;
+            btn_cancel.Text = "Cancelar";
+            btn_cancel.UseVisualStyleBackColor = false;
             // 
-            // type
+            // lbl_type
             // 
-            type.AutoSize = true;
-            type.FlatStyle = FlatStyle.Popup;
-            type.Location = new Point(39, 92);
-            type.Name = "type";
-            type.Size = new Size(30, 15);
-            type.TabIndex = 61;
-            type.Text = "Tipo";
+            lbl_type.AutoSize = true;
+            lbl_type.FlatStyle = FlatStyle.Popup;
+            lbl_type.Location = new Point(39, 92);
+            lbl_type.Name = "lbl_type";
+            lbl_type.Size = new Size(30, 15);
+            lbl_type.TabIndex = 61;
+            lbl_type.Text = "Tipo";
             // 
             // name_textBox
             // 
@@ -107,14 +107,14 @@
             name_textBox.Size = new Size(352, 23);
             name_textBox.TabIndex = 60;
             // 
-            // name
+            // lbl_name
             // 
-            name.AutoSize = true;
-            name.Location = new Point(39, 32);
-            name.Name = "name";
-            name.Size = new Size(40, 15);
-            name.TabIndex = 59;
-            name.Text = "Nome";
+            lbl_name.AutoSize = true;
+            lbl_name.Location = new Point(39, 32);
+            lbl_name.Name = "lbl_name";
+            lbl_name.Size = new Size(45, 15);
+            lbl_name.TabIndex = 59;
+            lbl_name.Text = "Nome*";
             // 
             // button1
             // 
@@ -136,15 +136,15 @@
             class_comboBox.Size = new Size(125, 23);
             class_comboBox.TabIndex = 71;
             // 
-            // categ
+            // lbl_category
             // 
-            categ.AutoSize = true;
-            categ.FlatStyle = FlatStyle.Popup;
-            categ.Location = new Point(231, 92);
-            categ.Name = "categ";
-            categ.Size = new Size(58, 15);
-            categ.TabIndex = 70;
-            categ.Text = "Categoria";
+            lbl_category.AutoSize = true;
+            lbl_category.FlatStyle = FlatStyle.Popup;
+            lbl_category.Location = new Point(231, 92);
+            lbl_category.Name = "lbl_category";
+            lbl_category.Size = new Size(58, 15);
+            lbl_category.TabIndex = 70;
+            lbl_category.Text = "Categoria";
             // 
             // checkedListBox1
             // 
@@ -169,34 +169,34 @@
             add_ingredients.UseVisualStyleBackColor = false;
             add_ingredients.Click += add_ingredients_Click;
             // 
-            // label1
+            // lbl_ingredients
             // 
-            label1.AutoSize = true;
-            label1.FlatStyle = FlatStyle.Popup;
-            label1.Location = new Point(39, 167);
-            label1.Name = "label1";
-            label1.Size = new Size(72, 15);
-            label1.TabIndex = 75;
-            label1.Text = "Ingredientes";
+            lbl_ingredients.AutoSize = true;
+            lbl_ingredients.FlatStyle = FlatStyle.Popup;
+            lbl_ingredients.Location = new Point(39, 167);
+            lbl_ingredients.Name = "lbl_ingredients";
+            lbl_ingredients.Size = new Size(72, 15);
+            lbl_ingredients.TabIndex = 75;
+            lbl_ingredients.Text = "Ingredientes";
             // 
             // CreateEditFlavours
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(433, 442);
-            Controls.Add(label1);
+            Controls.Add(lbl_ingredients);
             Controls.Add(add_ingredients);
             Controls.Add(checkedListBox1);
             Controls.Add(button1);
             Controls.Add(class_comboBox);
-            Controls.Add(categ);
+            Controls.Add(lbl_category);
             Controls.Add(add_type);
             Controls.Add(type_comboBox);
-            Controls.Add(save);
-            Controls.Add(cancel);
-            Controls.Add(type);
+            Controls.Add(btn_save);
+            Controls.Add(btn_cancel);
+            Controls.Add(lbl_type);
             Controls.Add(name_textBox);
-            Controls.Add(name);
+            Controls.Add(lbl_name);
             Name = "CreateEditFlavours";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Sabores";
@@ -207,16 +207,16 @@
         #endregion
         private Button add_type;
         private ComboBox type_comboBox;
-        private Button save;
-        private Button cancel;
-        private Label type;
+        private Button btn_save;
+        private Button btn_cancel;
+        private Label lbl_type;
         private TextBox name_textBox;
-        private Label name;
+        private Label lbl_name;
         private Button button1;
         private ComboBox class_comboBox;
-        private Label categ;
+        private Label lbl_category;
         private CheckedListBox checkedListBox1;
         private Button add_ingredients;
-        private Label label1;
+        private Label lbl_ingredients;
     }
 }

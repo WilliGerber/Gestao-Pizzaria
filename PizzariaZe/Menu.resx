@@ -58,7 +58,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="settings_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_settings_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAXtJREFUSEvl
         lT8vBEEYh7fyr5erlBJRSCTkErVKITREIRGFQnloNLQKDVFokBC+gEQhIVGg0BBB4RuIUs3zm503GWNu
@@ -168,7 +168,7 @@
         hmEYhmEYhmEYhmEYhmEYhmEY5seKw/H/khGygA/SfowAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="products_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_products_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAWVJREFUSEvt
         000rBWEYh/H5DCJEknwDaztZWFqI8h4b5RNYUDbK1gZJeSkWsmIryc5GWcpLFkKRbFhxXcc8NXE6M8cZ
@@ -180,7 +180,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="employees_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_employees_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAMFJREFUSEvl
         lIEJwzAMBL1AZ+o63aLdrEtkj46Q6kvemM+rjkmghB482HpbJrLi8jc8QlNoXoQxYofxDDE5hdhhMCnR
@@ -189,7 +189,7 @@
         Z+R0lPIGCUixQXkOhCEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="clients_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_clients_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAZRJREFUSEvd
         lL8uBUEchbfTUIpItBqPoFKpRKchWhGJTqMiUYlGq/IOCokoFBqFRDyAKJCIl+B8Y052zOzdcbe8J/li
@@ -201,7 +201,7 @@
         w6m5r+qkuXBFm18f9Ix00JpwRYwLb+H6c0OBMzlqnc45KWqaH1UToMd98rMDAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="supply_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_supply_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAALFJREFUSEvt
         j8ENwjAQBF0P4pUaKIYXdVAFRaQOeNELX7IbxdFpfRYbKT8y0khn397FKQd7coWvRda7MMAH/HZkj5nN
@@ -210,7 +210,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="orders_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_orders_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPhJREFUSEvt
         lD0KAkEMhfco1haCjaW38BQ23kALC28hnsRasLT3BHoFfQ99ErIJs7OKWPjBB2Enyfyx0/ypZQlP8NZT
@@ -220,7 +220,7 @@
         AaBf1p3xCWNiAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="finances_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_finances_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAL9JREFUSEvt
         krsNAjEQRF0PDZDSAgFlkCIyKICCyIiQiBEJ1cCstLMyY5+EDyxdcE96gXfWPn8uzUyWI7zA10htrq0x
@@ -229,7 +229,7 @@
         SZHSG72ZxHWKuBHEAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="dashboard_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_dashboard_nav_bar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAH1JREFUSEvt
         jUEKgDAQA/v/T+spEtoMRgS9dGAOu8m2Y/OU40aRMhdJZVekzEWoMO/b3kJ72PYW2kPNJEKFea+ZRKhw

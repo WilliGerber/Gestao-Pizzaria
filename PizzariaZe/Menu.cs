@@ -1,3 +1,6 @@
+using PizzariaDoZe;
+using PizzariaZe.Properties;
+
 namespace PizzariaZe
 {
     public partial class Menu : Form
@@ -5,6 +8,14 @@ namespace PizzariaZe
         public Menu()
         {
             InitializeComponent();
+
+            #region idioma/região interface - satellite assembly
+            // com base no idioma/região escolhido pelo usuário,
+            // ajusta as propriedades dos componentes da tela com base no conteúdo do arquivo resources
+            Functions.AjustaResourcesControl(this);
+            //ajuste manual de campos ou mensagens para o usuário que não puderam ser automatizadas acima
+            this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");
+            #endregion
         }
 
         private void clients_nav_bar_Click(object sender, EventArgs e)

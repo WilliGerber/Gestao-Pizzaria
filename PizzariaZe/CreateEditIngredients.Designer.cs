@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            type = new Label();
+            lbl_type = new Label();
             name_textBox = new TextBox();
-            name = new Label();
+            lbl_name = new Label();
             comboBox1 = new ComboBox();
-            no = new RadioButton();
-            yes = new RadioButton();
-            label1 = new Label();
-            radioButton1 = new RadioButton();
-            save = new Button();
-            cancel = new Button();
+            lbl_only_as_ingredient = new RadioButton();
+            lbl_only_as_aditional = new RadioButton();
+            lbl_is_aditional = new Label();
+            lbl_aditional_and_ingredient = new RadioButton();
+            btn_save = new Button();
+            btn_cancel = new Button();
             SuspendLayout();
             // 
-            // type
+            // lbl_type
             // 
-            type.AutoSize = true;
-            type.FlatStyle = FlatStyle.Popup;
-            type.Location = new Point(37, 90);
-            type.Name = "type";
-            type.Size = new Size(30, 15);
-            type.TabIndex = 29;
-            type.Text = "Tipo";
+            lbl_type.AutoSize = true;
+            lbl_type.FlatStyle = FlatStyle.Popup;
+            lbl_type.Location = new Point(37, 90);
+            lbl_type.Name = "lbl_type";
+            lbl_type.Size = new Size(30, 15);
+            lbl_type.TabIndex = 29;
+            lbl_type.Text = "Tipo";
             // 
             // name_textBox
             // 
@@ -57,14 +57,14 @@
             name_textBox.Size = new Size(349, 23);
             name_textBox.TabIndex = 28;
             // 
-            // name
+            // lbl_name
             // 
-            name.AutoSize = true;
-            name.Location = new Point(37, 30);
-            name.Name = "name";
-            name.Size = new Size(40, 15);
-            name.TabIndex = 27;
-            name.Text = "Nome";
+            lbl_name.AutoSize = true;
+            lbl_name.Location = new Point(37, 30);
+            lbl_name.Name = "lbl_name";
+            lbl_name.Size = new Size(45, 15);
+            lbl_name.TabIndex = 27;
+            lbl_name.Text = "Nome*";
             // 
             // comboBox1
             // 
@@ -74,92 +74,92 @@
             comboBox1.Size = new Size(349, 23);
             comboBox1.TabIndex = 53;
             // 
-            // no
+            // lbl_only_as_ingredient
             // 
-            no.AutoSize = true;
-            no.Location = new Point(37, 173);
-            no.Name = "no";
-            no.Size = new Size(135, 19);
-            no.TabIndex = 55;
-            no.TabStop = true;
-            no.Text = "Somente Ingrediente";
-            no.UseVisualStyleBackColor = true;
+            lbl_only_as_ingredient.AutoSize = true;
+            lbl_only_as_ingredient.Location = new Point(37, 173);
+            lbl_only_as_ingredient.Name = "lbl_only_as_ingredient";
+            lbl_only_as_ingredient.Size = new Size(135, 19);
+            lbl_only_as_ingredient.TabIndex = 55;
+            lbl_only_as_ingredient.TabStop = true;
+            lbl_only_as_ingredient.Text = "Somente Ingrediente";
+            lbl_only_as_ingredient.UseVisualStyleBackColor = true;
             // 
-            // yes
+            // lbl_only_as_aditional
             // 
-            yes.AutoSize = true;
-            yes.Location = new Point(37, 198);
-            yes.Name = "yes";
-            yes.Size = new Size(125, 19);
-            yes.TabIndex = 56;
-            yes.TabStop = true;
-            yes.Text = "Somente Adicional";
-            yes.UseVisualStyleBackColor = true;
+            lbl_only_as_aditional.AutoSize = true;
+            lbl_only_as_aditional.Location = new Point(37, 198);
+            lbl_only_as_aditional.Name = "lbl_only_as_aditional";
+            lbl_only_as_aditional.Size = new Size(125, 19);
+            lbl_only_as_aditional.TabIndex = 56;
+            lbl_only_as_aditional.TabStop = true;
+            lbl_only_as_aditional.Text = "Somente Adicional";
+            lbl_only_as_aditional.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lbl_is_aditional
             // 
-            label1.AutoSize = true;
-            label1.FlatStyle = FlatStyle.Popup;
-            label1.Location = new Point(37, 155);
-            label1.Name = "label1";
-            label1.Size = new Size(62, 15);
-            label1.TabIndex = 57;
-            label1.Text = "Adicional?";
+            lbl_is_aditional.AutoSize = true;
+            lbl_is_aditional.FlatStyle = FlatStyle.Popup;
+            lbl_is_aditional.Location = new Point(37, 155);
+            lbl_is_aditional.Name = "lbl_is_aditional";
+            lbl_is_aditional.Size = new Size(62, 15);
+            lbl_is_aditional.TabIndex = 57;
+            lbl_is_aditional.Text = "Adicional?";
             // 
-            // radioButton1
+            // lbl_aditional_and_ingredient
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(37, 223);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(147, 19);
-            radioButton1.TabIndex = 58;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Adicional e Ingrediente";
-            radioButton1.UseVisualStyleBackColor = true;
+            lbl_aditional_and_ingredient.AutoSize = true;
+            lbl_aditional_and_ingredient.Location = new Point(37, 223);
+            lbl_aditional_and_ingredient.Name = "lbl_aditional_and_ingredient";
+            lbl_aditional_and_ingredient.Size = new Size(147, 19);
+            lbl_aditional_and_ingredient.TabIndex = 58;
+            lbl_aditional_and_ingredient.TabStop = true;
+            lbl_aditional_and_ingredient.Text = "Adicional e Ingrediente";
+            lbl_aditional_and_ingredient.UseVisualStyleBackColor = true;
             // 
-            // save
+            // btn_save
             // 
-            save.BackColor = Color.FromArgb(210, 229, 209);
-            save.FlatAppearance.BorderColor = Color.FromArgb(167, 212, 167);
-            save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
-            save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
-            save.FlatStyle = FlatStyle.Flat;
-            save.Location = new Point(248, 286);
-            save.Name = "save";
-            save.Size = new Size(138, 35);
-            save.TabIndex = 52;
-            save.Text = "Salvar";
-            save.UseVisualStyleBackColor = false;
+            btn_save.BackColor = Color.FromArgb(210, 229, 209);
+            btn_save.FlatAppearance.BorderColor = Color.FromArgb(167, 212, 167);
+            btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
+            btn_save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
+            btn_save.FlatStyle = FlatStyle.Flat;
+            btn_save.Location = new Point(248, 286);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(138, 35);
+            btn_save.TabIndex = 52;
+            btn_save.Text = "Salvar";
+            btn_save.UseVisualStyleBackColor = false;
             // 
-            // cancel
+            // btn_cancel
             // 
-            cancel.BackColor = Color.FromArgb(254, 152, 152);
-            cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
-            cancel.FlatStyle = FlatStyle.Flat;
-            cancel.Location = new Point(37, 286);
-            cancel.Name = "cancel";
-            cancel.Size = new Size(138, 35);
-            cancel.TabIndex = 51;
-            cancel.Text = "Cancelar";
-            cancel.UseVisualStyleBackColor = false;
+            btn_cancel.BackColor = Color.FromArgb(254, 152, 152);
+            btn_cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
+            btn_cancel.FlatStyle = FlatStyle.Flat;
+            btn_cancel.Location = new Point(37, 286);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.Size = new Size(138, 35);
+            btn_cancel.TabIndex = 51;
+            btn_cancel.Text = "Cancelar";
+            btn_cancel.UseVisualStyleBackColor = false;
             // 
             // CreateEditIngredients
             // 
-            AcceptButton = save;
+            AcceptButton = btn_save;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            CancelButton = cancel;
+            CancelButton = btn_cancel;
             ClientSize = new Size(431, 346);
-            Controls.Add(radioButton1);
-            Controls.Add(label1);
-            Controls.Add(yes);
-            Controls.Add(no);
+            Controls.Add(lbl_aditional_and_ingredient);
+            Controls.Add(lbl_is_aditional);
+            Controls.Add(lbl_only_as_aditional);
+            Controls.Add(lbl_only_as_ingredient);
             Controls.Add(comboBox1);
-            Controls.Add(save);
-            Controls.Add(cancel);
-            Controls.Add(type);
+            Controls.Add(btn_save);
+            Controls.Add(btn_cancel);
+            Controls.Add(lbl_type);
             Controls.Add(name_textBox);
-            Controls.Add(name);
+            Controls.Add(lbl_name);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "CreateEditIngredients";
@@ -171,15 +171,15 @@
 
         #endregion
 
-        private Label type;
+        private Label lbl_type;
         private TextBox name_textBox;
-        private Label name;
+        private Label lbl_name;
         private ComboBox comboBox1;
-        private RadioButton no;
-        private RadioButton yes;
-        private Label label1;
-        private RadioButton radioButton1;
-        private Button save;
-        private Button cancel;
+        private RadioButton lbl_only_as_ingredient;
+        private RadioButton lbl_only_as_aditional;
+        private Label lbl_is_aditional;
+        private RadioButton lbl_aditional_and_ingredient;
+        private Button btn_save;
+        private Button btn_cancel;
     }
 }

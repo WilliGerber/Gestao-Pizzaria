@@ -118,82 +118,82 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btn_add_client.Text" xml:space="preserve">
-    <value>Adicionar Cliente</value>
+    <value>Agregar cliente</value>
   </data>
   <data name="btn_add_employee.Text" xml:space="preserve">
-    <value>Adicionar Funcionário</value>
+    <value>Agregar empleado</value>
   </data>
   <data name="btn_add_flavours.Text" xml:space="preserve">
-    <value>Adicionar Sabores</value>
+    <value>Agregar sabores</value>
   </data>
   <data name="btn_add_ingredients.Text" xml:space="preserve">
-    <value>Adicionar Ingredientes</value>
+    <value>Agregar ingredientes</value>
   </data>
   <data name="btn_add_order.Text" xml:space="preserve">
-    <value>Adicionar Pedido</value>
+    <value>Agregar pedido</value>
   </data>
   <data name="btn_add_pizzas_sizes.Text" xml:space="preserve">
-    <value>Adicionar Tamanhos</value>
+    <value>Agregar tamaños</value>
   </data>
   <data name="btn_add_products.Text" xml:space="preserve">
-    <value>Adicionar Produto</value>
+    <value>Agregar producto</value>
   </data>
   <data name="btn_cancel.Text" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="btn_clients_nav_bar.Text" xml:space="preserve">
     <value>Clientes</value>
   </data>
   <data name="btn_dashboard_nav_bar.Text" xml:space="preserve">
-    <value>Início</value>
+    <value>Comenzar</value>
   </data>
   <data name="btn_employees_nav_bar.Text" xml:space="preserve">
-    <value>Funcionários</value>
+    <value>Empleados</value>
   </data>
   <data name="btn_finances_nav_bar.Text" xml:space="preserve">
-    <value>Financeiro</value>
+    <value>Financiero</value>
   </data>
   <data name="btn_opened_orders.Text" xml:space="preserve">
-    <value>Pedidos Abertos</value>
+    <value>Ordenes abiertas</value>
   </data>
   <data name="btn_orders_nav_bar.Text" xml:space="preserve">
-    <value>Pedidos</value>
+    <value>Peticiones</value>
   </data>
   <data name="btn_payments.Text" xml:space="preserve">
-    <value>Pagamentos</value>
+    <value>Pagos</value>
   </data>
   <data name="btn_products_nav_bar.Text" xml:space="preserve">
     <value>Pizzas</value>
   </data>
   <data name="btn_revenues.Text" xml:space="preserve">
-    <value>Receitas</value>
+    <value>Ingresos</value>
   </data>
   <data name="btn_save.Text" xml:space="preserve">
-    <value>Salvar</value>
+    <value>Ahorrar</value>
   </data>
   <data name="btn_settings_nav_bar.Text" xml:space="preserve">
-    <value>Configurações</value>
+    <value>ajustes</value>
   </data>
   <data name="btn_supply_nav_bar.Text" xml:space="preserve">
-    <value>Estoque</value>
+    <value>Existencias</value>
   </data>
   <data name="lbl_aditional_and_ingredient.Text" xml:space="preserve">
-    <value>Adicional e Ingrediente</value>
+    <value>Ingrediente adicional</value>
   </data>
   <data name="lbl_aditional_info.Text" xml:space="preserve">
-    <value>Informações Adicionais</value>
+    <value>Informaciones adicionales</value>
   </data>
   <data name="lbl_adress_complement.Text" xml:space="preserve">
-    <value>Complemento</value>
+    <value>Complementar</value>
   </data>
   <data name="lbl_birth_date.Text" xml:space="preserve">
-    <value>Data Nascimento*</value>
+    <value>Fecha de nacimiento*</value>
   </data>
   <data name="lbl_category.Text" xml:space="preserve">
-    <value>Categoria</value>
+    <value>Categoría</value>
   </data>
   <data name="lbl_celphone.Text" xml:space="preserve">
-    <value>Celular*</value>
+    <value>Teléfono móvil*</value>
   </data>
   <data name="lbl_cpf.Text" xml:space="preserve">
     <value>CPF*</value>
@@ -208,37 +208,37 @@
     <value>Ingredientes</value>
   </data>
   <data name="lbl_is_aditional.Text" xml:space="preserve">
-    <value>Adicional?</value>
+    <value>¿Adicional?</value>
   </data>
   <data name="lbl_name.Text" xml:space="preserve">
-    <value>Nome*</value>
+    <value>Nombre*</value>
   </data>
   <data name="lbl_neighborhood.Text" xml:space="preserve">
-    <value>Bairro*</value>
+    <value>Vecindario*</value>
   </data>
   <data name="lbl_only_as_aditional.Text" xml:space="preserve">
-    <value>Somente Adicional</value>
+    <value>Solo adicional</value>
   </data>
   <data name="lbl_only_as_ingredient.Text" xml:space="preserve">
-    <value>Somente Ingrediente</value>
+    <value>Solo ingrediente</value>
   </data>
   <data name="lbl_package_quantity.Text" xml:space="preserve">
-    <value>Quantidade</value>
+    <value>Cantidad</value>
   </data>
   <data name="lbl_password.Text" xml:space="preserve">
-    <value>Senha</value>
+    <value>Contraseña</value>
   </data>
   <data name="lbl_product_info.Text" xml:space="preserve">
-    <value>Informações do Produto</value>
+    <value>Información del Producto</value>
   </data>
   <data name="lbl_product_quantity.Text" xml:space="preserve">
-    <value>Quantidade</value>
+    <value>Cantidad</value>
   </data>
   <data name="lbl_sale_price.Text" xml:space="preserve">
-    <value>Preço de Venda</value>
+    <value>Precio de venta</value>
   </data>
   <data name="lbl_sizes.Text" xml:space="preserve">
-    <value>Tamanhos</value>
+    <value>Tallas</value>
   </data>
   <data name="lbl_size_big.Text" xml:space="preserve">
     <value>Grande</value>
@@ -247,34 +247,30 @@
     <value>Gigante</value>
   </data>
   <data name="lbl_size_medium.Text" xml:space="preserve">
-    <value>Médio</value>
+    <value>Promedio</value>
   </data>
   <data name="lbl_size_small.Text" xml:space="preserve">
-    <value>Pequeno</value>
+    <value>Pequeño</value>
   </data>
   <data name="lbl_size_values.Text" xml:space="preserve">
     <value>Valores</value>
   </data>
   <data name="lbl_start_date.Text" xml:space="preserve">
-    <value>Data Admissão*</value>
+    <value>Fecha de admisión*</value>
   </data>
   <data name="lbl_street.Text" xml:space="preserve">
-    <value>Rua*</value>
+    <value>Camino*</value>
   </data>
   <data name="lbl_type.Text" xml:space="preserve">
     <value>Tipo</value>
   </data>
   <data name="lbl_unitary_cost.Text" xml:space="preserve">
-    <value>Custo Unitário</value>
+    <value>Costo unitario</value>
   </data>
   <data name="lbl_unity.Text" xml:space="preserve">
-    <value>Unidade</value>
+    <value>Unidad</value>
   </data>
   <data name="lbl_values.Text" xml:space="preserve">
     <value>Valores</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="warehouse_FILL0_wght400_GRAD0_opsz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\warehouse_FILL0_wght400_GRAD0_opsz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

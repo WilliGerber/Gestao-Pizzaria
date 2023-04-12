@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
-            add_employee = new Button();
+            btn_add_employee = new Button();
             SuspendLayout();
             // 
-            // add_employee
+            // btn_add_employee
             // 
-            add_employee.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            add_employee.Image = (Image)resources.GetObject("add_employee.Image");
-            add_employee.Location = new Point(25, 23);
-            add_employee.Name = "add_employee";
-            add_employee.Size = new Size(151, 76);
-            add_employee.TabIndex = 2;
-            add_employee.Text = "Adicionar Funcionário";
-            add_employee.TextImageRelation = TextImageRelation.ImageAboveText;
-            add_employee.UseVisualStyleBackColor = true;
-            add_employee.Click += add_employee_Click;
+            btn_add_employee.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_add_employee.Image = (Image)resources.GetObject("btn_add_employee.Image");
+            btn_add_employee.Location = new Point(25, 23);
+            btn_add_employee.Name = "btn_add_employee";
+            btn_add_employee.Size = new Size(151, 76);
+            btn_add_employee.TabIndex = 2;
+            btn_add_employee.Text = "Adicionar Funcionário";
+            btn_add_employee.TextImageRelation = TextImageRelation.ImageAboveText;
+            btn_add_employee.UseVisualStyleBackColor = true;
+            btn_add_employee.Click += add_employee_Click;
             // 
             // Employees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(add_employee);
+            Controls.Add(btn_add_employee);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Employees";
             Text = "Funcionários";
@@ -60,6 +60,6 @@
 
         #endregion
 
-        private Button add_employee;
+        private Button btn_add_employee;
     }
 }

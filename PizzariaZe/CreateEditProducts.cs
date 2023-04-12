@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PizzariaZe
 {
-    public partial class Orders : Form
+    public partial class CreateEditProducts : Form
     {
-        public Orders()
+        public CreateEditProducts()
         {
             InitializeComponent();
 
@@ -24,11 +24,6 @@ namespace PizzariaZe
             //ajuste manual de campos ou mensagens para o usuário que não puderam ser automatizadas acima
             this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");
             #endregion
-        }
-
-        private void add_order_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
