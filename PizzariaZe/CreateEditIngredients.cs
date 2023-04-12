@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PizzariaZe
 {
-    public partial class Orders : Form
+    public partial class CreateEditIngredients : Form
     {
-        public Orders()
+        public CreateEditIngredients()
         {
             InitializeComponent();
-        }
-
-        private void add_order_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

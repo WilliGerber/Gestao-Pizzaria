@@ -57,6 +57,7 @@
             add_client.Text = "Adicionar Cliente";
             add_client.TextImageRelation = TextImageRelation.ImageAboveText;
             add_client.UseVisualStyleBackColor = true;
+            add_client.Click += add_client_Click;
             // 
             // button1
             // 

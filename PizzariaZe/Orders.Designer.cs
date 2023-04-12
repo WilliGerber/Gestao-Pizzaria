@@ -28,13 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orders));
+            add_order = new Button();
             SuspendLayout();
+            // 
+            // add_order
+            // 
+            add_order.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            add_order.Image = (Image)resources.GetObject("add_order.Image");
+            add_order.Location = new Point(12, 12);
+            add_order.Name = "add_order";
+            add_order.Size = new Size(151, 76);
+            add_order.TabIndex = 3;
+            add_order.Text = "Adicionar Pedido";
+            add_order.TextImageRelation = TextImageRelation.ImageAboveText;
+            add_order.UseVisualStyleBackColor = true;
             // 
             // Orders
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(add_order);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Orders";
             Text = "Pedidos";
@@ -43,5 +58,7 @@
         }
 
         #endregion
+
+        private Button add_order;
     }
 }

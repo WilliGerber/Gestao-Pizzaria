@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace PizzariaZe
 {
-    public partial class Orders : Form
+    public partial class CreateEditFlavours : Form
     {
-        public Orders()
+        public CreateEditFlavours()
         {
             InitializeComponent();
         }
 
-        private void add_order_Click(object sender, EventArgs e)
+        private void add_ingredients_Click(object sender, EventArgs e)
         {
-
+            CreateEditIngredients createEditIngredients = new CreateEditIngredients();
+            createEditIngredients.ShowDialog();
         }
     }
 }

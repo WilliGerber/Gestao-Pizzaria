@@ -43,6 +43,7 @@
             add_employee.Text = "Adicionar Funcionário";
             add_employee.TextImageRelation = TextImageRelation.ImageAboveText;
             add_employee.UseVisualStyleBackColor = true;
+            add_employee.Click += add_employee_Click;
             // 
             // Employees
             // 

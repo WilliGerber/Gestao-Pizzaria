@@ -16,5 +16,11 @@ namespace PizzariaZe
         {
             InitializeComponent();
         }
+
+        private void add_client_Click(object sender, EventArgs e)
+        {
+            CreateEditClients createEditClients = new CreateEditClients();
+            createEditClients.ShowDialog();
+        }
     }
 }

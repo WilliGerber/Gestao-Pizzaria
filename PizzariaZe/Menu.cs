@@ -36,7 +36,7 @@ namespace PizzariaZe
 
         private void products_nav_bar_Click(object sender, EventArgs e)
         {
-            Products products = new Products();
+            Flavours products = new Flavours();
             DisposeAllButThis(this);
             products.TopLevel = false;
             splitContainer1.Panel2.Controls.Add(products);

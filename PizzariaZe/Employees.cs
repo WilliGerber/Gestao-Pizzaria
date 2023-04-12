@@ -16,5 +16,11 @@ namespace PizzariaZe
         {
             InitializeComponent();
         }
+
+        private void add_employee_Click(object sender, EventArgs e)
+        {
+            CreateEditEmployee createEditEmployee = new CreateEditEmployee();
+            createEditEmployee.ShowDialog();
+        }
     }
 }
