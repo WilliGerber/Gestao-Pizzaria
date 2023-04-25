@@ -39,5 +39,10 @@ namespace PizzariaZe
         {
             Close();
         }
+
+        private void PizzaP_TextChanged(object sender, EventArgs e)
+        {
+            Functions.AplicaMascaraMoeda2(this.PizzaP);
+        }
     }
 }

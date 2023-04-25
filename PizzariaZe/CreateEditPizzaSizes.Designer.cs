@@ -35,12 +35,12 @@ namespace PizzariaZe
             comboBox1 = new ComboBox();
             add_flavours = new Button();
             lbl_size_small = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            PizzaP = new TextBox();
+            PizzaM = new TextBox();
             lbl_size_medium = new Label();
-            textBox3 = new TextBox();
+            PizzaG = new TextBox();
             lbl_size_big = new Label();
-            textBox4 = new TextBox();
+            PizzaGG = new TextBox();
             lbl_size_giant = new Label();
             lbl_sizes = new Label();
             lbl_size_values = new Label();
@@ -112,19 +112,21 @@ namespace PizzariaZe
             lbl_size_small.TabIndex = 68;
             lbl_size_small.Text = "Pequeno";
             // 
-            // textBox1
+            // PizzaP
             // 
-            textBox1.Location = new Point(109, 131);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            PizzaP.Location = new Point(109, 131);
+            PizzaP.MaxLength = 9;
+            PizzaP.Name = "PizzaP";
+            PizzaP.Size = new Size(100, 23);
+            PizzaP.TabIndex = 3;
+            PizzaP.TextChanged += PizzaP_TextChanged;
             // 
-            // textBox2
+            // PizzaM
             // 
-            textBox2.Location = new Point(109, 160);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 4;
+            PizzaM.Location = new Point(109, 160);
+            PizzaM.Name = "PizzaM";
+            PizzaM.Size = new Size(100, 23);
+            PizzaM.TabIndex = 4;
             // 
             // lbl_size_medium
             // 
@@ -135,12 +137,12 @@ namespace PizzariaZe
             lbl_size_medium.TabIndex = 70;
             lbl_size_medium.Text = "Médio";
             // 
-            // textBox3
+            // PizzaG
             // 
-            textBox3.Location = new Point(109, 189);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 5;
+            PizzaG.Location = new Point(109, 189);
+            PizzaG.Name = "PizzaG";
+            PizzaG.Size = new Size(100, 23);
+            PizzaG.TabIndex = 5;
             // 
             // lbl_size_big
             // 
@@ -151,12 +153,12 @@ namespace PizzariaZe
             lbl_size_big.TabIndex = 72;
             lbl_size_big.Text = "Grande";
             // 
-            // textBox4
+            // PizzaGG
             // 
-            textBox4.Location = new Point(109, 218);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 6;
+            PizzaGG.Location = new Point(109, 218);
+            PizzaGG.Name = "PizzaGG";
+            PizzaGG.Size = new Size(100, 23);
+            PizzaGG.TabIndex = 6;
             // 
             // lbl_size_giant
             // 
@@ -192,13 +194,13 @@ namespace PizzariaZe
             ClientSize = new Size(433, 330);
             Controls.Add(lbl_size_values);
             Controls.Add(lbl_sizes);
-            Controls.Add(textBox4);
+            Controls.Add(PizzaGG);
             Controls.Add(lbl_size_giant);
-            Controls.Add(textBox3);
+            Controls.Add(PizzaG);
             Controls.Add(lbl_size_big);
-            Controls.Add(textBox2);
+            Controls.Add(PizzaM);
             Controls.Add(lbl_size_medium);
-            Controls.Add(textBox1);
+            Controls.Add(PizzaP);
             Controls.Add(lbl_size_small);
             Controls.Add(add_flavours);
             Controls.Add(comboBox1);
@@ -220,12 +222,12 @@ namespace PizzariaZe
         private ComboBox comboBox1;
         private Button add_flavours;
         private Label lbl_size_small;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox PizzaP;
+        private TextBox PizzaM;
         private Label lbl_size_medium;
-        private TextBox textBox3;
+        private TextBox PizzaG;
         private Label lbl_size_big;
-        private TextBox textBox4;
+        private TextBox PizzaGG;
         private Label lbl_size_giant;
         private Label lbl_sizes;
         private Label lbl_size_values;
