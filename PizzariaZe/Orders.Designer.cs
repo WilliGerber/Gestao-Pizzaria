@@ -39,7 +39,7 @@
             btn_add_order.Location = new Point(12, 12);
             btn_add_order.Name = "btn_add_order";
             btn_add_order.Size = new Size(151, 76);
-            btn_add_order.TabIndex = 3;
+            btn_add_order.TabIndex = 1;
             btn_add_order.Text = "Adicionar Pedido";
             btn_add_order.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_add_order.UseVisualStyleBackColor = true;
@@ -51,6 +51,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btn_add_order);
             FormBorderStyle = FormBorderStyle.None;
+            KeyPreview = true;
             Name = "Orders";
             Text = "Pedidos";
             WindowState = FormWindowState.Maximized;

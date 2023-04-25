@@ -17,6 +17,9 @@ namespace PizzariaZe
         {
             InitializeComponent();
 
+            //adiciona eventos em geral, exemplo: ganhar e perder o foco
+            Functions.EventoFocoCampos(this);
+
             #region idioma/região interface - satellite assembly
             // com base no idioma/região escolhido pelo usuário,
             // ajusta as propriedades dos componentes da tela com base no conteúdo do arquivo resources
@@ -30,6 +33,14 @@ namespace PizzariaZe
         {
             CreateEditClients createEditClients = new CreateEditClients();
             createEditClients.ShowDialog();
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Tem certeza que deseja sair?", "Confirmação de saída", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

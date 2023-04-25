@@ -40,7 +40,7 @@
             btn_revenues.Location = new Point(26, 23);
             btn_revenues.Name = "btn_revenues";
             btn_revenues.Size = new Size(151, 76);
-            btn_revenues.TabIndex = 5;
+            btn_revenues.TabIndex = 1;
             btn_revenues.Text = "Receitas";
             btn_revenues.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_revenues.UseVisualStyleBackColor = true;
@@ -53,7 +53,7 @@
             btn_payments.Location = new Point(183, 23);
             btn_payments.Name = "btn_payments";
             btn_payments.Size = new Size(151, 76);
-            btn_payments.TabIndex = 6;
+            btn_payments.TabIndex = 2;
             btn_payments.Text = "Pagamentos";
             btn_payments.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_payments.UseVisualStyleBackColor = true;
@@ -66,6 +66,7 @@
             Controls.Add(btn_payments);
             Controls.Add(btn_revenues);
             FormBorderStyle = FormBorderStyle.None;
+            KeyPreview = true;
             Name = "Finances";
             Text = "Financeiro";
             WindowState = FormWindowState.Maximized;

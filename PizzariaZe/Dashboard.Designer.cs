@@ -41,7 +41,7 @@
             btn_add_order.Location = new Point(466, 71);
             btn_add_order.Name = "btn_add_order";
             btn_add_order.Size = new Size(212, 144);
-            btn_add_order.TabIndex = 0;
+            btn_add_order.TabIndex = 2;
             btn_add_order.Text = "Adicionar Pedido";
             btn_add_order.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_add_order.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             btn_opened_orders.Location = new Point(137, 262);
             btn_opened_orders.Name = "btn_opened_orders";
             btn_opened_orders.Size = new Size(212, 144);
-            btn_opened_orders.TabIndex = 2;
+            btn_opened_orders.TabIndex = 3;
             btn_opened_orders.Text = "Pedidos Abertos";
             btn_opened_orders.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_opened_orders.UseVisualStyleBackColor = true;
@@ -80,6 +80,7 @@
             Controls.Add(btn_add_client);
             Controls.Add(btn_add_order);
             FormBorderStyle = FormBorderStyle.None;
+            KeyPreview = true;
             Name = "Dashboard";
             Text = "Início";
             WindowState = FormWindowState.Maximized;

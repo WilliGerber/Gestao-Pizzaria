@@ -55,7 +55,7 @@
             name_textBox.Location = new Point(37, 48);
             name_textBox.Name = "name_textBox";
             name_textBox.Size = new Size(349, 23);
-            name_textBox.TabIndex = 28;
+            name_textBox.TabIndex = 1;
             // 
             // lbl_name
             // 
@@ -72,7 +72,7 @@
             comboBox1.Location = new Point(37, 108);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(349, 23);
-            comboBox1.TabIndex = 53;
+            comboBox1.TabIndex = 2;
             // 
             // lbl_only_as_ingredient
             // 
@@ -80,7 +80,7 @@
             lbl_only_as_ingredient.Location = new Point(37, 173);
             lbl_only_as_ingredient.Name = "lbl_only_as_ingredient";
             lbl_only_as_ingredient.Size = new Size(135, 19);
-            lbl_only_as_ingredient.TabIndex = 55;
+            lbl_only_as_ingredient.TabIndex = 3;
             lbl_only_as_ingredient.TabStop = true;
             lbl_only_as_ingredient.Text = "Somente Ingrediente";
             lbl_only_as_ingredient.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
             lbl_only_as_aditional.Location = new Point(37, 198);
             lbl_only_as_aditional.Name = "lbl_only_as_aditional";
             lbl_only_as_aditional.Size = new Size(125, 19);
-            lbl_only_as_aditional.TabIndex = 56;
+            lbl_only_as_aditional.TabIndex = 4;
             lbl_only_as_aditional.TabStop = true;
             lbl_only_as_aditional.Text = "Somente Adicional";
             lbl_only_as_aditional.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             lbl_aditional_and_ingredient.Location = new Point(37, 223);
             lbl_aditional_and_ingredient.Name = "lbl_aditional_and_ingredient";
             lbl_aditional_and_ingredient.Size = new Size(147, 19);
-            lbl_aditional_and_ingredient.TabIndex = 58;
+            lbl_aditional_and_ingredient.TabIndex = 5;
             lbl_aditional_and_ingredient.TabStop = true;
             lbl_aditional_and_ingredient.Text = "Adicional e Ingrediente";
             lbl_aditional_and_ingredient.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@
             btn_save.Location = new Point(248, 286);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
-            btn_save.TabIndex = 52;
+            btn_save.TabIndex = 7;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
             // 
@@ -139,9 +139,10 @@
             btn_cancel.Location = new Point(37, 286);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
-            btn_cancel.TabIndex = 51;
+            btn_cancel.TabIndex = 6;
             btn_cancel.Text = "Cancelar";
             btn_cancel.UseVisualStyleBackColor = false;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // CreateEditIngredients
             // 
@@ -160,6 +161,7 @@
             Controls.Add(lbl_type);
             Controls.Add(name_textBox);
             Controls.Add(lbl_name);
+            KeyPreview = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "CreateEditIngredients";

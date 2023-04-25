@@ -56,7 +56,7 @@ namespace PizzariaZe
             btn_save.Location = new Point(250, 281);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
-            btn_save.TabIndex = 63;
+            btn_save.TabIndex = 8;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
             // 
@@ -68,9 +68,10 @@ namespace PizzariaZe
             btn_cancel.Location = new Point(39, 281);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
-            btn_cancel.TabIndex = 62;
+            btn_cancel.TabIndex = 7;
             btn_cancel.Text = "Cancelar";
             btn_cancel.UseVisualStyleBackColor = false;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // lbl_flavour
             // 
@@ -87,7 +88,7 @@ namespace PizzariaZe
             comboBox1.Location = new Point(39, 50);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(317, 23);
-            comboBox1.TabIndex = 66;
+            comboBox1.TabIndex = 1;
             // 
             // add_flavours
             // 
@@ -98,7 +99,7 @@ namespace PizzariaZe
             add_flavours.Location = new Point(362, 50);
             add_flavours.Name = "add_flavours";
             add_flavours.Size = new Size(29, 23);
-            add_flavours.TabIndex = 67;
+            add_flavours.TabIndex = 2;
             add_flavours.UseVisualStyleBackColor = false;
             add_flavours.Click += add_flavours_Click;
             // 
@@ -116,14 +117,14 @@ namespace PizzariaZe
             textBox1.Location = new Point(109, 131);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 69;
+            textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(109, 160);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 71;
+            textBox2.TabIndex = 4;
             // 
             // lbl_size_medium
             // 
@@ -139,7 +140,7 @@ namespace PizzariaZe
             textBox3.Location = new Point(109, 189);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 73;
+            textBox3.TabIndex = 5;
             // 
             // lbl_size_big
             // 
@@ -155,7 +156,7 @@ namespace PizzariaZe
             textBox4.Location = new Point(109, 218);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 75;
+            textBox4.TabIndex = 6;
             // 
             // lbl_size_giant
             // 
@@ -204,6 +205,7 @@ namespace PizzariaZe
             Controls.Add(btn_save);
             Controls.Add(btn_cancel);
             Controls.Add(lbl_flavour);
+            KeyPreview = true;
             Name = "CreateEditPizzaSizes";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Sabores";

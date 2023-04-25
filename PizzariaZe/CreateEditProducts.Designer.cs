@@ -59,7 +59,7 @@
             btn_save.Location = new Point(254, 272);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
-            btn_save.TabIndex = 80;
+            btn_save.TabIndex = 9;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
             // 
@@ -71,9 +71,10 @@
             btn_cancel.Location = new Point(40, 272);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
-            btn_cancel.TabIndex = 79;
+            btn_cancel.TabIndex = 8;
             btn_cancel.Text = "Cancelar";
             btn_cancel.UseVisualStyleBackColor = false;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // lbl_name
             // 
@@ -89,7 +90,7 @@
             textBox5.Location = new Point(40, 41);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(352, 23);
-            textBox5.TabIndex = 93;
+            textBox5.TabIndex = 1;
             // 
             // lbl_type
             // 
@@ -114,7 +115,7 @@
             textBox1.Location = new Point(166, 97);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 95;
+            textBox1.TabIndex = 3;
             // 
             // lbl_product_quantity
             // 
@@ -130,7 +131,7 @@
             textBox2.Location = new Point(292, 97);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 97;
+            textBox2.TabIndex = 4;
             // 
             // comboBox1
             // 
@@ -138,7 +139,7 @@
             comboBox1.Location = new Point(40, 97);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(100, 23);
-            comboBox1.TabIndex = 99;
+            comboBox1.TabIndex = 2;
             // 
             // panel1
             // 
@@ -160,14 +161,14 @@
             comboBox2.Location = new Point(9, 35);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(100, 23);
-            comboBox2.TabIndex = 107;
+            comboBox2.TabIndex = 5;
             // 
             // textBox4
             // 
             textBox4.Location = new Point(125, 35);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 103;
+            textBox4.TabIndex = 6;
             // 
             // lbl_sale_price
             // 
@@ -192,7 +193,7 @@
             textBox3.Location = new Point(241, 35);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 105;
+            textBox3.TabIndex = 7;
             // 
             // lbl_package_quantity
             // 
@@ -229,9 +230,10 @@
             Controls.Add(btn_save);
             Controls.Add(btn_cancel);
             Controls.Add(lbl_name);
+            KeyPreview = true;
             Name = "CreateEditProducts";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Form1";
+            Text = "Produtos";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

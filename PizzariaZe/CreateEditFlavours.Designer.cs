@@ -53,7 +53,7 @@
             add_type.Location = new Point(170, 110);
             add_type.Name = "add_type";
             add_type.Size = new Size(29, 23);
-            add_type.TabIndex = 65;
+            add_type.TabIndex = 3;
             add_type.UseVisualStyleBackColor = false;
             // 
             // type_comboBox
@@ -62,7 +62,7 @@
             type_comboBox.Location = new Point(39, 110);
             type_comboBox.Name = "type_comboBox";
             type_comboBox.Size = new Size(125, 23);
-            type_comboBox.TabIndex = 64;
+            type_comboBox.TabIndex = 2;
             // 
             // btn_save
             // 
@@ -74,7 +74,7 @@
             btn_save.Location = new Point(250, 388);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
-            btn_save.TabIndex = 63;
+            btn_save.TabIndex = 8;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
             // 
@@ -86,9 +86,10 @@
             btn_cancel.Location = new Point(39, 388);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
-            btn_cancel.TabIndex = 62;
+            btn_cancel.TabIndex = 7;
             btn_cancel.Text = "Cancelar";
             btn_cancel.UseVisualStyleBackColor = false;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // lbl_type
             // 
@@ -105,7 +106,7 @@
             name_textBox.Location = new Point(39, 50);
             name_textBox.Name = "name_textBox";
             name_textBox.Size = new Size(352, 23);
-            name_textBox.TabIndex = 60;
+            name_textBox.TabIndex = 1;
             // 
             // lbl_name
             // 
@@ -125,12 +126,13 @@
             button1.Location = new Point(362, 110);
             button1.Name = "button1";
             button1.Size = new Size(29, 23);
-            button1.TabIndex = 72;
+            button1.TabIndex = 5;
             button1.UseVisualStyleBackColor = false;
             // 
             // class_comboBox
             // 
             class_comboBox.FormattingEnabled = true;
+            class_comboBox.ItemHeight = 15;
             class_comboBox.Location = new Point(231, 110);
             class_comboBox.Name = "class_comboBox";
             class_comboBox.Size = new Size(125, 23);
@@ -154,7 +156,7 @@
             checkedListBox1.Location = new Point(39, 188);
             checkedListBox1.Name = "checkedListBox1";
             checkedListBox1.Size = new Size(352, 166);
-            checkedListBox1.TabIndex = 73;
+            checkedListBox1.TabIndex = 100;
             // 
             // add_ingredients
             // 
@@ -165,7 +167,7 @@
             add_ingredients.Location = new Point(362, 159);
             add_ingredients.Name = "add_ingredients";
             add_ingredients.Size = new Size(29, 23);
-            add_ingredients.TabIndex = 74;
+            add_ingredients.TabIndex = 6;
             add_ingredients.UseVisualStyleBackColor = false;
             add_ingredients.Click += add_ingredients_Click;
             // 
@@ -197,6 +199,7 @@
             Controls.Add(lbl_type);
             Controls.Add(name_textBox);
             Controls.Add(lbl_name);
+            KeyPreview = true;
             Name = "CreateEditFlavours";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Sabores";

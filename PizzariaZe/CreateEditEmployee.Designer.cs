@@ -256,9 +256,10 @@
             btn_cancel.Location = new Point(31, 403);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
-            btn_cancel.TabIndex = 25;
+            btn_cancel.TabIndex = 12;
             btn_cancel.Text = "Cancelar";
             btn_cancel.UseVisualStyleBackColor = false;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // btn_save
             // 
@@ -270,7 +271,7 @@
             btn_save.Location = new Point(619, 403);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
-            btn_save.TabIndex = 26;
+            btn_save.TabIndex = 13;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
             // 
@@ -305,6 +306,7 @@
             Controls.Add(lbl_cpf);
             Controls.Add(name_textBox);
             Controls.Add(lbl_name);
+            KeyPreview = true;
             Name = "CreateEditEmployee";
             StartPosition = FormStartPosition.CenterParent;
             Text = "CreateEditEmployee";

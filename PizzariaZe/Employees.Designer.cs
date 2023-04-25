@@ -39,7 +39,7 @@
             btn_add_employee.Location = new Point(25, 23);
             btn_add_employee.Name = "btn_add_employee";
             btn_add_employee.Size = new Size(151, 76);
-            btn_add_employee.TabIndex = 2;
+            btn_add_employee.TabIndex = 1;
             btn_add_employee.Text = "Adicionar Funcionário";
             btn_add_employee.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_add_employee.UseVisualStyleBackColor = true;
@@ -52,6 +52,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btn_add_employee);
             FormBorderStyle = FormBorderStyle.None;
+            KeyPreview = true;
             Name = "Employees";
             Text = "Funcionários";
             WindowState = FormWindowState.Maximized;

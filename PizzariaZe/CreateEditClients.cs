@@ -16,6 +16,16 @@ namespace PizzariaZe
         public CreateEditClients()
         {
             InitializeComponent();
+
+            #region
+            //adiciona eventos em geral, exemplo: ganhar e perder o foco
+            Functions.EventoFocoCampos(this);
+
+            //configurção atalho teclas
+            this.KeyDown += new KeyEventHandler(Functions.FormEventoKeyDown!);
+            #endregion
+
+
             #region idioma/região interface - satellite assembly
             // com base no idioma/região escolhido pelo usuário,
             // ajusta as propriedades dos componentes da tela com base no conteúdo do arquivo resources
@@ -23,6 +33,13 @@ namespace PizzariaZe
             //ajuste manual de campos ou mensagens para o usuário que não puderam ser automatizadas acima
             this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");
             #endregion
+
+            
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -60,7 +60,7 @@
             btn_save.Location = new Point(625, 386);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
-            btn_save.TabIndex = 52;
+            btn_save.TabIndex = 11;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
             // 
@@ -72,16 +72,17 @@
             btn_cancel.Location = new Point(37, 386);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
-            btn_cancel.TabIndex = 51;
+            btn_cancel.TabIndex = 10;
             btn_cancel.Text = "Cancelar";
             btn_cancel.UseVisualStyleBackColor = false;
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // email_textBox
             // 
             email_textBox.Location = new Point(414, 111);
             email_textBox.Name = "email_textBox";
             email_textBox.Size = new Size(349, 23);
-            email_textBox.TabIndex = 41;
+            email_textBox.TabIndex = 4;
             // 
             // lbl_Email
             // 
@@ -97,7 +98,7 @@
             celphone_textBox.Location = new Point(37, 111);
             celphone_textBox.Name = "celphone_textBox";
             celphone_textBox.Size = new Size(349, 23);
-            celphone_textBox.TabIndex = 40;
+            celphone_textBox.TabIndex = 3;
             // 
             // lbl_celphone
             // 
@@ -113,7 +114,7 @@
             adress_complement_textBox.Location = new Point(241, 234);
             adress_complement_textBox.Name = "adress_complement_textBox";
             adress_complement_textBox.Size = new Size(145, 23);
-            adress_complement_textBox.TabIndex = 38;
+            adress_complement_textBox.TabIndex = 8;
             // 
             // lbl_adress_complement
             // 
@@ -129,7 +130,7 @@
             textBox1.Location = new Point(37, 234);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(145, 23);
-            textBox1.TabIndex = 37;
+            textBox1.TabIndex = 7;
             // 
             // lbl_house_number
             // 
@@ -145,7 +146,7 @@
             neighborhood_textBox.Location = new Point(414, 170);
             neighborhood_textBox.Name = "neighborhood_textBox";
             neighborhood_textBox.Size = new Size(349, 23);
-            neighborhood_textBox.TabIndex = 36;
+            neighborhood_textBox.TabIndex = 6;
             // 
             // lbl_neighborhood
             // 
@@ -161,7 +162,7 @@
             street_textBox.Location = new Point(37, 170);
             street_textBox.Name = "street_textBox";
             street_textBox.Size = new Size(349, 23);
-            street_textBox.TabIndex = 34;
+            street_textBox.TabIndex = 5;
             // 
             // lbl_street
             // 
@@ -177,7 +178,7 @@
             cpf_textBox.Location = new Point(414, 48);
             cpf_textBox.Name = "cpf_textBox";
             cpf_textBox.Size = new Size(349, 23);
-            cpf_textBox.TabIndex = 30;
+            cpf_textBox.TabIndex = 2;
             // 
             // lbl_cpf
             // 
@@ -194,7 +195,7 @@
             name_textBox.Location = new Point(37, 48);
             name_textBox.Name = "name_textBox";
             name_textBox.Size = new Size(349, 23);
-            name_textBox.TabIndex = 28;
+            name_textBox.TabIndex = 1;
             // 
             // lbl_name
             // 
@@ -210,7 +211,7 @@
             additional_informarions_textBox.Location = new Point(414, 234);
             additional_informarions_textBox.Name = "additional_informarions_textBox";
             additional_informarions_textBox.Size = new Size(349, 23);
-            additional_informarions_textBox.TabIndex = 53;
+            additional_informarions_textBox.TabIndex = 9;
             // 
             // lbl_aditional_info
             // 
@@ -246,6 +247,7 @@
             Controls.Add(lbl_cpf);
             Controls.Add(name_textBox);
             Controls.Add(lbl_name);
+            KeyPreview = true;
             Name = "CreateEditClients";
             StartPosition = FormStartPosition.CenterParent;
             Text = "CreateEditClients";

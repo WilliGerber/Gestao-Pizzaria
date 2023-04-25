@@ -39,7 +39,7 @@
             btn_add_client.Location = new Point(22, 23);
             btn_add_client.Name = "btn_add_client";
             btn_add_client.Size = new Size(151, 76);
-            btn_add_client.TabIndex = 2;
+            btn_add_client.TabIndex = 1;
             btn_add_client.Text = "Adicionar Cliente";
             btn_add_client.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_add_client.UseVisualStyleBackColor = true;
@@ -52,6 +52,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btn_add_client);
             FormBorderStyle = FormBorderStyle.None;
+            KeyPreview = true;
             Name = "Clients";
             Text = "Clientes";
             WindowState = FormWindowState.Maximized;

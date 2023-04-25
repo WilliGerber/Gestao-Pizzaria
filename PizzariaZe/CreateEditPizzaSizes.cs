@@ -17,6 +17,9 @@ namespace PizzariaZe
         {
             InitializeComponent();
 
+            //adiciona eventos em geral, exemplo: ganhar e perder o foco
+            Functions.EventoFocoCampos(this);
+
             #region idioma/região interface - satellite assembly
             // com base no idioma/região escolhido pelo usuário,
             // ajusta as propriedades dos componentes da tela com base no conteúdo do arquivo resources
@@ -30,6 +33,11 @@ namespace PizzariaZe
         {
             CreateEditFlavours createEditFlavours = new CreateEditFlavours();
             createEditFlavours.ShowDialog();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

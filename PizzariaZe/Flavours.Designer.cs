@@ -54,7 +54,7 @@
             btn_pizzas_sizes.Location = new Point(200, 23);
             btn_pizzas_sizes.Name = "btn_pizzas_sizes";
             btn_pizzas_sizes.Size = new Size(151, 76);
-            btn_pizzas_sizes.TabIndex = 4;
+            btn_pizzas_sizes.TabIndex = 2;
             btn_pizzas_sizes.Text = "Adicionar Tamanhos";
             btn_pizzas_sizes.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_pizzas_sizes.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             btn_add_ingredients.Location = new Point(24, 23);
             btn_add_ingredients.Name = "btn_add_ingredients";
             btn_add_ingredients.Size = new Size(151, 76);
-            btn_add_ingredients.TabIndex = 5;
+            btn_add_ingredients.TabIndex = 1;
             btn_add_ingredients.Text = "Adicionar Ingredientes";
             btn_add_ingredients.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_add_ingredients.UseVisualStyleBackColor = true;
@@ -82,6 +82,7 @@
             Controls.Add(btn_pizzas_sizes);
             Controls.Add(btn_add_flavours);
             FormBorderStyle = FormBorderStyle.None;
+            KeyPreview = true;
             Name = "Flavours";
             Text = "Pizzas";
             WindowState = FormWindowState.Maximized;
