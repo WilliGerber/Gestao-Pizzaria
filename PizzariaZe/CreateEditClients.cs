@@ -34,12 +34,17 @@ namespace PizzariaZe
             this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");
             #endregion
 
-            
+
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cpf_textBox_TextChanged(object sender, EventArgs e)
+        {
+            Masks.AplicaMascaraCPF(cpf_textBox);
         }
     }
 }

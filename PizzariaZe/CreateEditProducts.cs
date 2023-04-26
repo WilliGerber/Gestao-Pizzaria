@@ -33,5 +33,15 @@ namespace PizzariaZe
         {
             Close();
         }
+
+        private void tBoxProductCost_TextChanged(object sender, EventArgs e)
+        {
+            Masks.AplicaMascaraMoeda2(this.tBoxProductCost);
+        }
+
+        private void tBoxProductPrice_TextChanged(object sender, EventArgs e)
+        {
+            Masks.AplicaMascaraMoeda2(this.tBoxProductPrice);
+        }
     }
 }

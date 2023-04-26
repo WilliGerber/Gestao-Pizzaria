@@ -40,9 +40,23 @@ namespace PizzariaZe
             Close();
         }
 
+        #region Handler TextChanged Masks
         private void PizzaP_TextChanged(object sender, EventArgs e)
         {
-            Functions.AplicaMascaraMoeda2(this.PizzaP);
+            Masks.AplicaMascaraMoeda2(this.PizzaP);
         }
+        private void PizzaM_TextChanged(object sender, EventArgs e)
+        {
+            Masks.AplicaMascaraMoeda2(this.PizzaM);
+        }
+        private void PizzaG_TextChanged(object sender, EventArgs e)
+        {
+            Masks.AplicaMascaraMoeda2(this.PizzaG);
+        }
+        private void PizzaGG_TextChanged(object sender, EventArgs e)
+        {
+            Masks.AplicaMascaraMoeda2(this.PizzaGG);
+        }
+        #endregion
     }
 }

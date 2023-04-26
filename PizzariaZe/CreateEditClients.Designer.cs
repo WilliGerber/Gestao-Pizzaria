@@ -179,6 +179,7 @@
             cpf_textBox.Name = "cpf_textBox";
             cpf_textBox.Size = new Size(349, 23);
             cpf_textBox.TabIndex = 2;
+            cpf_textBox.TextChanged += cpf_textBox_TextChanged;
             // 
             // lbl_cpf
             // 

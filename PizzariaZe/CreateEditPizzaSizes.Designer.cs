@@ -124,9 +124,11 @@ namespace PizzariaZe
             // PizzaM
             // 
             PizzaM.Location = new Point(109, 160);
+            PizzaM.MaxLength = 9;
             PizzaM.Name = "PizzaM";
             PizzaM.Size = new Size(100, 23);
             PizzaM.TabIndex = 4;
+            PizzaM.TextChanged += PizzaM_TextChanged;
             // 
             // lbl_size_medium
             // 
@@ -140,9 +142,11 @@ namespace PizzariaZe
             // PizzaG
             // 
             PizzaG.Location = new Point(109, 189);
+            PizzaG.MaxLength = 9;
             PizzaG.Name = "PizzaG";
             PizzaG.Size = new Size(100, 23);
             PizzaG.TabIndex = 5;
+            PizzaG.TextChanged += PizzaG_TextChanged;
             // 
             // lbl_size_big
             // 
@@ -156,9 +160,11 @@ namespace PizzariaZe
             // PizzaGG
             // 
             PizzaGG.Location = new Point(109, 218);
+            PizzaGG.MaxLength = 9;
             PizzaGG.Name = "PizzaGG";
             PizzaGG.Size = new Size(100, 23);
             PizzaGG.TabIndex = 6;
+            PizzaGG.TextChanged += PizzaGG_TextChanged;
             // 
             // lbl_size_giant
             // 

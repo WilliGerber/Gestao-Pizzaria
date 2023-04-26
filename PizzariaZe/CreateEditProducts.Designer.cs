@@ -31,19 +31,19 @@
             btn_save = new Button();
             btn_cancel = new Button();
             lbl_name = new Label();
-            textBox5 = new TextBox();
+            tBoxProductName = new TextBox();
             lbl_type = new Label();
             lbl_unitary_cost = new Label();
-            textBox1 = new TextBox();
+            tBoxProductCost = new TextBox();
             lbl_product_quantity = new Label();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
+            tBoxProductQntBought = new TextBox();
+            cBoxProductType = new ComboBox();
             panel1 = new Panel();
-            comboBox2 = new ComboBox();
-            textBox4 = new TextBox();
+            cBoxProductUnit = new ComboBox();
+            tBoxProductUnitQnt = new TextBox();
             lbl_sale_price = new Label();
             lbl_unity = new Label();
-            textBox3 = new TextBox();
+            tBoxProductPrice = new TextBox();
             lbl_package_quantity = new Label();
             lbl_product_info = new Label();
             panel1.SuspendLayout();
@@ -85,12 +85,12 @@
             lbl_name.TabIndex = 78;
             lbl_name.Text = "Nome*";
             // 
-            // textBox5
+            // tBoxProductName
             // 
-            textBox5.Location = new Point(40, 41);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(352, 23);
-            textBox5.TabIndex = 1;
+            tBoxProductName.Location = new Point(40, 41);
+            tBoxProductName.Name = "tBoxProductName";
+            tBoxProductName.Size = new Size(352, 23);
+            tBoxProductName.TabIndex = 1;
             // 
             // lbl_type
             // 
@@ -110,12 +110,14 @@
             lbl_unitary_cost.TabIndex = 96;
             lbl_unitary_cost.Text = "Custo Unitario";
             // 
-            // textBox1
+            // tBoxProductCost
             // 
-            textBox1.Location = new Point(166, 97);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            tBoxProductCost.Location = new Point(166, 97);
+            tBoxProductCost.MaxLength = 9;
+            tBoxProductCost.Name = "tBoxProductCost";
+            tBoxProductCost.Size = new Size(100, 23);
+            tBoxProductCost.TabIndex = 3;
+            tBoxProductCost.TextChanged += tBoxProductCost_TextChanged;
             // 
             // lbl_product_quantity
             // 
@@ -126,49 +128,49 @@
             lbl_product_quantity.TabIndex = 98;
             lbl_product_quantity.Text = "Quantidade";
             // 
-            // textBox2
+            // tBoxProductQntBought
             // 
-            textBox2.Location = new Point(292, 97);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 4;
+            tBoxProductQntBought.Location = new Point(292, 97);
+            tBoxProductQntBought.Name = "tBoxProductQntBought";
+            tBoxProductQntBought.Size = new Size(100, 23);
+            tBoxProductQntBought.TabIndex = 4;
             // 
-            // comboBox1
+            // cBoxProductType
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(40, 97);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(100, 23);
-            comboBox1.TabIndex = 2;
+            cBoxProductType.FormattingEnabled = true;
+            cBoxProductType.Location = new Point(40, 97);
+            cBoxProductType.Name = "cBoxProductType";
+            cBoxProductType.Size = new Size(100, 23);
+            cBoxProductType.TabIndex = 2;
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(comboBox2);
-            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(cBoxProductUnit);
+            panel1.Controls.Add(tBoxProductUnitQnt);
             panel1.Controls.Add(lbl_sale_price);
             panel1.Controls.Add(lbl_unity);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(tBoxProductPrice);
             panel1.Controls.Add(lbl_package_quantity);
             panel1.Location = new Point(40, 158);
             panel1.Name = "panel1";
             panel1.Size = new Size(352, 89);
             panel1.TabIndex = 100;
             // 
-            // comboBox2
+            // cBoxProductUnit
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(9, 35);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(100, 23);
-            comboBox2.TabIndex = 5;
+            cBoxProductUnit.FormattingEnabled = true;
+            cBoxProductUnit.Location = new Point(9, 35);
+            cBoxProductUnit.Name = "cBoxProductUnit";
+            cBoxProductUnit.Size = new Size(100, 23);
+            cBoxProductUnit.TabIndex = 5;
             // 
-            // textBox4
+            // tBoxProductUnitQnt
             // 
-            textBox4.Location = new Point(125, 35);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 6;
+            tBoxProductUnitQnt.Location = new Point(125, 35);
+            tBoxProductUnitQnt.Name = "tBoxProductUnitQnt";
+            tBoxProductUnitQnt.Size = new Size(100, 23);
+            tBoxProductUnitQnt.TabIndex = 6;
             // 
             // lbl_sale_price
             // 
@@ -188,12 +190,14 @@
             lbl_unity.TabIndex = 102;
             lbl_unity.Text = "Unidade";
             // 
-            // textBox3
+            // tBoxProductPrice
             // 
-            textBox3.Location = new Point(241, 35);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 7;
+            tBoxProductPrice.Location = new Point(241, 35);
+            tBoxProductPrice.MaxLength = 9;
+            tBoxProductPrice.Name = "tBoxProductPrice";
+            tBoxProductPrice.Size = new Size(100, 23);
+            tBoxProductPrice.TabIndex = 7;
+            tBoxProductPrice.TextChanged += tBoxProductPrice_TextChanged;
             // 
             // lbl_package_quantity
             // 
@@ -220,13 +224,13 @@
             ClientSize = new Size(433, 330);
             Controls.Add(lbl_product_info);
             Controls.Add(panel1);
-            Controls.Add(comboBox1);
+            Controls.Add(cBoxProductType);
             Controls.Add(lbl_product_quantity);
-            Controls.Add(textBox2);
+            Controls.Add(tBoxProductQntBought);
             Controls.Add(lbl_unitary_cost);
-            Controls.Add(textBox1);
+            Controls.Add(tBoxProductCost);
             Controls.Add(lbl_type);
-            Controls.Add(textBox5);
+            Controls.Add(tBoxProductName);
             Controls.Add(btn_save);
             Controls.Add(btn_cancel);
             Controls.Add(lbl_name);
@@ -244,19 +248,19 @@
         private Button btn_save;
         private Button btn_cancel;
         private Label lbl_name;
-        private TextBox textBox5;
+        private TextBox tBoxProductName;
         private Label lbl_type;
         private Label lbl_unitary_cost;
-        private TextBox textBox1;
+        private TextBox tBoxProductCost;
         private Label lbl_product_quantity;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
+        private TextBox tBoxProductQntBought;
+        private ComboBox cBoxProductType;
         private Panel panel1;
-        private ComboBox comboBox2;
-        private TextBox textBox4;
+        private ComboBox cBoxProductUnit;
+        private TextBox tBoxProductUnitQnt;
         private Label lbl_sale_price;
         private Label lbl_unity;
-        private TextBox textBox3;
+        private TextBox tBoxProductPrice;
         private Label lbl_package_quantity;
         private Label lbl_product_info;
     }

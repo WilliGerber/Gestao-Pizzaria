@@ -116,34 +116,72 @@ namespace PizzariaZe
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            switch (e.CloseReason)
+            CloseForm closeForm = new CloseForm();
+
+            // Mostra o formulário closeForm para gerenciar o fechamento
+            closeForm.ShowDialog();
+
+            // Verifica o resultado do diálogo e cancela o fechamento se necessário
+            if (closeForm.DialogResult == DialogResult.Yes)
             {
-                case CloseReason.UserClosing:
-                    DialogResult result = MessageBox.Show("Deseja fechar a aplicação?",
-                                            "Sair?",
-                                            MessageBoxButtons.YesNoCancel,
-                                            MessageBoxIcon.Question,
-                                            MessageBoxDefaultButton.Button2);
-
-                    Button btnCancelar = new Button();
-                    btnCancelar.DialogResult = DialogResult.Cancel;
-                    this.CancelButton = btnCancelar;
-                    btnCancelar.Text = "Minimizar";
-                    btnCancelar.Click += new EventHandler(Menu_Resize!);
-                    this.ControlBox = false;
-                    this.Controls.Add(btnCancelar);
-
-                    if (result == DialogResult.Cancel)
-                    {
-                        Menu_Resize(null, null);
-                        e.Cancel = true;
-                    }
-                    else if (result == DialogResult.Yes)
-                    {
-                        e.Cancel = false;
-                    }
-                    break;
+                e.Cancel = false;
             }
+            else if (closeForm.DialogResult == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else if (closeForm.DialogResult == DialogResult.OK)
+            {
+                this.WindowState = FormWindowState.Minimized;
+                e.Cancel = true;
+            }
+
+
+
+            //switch (e.CloseReason)
+            //{
+            //    case CloseReason.UserClosing:
+            //        DialogResult result = MessageBox.Show("Deseja fechar a aplicação?",
+            //                                "Sair?",
+            //                                MessageBoxButtons.YesNoCancel,
+            //                                MessageBoxIcon.Question,
+            //                                MessageBoxDefaultButton.Button2);
+
+            //        Button btnCancelar = new Button();
+            //        btnCancelar.DialogResult = DialogResult.Cancel;
+            //        this.CancelButton = btnCancelar;
+            //        btnCancelar.Text = "Minimizar";
+            //        btnCancelar.Click += new EventHandler(Menu_Resize!);
+            //        this.ControlBox = false;
+            //        this.Controls.Add(btnCancelar);
+
+            //        switch (result)
+            //        {
+            //            case DialogResult.Cancel:
+            //                ((Form)sender).WindowState = FormWindowState.Minimized;
+            //                e.Cancel = true; // Cancela o evento de fechamento
+            //                break;
+            //            case DialogResult.Yes:
+            //                e.Cancel = false;
+            //                break;
+            //            case DialogResult.No:
+            //                e.Cancel = true;
+            //                break;
+
+
+            //        }
+
+            //if (result == DialogResult.Cancel)
+            //{
+            //    Menu_Resize(null, null);
+            //    e.Cancel = true;
+            //}
+            //else if (result == DialogResult.Yes)
+            //{
+            //    e.Cancel = false;
+            //}
+            //break;
+            //}
         }
 
         #region sprip menu geral clicks manager 
