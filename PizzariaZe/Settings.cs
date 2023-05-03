@@ -27,6 +27,8 @@ namespace PizzariaZe
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            Program.isChangingLanguage = true;
+
             //abre o arquivo local como leitura/escrita e salva as alterações em ProjetoPastelariaDoZe_2023.dll.config
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             config.AppSettings.Settings.Remove("IdiomaRegiao");

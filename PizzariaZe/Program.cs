@@ -8,31 +8,34 @@ namespace PizzariaZe
 {
     internal static class Program
     {
+        public static string currencySymbol;
+        public static string separadorDecimal;
+        public static string language = ConfigurationManager.AppSettings["IdiomaRegiao"];
+        public static bool isChangingLanguage = false;
+
+
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+
             // en-US, es, pt-BR, etc
             string? auxIdiomaRegiao = (ConfigurationManager.AppSettings.Get("IdiomaRegiao") is not null) ? ConfigurationManager.AppSettings.Get("IdiomaRegiao") : "";
             //ajusta o idioma/região
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(auxIdiomaRegiao!);
             Thread.CurrentThread.CurrentCulture = new CultureInfo(auxIdiomaRegiao!);
 
-            string language = ConfigurationManager.AppSettings["IdiomaRegiao"];
-            string separadorDecimal;
-            string currencySymbol;
-
-
             if (language == "pt-BR")
             {
                 currencySymbol = "R$";
                 separadorDecimal = ",";
             }
-            else if (language == "eng")
+            else if (language == "en-US")
             {
-                currencySymbol = "US$";
+                currencySymbol = "$";
                 separadorDecimal = ".";
             }
             else if (language == "es")

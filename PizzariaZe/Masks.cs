@@ -18,16 +18,16 @@ namespace PizzariaDoZe
         static string valor;
         static int lastDigit;
         static string lastDigitString;
+        static bool maxCatacters = false;
 
         #region R$ Mask
-        private static void Aplica_KeyPress_Reais(object sender, KeyPressEventArgs e)
+        private static void Aplica_KeyPress(object sender, KeyPressEventArgs e)
         {
             TextBoxBase txt = (TextBoxBase)sender;
             int maxLength = txt.MaxLength;
             int currentLength = txt.Text.Length;
-            lastDigit = Convert.ToInt16(e.KeyChar.ToString());
-            lastDigitString = lastDigit.ToString();
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Back))
+
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Back) && e.KeyChar != Convert.ToChar(Keys.Enter))
             {
                 if (e.KeyChar == ',')
                 {
@@ -38,65 +38,70 @@ namespace PizzariaDoZe
                     e.Handled = true;
                 }
             }
-            else if (currentLength >= maxLength && e.KeyChar != Convert.ToChar(Keys.Back))
-            {
-
-                MessageBox.Show("Quantidade máxima de caracteres atingida", "Valor máximo excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                string valorString = valor.ToString();
-                valorString = valorString.Substring(1) + lastDigitString;
-                txt.Text = "R$" + valorString;
-                e.Handled = true;
-
-            }
+            //else if (currentLength == maxLength && e.KeyChar != Convert.ToChar(Keys.Back))
+            //{
+            //    currentLength--;
+            //    MessageBox.Show("Quantidade máxima de caracteres atingida", "Valor máximo excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    e.Handled = true;
+            //    maxCatacters = true;
+            //}
         }
-        private static void Aplica_Leave_Reais(object sender, EventArgs e)
+        private static void Aplica_Leave(object sender, EventArgs e)
         {
             TextBoxBase txt = (TextBoxBase)sender;
-            valor = txt.Text.Replace("R$", "");
+            valor = txt.Text.Replace(Program.currencySymbol, "");
             txt.Text = string.Format("{0:C}", Convert.ToDouble(valor));
         }
-        private static void Aplica_KeyUp_Reais(object sender, KeyEventArgs e)
+        private static void Aplica_KeyUp(object sender, KeyEventArgs e)
         {
             TextBoxBase txt = (TextBoxBase)sender;
+
+            valor = txt.Text.Replace(Program.currencySymbol, "").Replace(Program.separadorDecimal, "").Replace(" ", "");
 
             if (valor.Length == 0)
             {
-                txt.Text = "0,00" + valor;
+                txt.Text = "0" + Program.separadorDecimal+ "00" + valor;
             }
             else if (valor.Length == 1)
             {
-                txt.Text = "0,0" + valor;
+                txt.Text = "0" + Program.separadorDecimal + "0" + valor;
             }
             else if (valor.Length == 2)
             {
-                txt.Text = "0," + valor;
+                txt.Text = "0" + Program.separadorDecimal + valor;
             }
             else if (valor.Length >= 3)
             {
-                if (txt.Text.StartsWith("0,"))
+                if (txt.Text.StartsWith("0" + Program.separadorDecimal))
                 {
-                    txt.Text = valor.Insert(valor.Length - 2, ",").Replace("0,", "");
+                    txt.Text = valor.Insert(valor.Length - 2, Program.separadorDecimal).Replace("0" + Program.separadorDecimal, "");
                 }
-                else if (txt.Text.Contains("00,"))
+                else if (txt.Text.Contains("00" + Program.separadorDecimal))
                 {
-                    txt.Text = valor.Insert(valor.Length - 2, ",").Replace("00,", "");
+                    txt.Text = valor.Insert(valor.Length - 2, Program.separadorDecimal).Replace("00" + Program.separadorDecimal, "");
                 }
                 else
                 {
-                    txt.Text = valor.Insert(valor.Length - 2, ",");
+                    txt.Text = valor.Insert(valor.Length - 2, Program.separadorDecimal);
                 }
             }
             valor = txt.Text;
+
             txt.Text = string.Format("{0:C}", Convert.ToDouble(valor));
+            System.Diagnostics.Debug.WriteLine(valor);
+
             txt.Select(txt.Text.Length, 0);
         }
         public static void AplicaMascaraMoeda2(TextBoxBase txt)
         {
-            txt.KeyPress += Aplica_KeyPress_Reais;
-            txt.Leave += Aplica_Leave_Reais;
-            txt.KeyUp += Aplica_KeyUp_Reais;
+            txt.KeyPress += Aplica_KeyPress;
+            if (!maxCatacters)
+            {
+                txt.KeyUp += Aplica_KeyUp;
+            }
+            txt.Leave += Aplica_Leave;
         }
+
         #endregion
 
 

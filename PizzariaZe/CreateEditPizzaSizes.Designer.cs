@@ -119,7 +119,7 @@ namespace PizzariaZe
             PizzaP.Name = "PizzaP";
             PizzaP.Size = new Size(100, 23);
             PizzaP.TabIndex = 3;
-            PizzaP.TextChanged += PizzaP_TextChanged;
+            PizzaP.KeyPress += PizzaP_KeyPress;
             // 
             // PizzaM
             // 
@@ -128,7 +128,7 @@ namespace PizzariaZe
             PizzaM.Name = "PizzaM";
             PizzaM.Size = new Size(100, 23);
             PizzaM.TabIndex = 4;
-            PizzaM.TextChanged += PizzaM_TextChanged;
+            PizzaM.KeyPress += PizzaM_KeyPress;
             // 
             // lbl_size_medium
             // 
@@ -146,7 +146,7 @@ namespace PizzariaZe
             PizzaG.Name = "PizzaG";
             PizzaG.Size = new Size(100, 23);
             PizzaG.TabIndex = 5;
-            PizzaG.TextChanged += PizzaG_TextChanged;
+            PizzaG.KeyPress += PizzaG_KeyPress;
             // 
             // lbl_size_big
             // 
@@ -164,7 +164,7 @@ namespace PizzariaZe
             PizzaGG.Name = "PizzaGG";
             PizzaGG.Size = new Size(100, 23);
             PizzaGG.TabIndex = 6;
-            PizzaGG.TextChanged += PizzaGG_TextChanged;
+            PizzaGG.KeyPress += PizzaGG_KeyPress;
             // 
             // lbl_size_giant
             // 
