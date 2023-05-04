@@ -8,14 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using PizzariaZeDAO;
 
 namespace PizzariaZe
 {
     public partial class CreateEditIngredients : Form
     {
+        private readonly IngredientDAO dao;
+
         public CreateEditIngredients()
         {
             InitializeComponent();
+
+            //pegar dados banco de dados
+            string provider = ConfigurationManager.ConnectionStrings["BD"].ProviderName;
+            string strConnection = ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
+
+            //cria a instancia da classe da model
+            dao = new IngredientDAO(provider, strConnection);
 
             //adiciona eventos em geral, exemplo: ganhar e perder o foco
             Functions.EventoFocoCampos(this);
@@ -32,6 +43,27 @@ namespace PizzariaZe
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            //Instância e Preenche o objeto com os dados da view
+            var ingredient = new Ingredient
+            {
+                Id = 0,
+                Name = name_textBox.Text,
+            };
+
+            try
+            {
+                // chama o método para inserir da camada model
+                dao.InserirDbProvider(ingredient);
+                MessageBox.Show("Dados inseridos com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
