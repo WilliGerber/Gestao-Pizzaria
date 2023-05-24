@@ -384,7 +384,7 @@ namespace PizzariaZe
 
         #endregion
 
-        private SplitContainer splitContainer1;
+        public SplitContainer splitContainer1;
         private Button btn_dashboard_nav_bar;
         private Button btn_finances_nav_bar;
         private Button btn_orders_nav_bar;

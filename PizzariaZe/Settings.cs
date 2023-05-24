@@ -23,9 +23,18 @@ namespace PizzariaZe
 
             //seleciona no comboBox o idioma/cultura atual
             comboBox_language.SelectedItem = ConfigurationManager.AppSettings.Get("IdiomaRegiao");
+
+            // busca os dados com nome BD
+            ConnectionStringSettings connectionStringSettings =
+            ConfigurationManager.ConnectionStrings["BD"];
+            // obtém o providerName e atualiza em tela
+            cmb_box_provider.Text = connectionStringSettings.ProviderName;
+            // obtém a connectionString e atualiza em tela
+            txt_box_connection_string.Text = connectionStringSettings.ConnectionString;
         }
 
-        private void btn_save_Click(object sender, EventArgs e)
+
+        private void btn_save_settings_Click_Click(object sender, EventArgs e)
         {
             Program.isChangingLanguage = true;
 
@@ -33,10 +42,17 @@ namespace PizzariaZe
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             config.AppSettings.Settings.Remove("IdiomaRegiao");
             config.AppSettings.Settings.Add("IdiomaRegiao", comboBox_language.Text);
-            config.Save(ConfigurationSaveMode.Modified);
+
+            //altera os valores de provider e da connectionStrings com nome BD
+            config.ConnectionStrings.ConnectionStrings["BD"].ProviderName = cmb_box_provider.Text;
+            config.ConnectionStrings.ConnectionStrings["BD"].ConnectionString = txt_box_connection_string.Text;
+
+            config.Save(ConfigurationSaveMode.Modified, true);
             ConfigurationManager.RefreshSection("appSettings");
+            //recarrega os dados da seção especificada
+            ConfigurationManager.RefreshSection("connectionStrings");
             Close();
-            _ = MessageBox.Show("Idioma/região alterada com sucesso! Reinicie a aplicação para aplicar o novo Idioma/região!");
+            _ = MessageBox.Show("Dados alterados com sucesso!");
             if (checkBox_language_restart.Checked)
             {
                 Application.Restart();

@@ -29,6 +29,19 @@ namespace PizzariaZe
             #endregion
         }
 
+        public void DisposeAllButThis(Form form)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm.GetType() == form.GetType()
+                    && frm != form)
+                {
+                    frm.Dispose();
+                    frm.Close();
+                }
+            }
+        }
+
         private void add_ingredients_Click(object sender, EventArgs e)
         {
             CreateEditIngredients createEditIngredients = new CreateEditIngredients();
@@ -45,6 +58,15 @@ namespace PizzariaZe
         {
             CreateEditPizzaSizes createEditPizzaSizes = new CreateEditPizzaSizes();
             createEditPizzaSizes.ShowDialog();
+        }
+
+        private void btn_ingredients_Click(object sender, EventArgs e)
+        {
+            Ingredients ingredients = new Ingredients();
+            DisposeAllButThis(this);
+            ingredients.TopLevel = false;
+            pannelContent.Controls.Add(ingredients);
+            ingredients.Show();
         }
     }
 }

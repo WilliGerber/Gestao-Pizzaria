@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Flavours));
             btn_add_flavours = new Button();
             btn_pizzas_sizes = new Button();
-            btn_add_ingredients = new Button();
-            content = new Panel();
+            pannelContent = new Panel();
+            btn_ingredients = new Button();
             SuspendLayout();
             // 
             // btn_add_flavours
             // 
             btn_add_flavours.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btn_add_flavours.Image = (Image)resources.GetObject("btn_add_flavours.Image");
-            btn_add_flavours.Location = new Point(378, 23);
+            btn_add_flavours.Location = new Point(172, 9);
             btn_add_flavours.Name = "btn_add_flavours";
             btn_add_flavours.Size = new Size(151, 76);
             btn_add_flavours.TabIndex = 3;
@@ -52,7 +52,7 @@
             // 
             btn_pizzas_sizes.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btn_pizzas_sizes.Image = (Image)resources.GetObject("btn_pizzas_sizes.Image");
-            btn_pizzas_sizes.Location = new Point(200, 23);
+            btn_pizzas_sizes.Location = new Point(329, 9);
             btn_pizzas_sizes.Name = "btn_pizzas_sizes";
             btn_pizzas_sizes.Size = new Size(151, 76);
             btn_pizzas_sizes.TabIndex = 2;
@@ -61,33 +61,33 @@
             btn_pizzas_sizes.UseVisualStyleBackColor = true;
             btn_pizzas_sizes.Click += pizzas_sizes_Click;
             // 
-            // btn_add_ingredients
+            // pannelContent
             // 
-            btn_add_ingredients.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_add_ingredients.Image = (Image)resources.GetObject("btn_add_ingredients.Image");
-            btn_add_ingredients.Location = new Point(24, 23);
-            btn_add_ingredients.Name = "btn_add_ingredients";
-            btn_add_ingredients.Size = new Size(151, 76);
-            btn_add_ingredients.TabIndex = 1;
-            btn_add_ingredients.Text = "Adicionar Ingredientes";
-            btn_add_ingredients.TextImageRelation = TextImageRelation.ImageAboveText;
-            btn_add_ingredients.UseVisualStyleBackColor = true;
-            btn_add_ingredients.Click += add_ingredients_Click;
+            pannelContent.Location = new Point(12, 94);
+            pannelContent.Name = "pannelContent";
+            pannelContent.Size = new Size(1036, 344);
+            pannelContent.TabIndex = 4;
             // 
-            // content
+            // btn_ingredients
             // 
-            content.Location = new Point(24, 124);
-            content.Name = "content";
-            content.Size = new Size(764, 314);
-            content.TabIndex = 4;
+            btn_ingredients.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_ingredients.Image = (Image)resources.GetObject("btn_ingredients.Image");
+            btn_ingredients.Location = new Point(15, 9);
+            btn_ingredients.Name = "btn_ingredients";
+            btn_ingredients.Size = new Size(151, 76);
+            btn_ingredients.TabIndex = 5;
+            btn_ingredients.Text = "Ingredientes";
+            btn_ingredients.TextImageRelation = TextImageRelation.ImageAboveText;
+            btn_ingredients.UseVisualStyleBackColor = true;
+            btn_ingredients.Click += btn_ingredients_Click;
             // 
             // Flavours
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(content);
-            Controls.Add(btn_add_ingredients);
+            ClientSize = new Size(1060, 450);
+            Controls.Add(btn_ingredients);
+            Controls.Add(pannelContent);
             Controls.Add(btn_pizzas_sizes);
             Controls.Add(btn_add_flavours);
             FormBorderStyle = FormBorderStyle.None;
@@ -102,7 +102,7 @@
 
         private Button btn_add_flavours;
         private Button btn_pizzas_sizes;
-        private Button btn_add_ingredients;
-        private Panel content;
+        private Panel pannelContent;
+        private Button btn_ingredients;
     }
 }

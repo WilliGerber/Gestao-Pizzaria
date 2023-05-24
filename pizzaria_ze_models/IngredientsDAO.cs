@@ -67,14 +67,14 @@ namespace PizzariaZeDAO
             }
             else if (ingredient.Name.Length > 0)
             {
-                auxSqlFiltro = "WHERE i.nome like '%" + ingredient.Name + "%' ";
+                auxSqlFiltro = "WHERE i.ingredient_name like '%" + ingredient.Name + "%' ";
             }
             conexao.Open();
             comando.CommandText = @" " +
-            "SELECT i.id AS ID, i.nome AS Nome " +
-            "FROM tb_ingrediente AS i " +
+            "SELECT i.id AS ID, i.ingredient_name AS Nome " +
+            "FROM tb_ingredient AS i " +
             auxSqlFiltro +
-            "ORDER BY i.nome;";
+            "ORDER BY i.ingredient_name;";
             //Executa o script na conexão e retorna as linhas afetadas.
             var sdr = comando.ExecuteReader();
             DataTable linhas = new();

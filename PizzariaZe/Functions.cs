@@ -2,9 +2,13 @@ using PizzariaZe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace PizzariaDoZe
 {
     internal class Functions
@@ -148,6 +152,30 @@ namespace PizzariaDoZe
             }
         }
 
-        
+        public static void ValidaConexaoDB()
+        {
+            DbProviderFactory factory;
+            try
+            {
+                factory = DbProviderFactories.GetFactory(ConfigurationManager.ConnectionStrings["BD"].ProviderName);
+                using var conexao = factory.CreateConnection();
+                conexao!.ConnectionString = ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
+                using var comando = factory.CreateCommand();
+                comando!.Connection = conexao;
+                conexao.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível conectar-se com o banco de dados. Por favor, revise as configurações");
+                Settings settings = new Settings();
+
+                Menu menu = new Menu();
+                settings.TopLevel = false;
+                menu.splitContainer1.Panel2.Controls.Add(settings);
+                settings.Show();
+                ValidaConexaoDB();
+            }
+        }
+
     }
 }

@@ -45,6 +45,8 @@ namespace PizzariaZe
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             Close();
+            Ingredients ingredients = new Ingredients();
+            ingredients.AtualizarTela();
         }
 
         private void btn_save_Click(object sender, EventArgs e)
@@ -66,26 +68,10 @@ namespace PizzariaZe
             {
                 MessageBox.Show(ex.Message);
             }
-        }
 
-        private void AtualizarTela()
-        {
-            //Instância e Preenche o objeto com os dados da view
-            var ingredient = new Ingredient();
-            try
-            {
-                //chama o método para buscar todos os dados da nossa camada model
-                DataTable linhas = ingredientDAO.getIngredients(ingredient);
-                // seta o datasouce do dataGridView com os dados retornados
-                //dataGridViewDados.Columns.Clear();
-                //dataGridViewDados.AutoGenerateColumns = true;
-                //dataGridViewDados.DataSource = linhas;
-                //dataGridViewDados.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+            Ingredients ingredients = new Ingredients();
+            ingredients.AtualizarTela();
         }
     }
 }

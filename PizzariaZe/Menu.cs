@@ -49,6 +49,7 @@ namespace PizzariaZe
 
             #endregion
 
+            Functions.ValidaConexaoDB();
 
         }
 
