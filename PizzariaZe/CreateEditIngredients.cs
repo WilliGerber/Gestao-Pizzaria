@@ -16,7 +16,7 @@ namespace PizzariaZe
     public partial class CreateEditIngredients : Form
     {
         private readonly IngredientDAO dao;
-
+        private IngredientDAO ingredientDAO;
         public CreateEditIngredients()
         {
             InitializeComponent();
@@ -27,6 +27,8 @@ namespace PizzariaZe
 
             //cria a instancia da classe da model
             dao = new IngredientDAO(provider, strConnection);
+            //cria a instancia da classe da model
+            ingredientDAO = new IngredientDAO(provider, strConnection);
 
             //adiciona eventos em geral, exemplo: ganhar e perder o foco
             Functions.EventoFocoCampos(this);
@@ -59,6 +61,26 @@ namespace PizzariaZe
                 // chama o método para inserir da camada model
                 dao.InserirDbProvider(ingredient);
                 MessageBox.Show("Dados inseridos com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void AtualizarTela()
+        {
+            //Instância e Preenche o objeto com os dados da view
+            var ingredient = new Ingredient();
+            try
+            {
+                //chama o método para buscar todos os dados da nossa camada model
+                DataTable linhas = ingredientDAO.getIngredients(ingredient);
+                // seta o datasouce do dataGridView com os dados retornados
+                //dataGridViewDados.Columns.Clear();
+                //dataGridViewDados.AutoGenerateColumns = true;
+                //dataGridViewDados.DataSource = linhas;
+                //dataGridViewDados.Refresh();
             }
             catch (Exception ex)
             {

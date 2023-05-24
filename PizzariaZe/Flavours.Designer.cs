@@ -32,6 +32,7 @@
             btn_add_flavours = new Button();
             btn_pizzas_sizes = new Button();
             btn_add_ingredients = new Button();
+            content = new Panel();
             SuspendLayout();
             // 
             // btn_add_flavours
@@ -73,11 +74,19 @@
             btn_add_ingredients.UseVisualStyleBackColor = true;
             btn_add_ingredients.Click += add_ingredients_Click;
             // 
+            // content
+            // 
+            content.Location = new Point(24, 124);
+            content.Name = "content";
+            content.Size = new Size(764, 314);
+            content.TabIndex = 4;
+            // 
             // Flavours
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(content);
             Controls.Add(btn_add_ingredients);
             Controls.Add(btn_pizzas_sizes);
             Controls.Add(btn_add_flavours);
@@ -94,5 +103,6 @@
         private Button btn_add_flavours;
         private Button btn_pizzas_sizes;
         private Button btn_add_ingredients;
+        private Panel content;
     }
 }

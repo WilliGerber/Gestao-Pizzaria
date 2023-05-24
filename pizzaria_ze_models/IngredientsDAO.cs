@@ -1,4 +1,6 @@
 using System.Data.Common;
+using System.Data;
+
 
 namespace PizzariaZeDAO
 {
@@ -42,7 +44,7 @@ namespace PizzariaZeDAO
             //Adiciona parâmetro (@campo e valor)
             var name = comando.CreateParameter(); name.ParameterName = "@name";
             name.Value = ingredient.Name; comando.Parameters.Add(name);
-            
+
             conn.Open();
 
             comando.CommandText = @"INSERT INTO tb_ingredient(ingredient_name) VALUES (@name)";
@@ -51,8 +53,33 @@ namespace PizzariaZeDAO
             var linhas = comando.ExecuteNonQuery();
             //using faz o Close() automático quando fecha o seu escopo
         }
+        public DataTable getIngredients(Ingredient ingredient)
+        {
+            using var conexao = factory.CreateConnection(); //Cria conexão
+            conexao!.ConnectionString = StringConexao; //Atribui a string de conexão
+            using var comando = factory.CreateCommand(); //Cria comando
+            comando!.Connection = conexao; //Atribui conexão
+                                           //verifica se tem filtro e personaliza o SQL do filtro
+            string auxSqlFiltro = "";
+            if (ingredient.Id > 0)
+            {
+                auxSqlFiltro = "WHERE i.id = " + ingredient.Id + " ";
+            }
+            else if (ingredient.Name.Length > 0)
+            {
+                auxSqlFiltro = "WHERE i.nome like '%" + ingredient.Name + "%' ";
+            }
+            conexao.Open();
+            comando.CommandText = @" " +
+            "SELECT i.id AS ID, i.nome AS Nome " +
+            "FROM tb_ingrediente AS i " +
+            auxSqlFiltro +
+            "ORDER BY i.nome;";
+            //Executa o script na conexão e retorna as linhas afetadas.
+            var sdr = comando.ExecuteReader();
+            DataTable linhas = new();
+            linhas.Load(sdr);
+            return linhas;
+        }
     }
-
-
-
 }
