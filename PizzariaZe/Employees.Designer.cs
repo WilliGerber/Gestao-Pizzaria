@@ -36,7 +36,7 @@
             // 
             btn_add_employee.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btn_add_employee.Image = (Image)resources.GetObject("btn_add_employee.Image");
-            btn_add_employee.Location = new Point(25, 23);
+            btn_add_employee.Location = new Point(12, 12);
             btn_add_employee.Name = "btn_add_employee";
             btn_add_employee.Size = new Size(151, 76);
             btn_add_employee.TabIndex = 1;
@@ -49,7 +49,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(978, 492);
             Controls.Add(btn_add_employee);
             FormBorderStyle = FormBorderStyle.None;
             KeyPreview = true;

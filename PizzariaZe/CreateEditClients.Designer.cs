@@ -1,4 +1,4 @@
-﻿namespace PizzariaZe
+namespace PizzariaZe
 {
     partial class CreateEditClients
     {
@@ -34,20 +34,29 @@
             lbl_Email = new Label();
             celphone_textBox = new TextBox();
             lbl_celphone = new Label();
-            adress_complement_textBox = new TextBox();
-            lbl_adress_complement = new Label();
-            textBox1 = new TextBox();
-            lbl_house_number = new Label();
-            neighborhood_textBox = new TextBox();
-            lbl_neighborhood = new Label();
-            street_textBox = new TextBox();
-            lbl_street = new Label();
             cpf_textBox = new TextBox();
             lbl_cpf = new Label();
             name_textBox = new TextBox();
             lbl_name = new Label();
-            additional_informarions_textBox = new TextBox();
-            lbl_aditional_info = new Label();
+            label1 = new Label();
+            lbl_street = new Label();
+            street_textBox = new TextBox();
+            lbl_neighborhood = new Label();
+            neighborhood_textBox = new TextBox();
+            lbl_house_number = new Label();
+            textBox1 = new TextBox();
+            lbl_adress_complement = new Label();
+            adress_complement_textBox = new TextBox();
+            lbl_uf = new Label();
+            txt_box_uf = new TextBox();
+            groupBox1 = new GroupBox();
+            txt_box_country = new TextBox();
+            lbl_country = new Label();
+            txt_box_city = new TextBox();
+            lbl_city = new Label();
+            msk_text_box_cep = new MaskedTextBox();
+            txt_box_id = new TextBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // btn_save
@@ -57,7 +66,7 @@
             btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
             btn_save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
             btn_save.FlatStyle = FlatStyle.Flat;
-            btn_save.Location = new Point(625, 386);
+            btn_save.Location = new Point(625, 454);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
             btn_save.TabIndex = 11;
@@ -69,7 +78,7 @@
             btn_cancel.BackColor = Color.FromArgb(254, 152, 152);
             btn_cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
             btn_cancel.FlatStyle = FlatStyle.Flat;
-            btn_cancel.Location = new Point(37, 386);
+            btn_cancel.Location = new Point(37, 454);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
             btn_cancel.TabIndex = 10;
@@ -109,70 +118,6 @@
             lbl_celphone.TabIndex = 48;
             lbl_celphone.Text = "Celular*";
             // 
-            // adress_complement_textBox
-            // 
-            adress_complement_textBox.Location = new Point(241, 234);
-            adress_complement_textBox.Name = "adress_complement_textBox";
-            adress_complement_textBox.Size = new Size(145, 23);
-            adress_complement_textBox.TabIndex = 8;
-            // 
-            // lbl_adress_complement
-            // 
-            lbl_adress_complement.AutoSize = true;
-            lbl_adress_complement.Location = new Point(241, 216);
-            lbl_adress_complement.Name = "lbl_adress_complement";
-            lbl_adress_complement.Size = new Size(84, 15);
-            lbl_adress_complement.TabIndex = 47;
-            lbl_adress_complement.Text = "Complemento";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(37, 234);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(145, 23);
-            textBox1.TabIndex = 7;
-            // 
-            // lbl_house_number
-            // 
-            lbl_house_number.AutoSize = true;
-            lbl_house_number.Location = new Point(37, 216);
-            lbl_house_number.Name = "lbl_house_number";
-            lbl_house_number.Size = new Size(56, 15);
-            lbl_house_number.TabIndex = 46;
-            lbl_house_number.Text = "Número*";
-            // 
-            // neighborhood_textBox
-            // 
-            neighborhood_textBox.Location = new Point(414, 170);
-            neighborhood_textBox.Name = "neighborhood_textBox";
-            neighborhood_textBox.Size = new Size(349, 23);
-            neighborhood_textBox.TabIndex = 6;
-            // 
-            // lbl_neighborhood
-            // 
-            lbl_neighborhood.AutoSize = true;
-            lbl_neighborhood.Location = new Point(414, 152);
-            lbl_neighborhood.Name = "lbl_neighborhood";
-            lbl_neighborhood.Size = new Size(43, 15);
-            lbl_neighborhood.TabIndex = 45;
-            lbl_neighborhood.Text = "Bairro*";
-            // 
-            // street_textBox
-            // 
-            street_textBox.Location = new Point(37, 170);
-            street_textBox.Name = "street_textBox";
-            street_textBox.Size = new Size(349, 23);
-            street_textBox.TabIndex = 5;
-            // 
-            // lbl_street
-            // 
-            lbl_street.AutoSize = true;
-            lbl_street.Location = new Point(37, 152);
-            lbl_street.Name = "lbl_street";
-            lbl_street.Size = new Size(32, 15);
-            lbl_street.TabIndex = 32;
-            lbl_street.Text = "Rua*";
-            // 
             // cpf_textBox
             // 
             cpf_textBox.Location = new Point(414, 48);
@@ -207,51 +152,192 @@
             lbl_name.TabIndex = 27;
             lbl_name.Text = "Nome*";
             // 
-            // additional_informarions_textBox
+            // label1
             // 
-            additional_informarions_textBox.Location = new Point(414, 234);
-            additional_informarions_textBox.Name = "additional_informarions_textBox";
-            additional_informarions_textBox.Size = new Size(349, 23);
-            additional_informarions_textBox.TabIndex = 9;
+            label1.AutoSize = true;
+            label1.Location = new Point(37, 155);
+            label1.Name = "label1";
+            label1.Size = new Size(33, 15);
+            label1.TabIndex = 56;
+            label1.Text = "CEP*";
             // 
-            // lbl_aditional_info
+            // lbl_street
             // 
-            lbl_aditional_info.AutoSize = true;
-            lbl_aditional_info.Location = new Point(414, 216);
-            lbl_aditional_info.Name = "lbl_aditional_info";
-            lbl_aditional_info.Size = new Size(131, 15);
-            lbl_aditional_info.TabIndex = 54;
-            lbl_aditional_info.Text = "Informações Adicionais";
+            lbl_street.AutoSize = true;
+            lbl_street.Location = new Point(28, 16);
+            lbl_street.Name = "lbl_street";
+            lbl_street.Size = new Size(27, 15);
+            lbl_street.TabIndex = 32;
+            lbl_street.Text = "Rua";
+            // 
+            // street_textBox
+            // 
+            street_textBox.Location = new Point(24, 34);
+            street_textBox.Name = "street_textBox";
+            street_textBox.Size = new Size(353, 23);
+            street_textBox.TabIndex = 5;
+            // 
+            // lbl_neighborhood
+            // 
+            lbl_neighborhood.AutoSize = true;
+            lbl_neighborhood.Location = new Point(405, 16);
+            lbl_neighborhood.Name = "lbl_neighborhood";
+            lbl_neighborhood.Size = new Size(38, 15);
+            lbl_neighborhood.TabIndex = 45;
+            lbl_neighborhood.Text = "Bairro";
+            // 
+            // neighborhood_textBox
+            // 
+            neighborhood_textBox.Location = new Point(405, 34);
+            neighborhood_textBox.Name = "neighborhood_textBox";
+            neighborhood_textBox.Size = new Size(345, 23);
+            neighborhood_textBox.TabIndex = 6;
+            // 
+            // lbl_house_number
+            // 
+            lbl_house_number.AutoSize = true;
+            lbl_house_number.Location = new Point(38, 368);
+            lbl_house_number.Name = "lbl_house_number";
+            lbl_house_number.Size = new Size(51, 15);
+            lbl_house_number.TabIndex = 46;
+            lbl_house_number.Text = "Número";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(37, 386);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(174, 23);
+            textBox1.TabIndex = 7;
+            // 
+            // lbl_adress_complement
+            // 
+            lbl_adress_complement.AutoSize = true;
+            lbl_adress_complement.Location = new Point(242, 368);
+            lbl_adress_complement.Name = "lbl_adress_complement";
+            lbl_adress_complement.Size = new Size(84, 15);
+            lbl_adress_complement.TabIndex = 47;
+            lbl_adress_complement.Text = "Complemento";
+            // 
+            // adress_complement_textBox
+            // 
+            adress_complement_textBox.Location = new Point(242, 386);
+            adress_complement_textBox.Name = "adress_complement_textBox";
+            adress_complement_textBox.Size = new Size(521, 23);
+            adress_complement_textBox.TabIndex = 8;
+            // 
+            // lbl_uf
+            // 
+            lbl_uf.AutoSize = true;
+            lbl_uf.Location = new Point(405, 80);
+            lbl_uf.Name = "lbl_uf";
+            lbl_uf.Size = new Size(21, 15);
+            lbl_uf.TabIndex = 54;
+            lbl_uf.Text = "UF";
+            // 
+            // txt_box_uf
+            // 
+            txt_box_uf.Location = new Point(405, 98);
+            txt_box_uf.Name = "txt_box_uf";
+            txt_box_uf.Size = new Size(49, 23);
+            txt_box_uf.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(txt_box_country);
+            groupBox1.Controls.Add(lbl_country);
+            groupBox1.Controls.Add(txt_box_city);
+            groupBox1.Controls.Add(lbl_city);
+            groupBox1.Controls.Add(txt_box_uf);
+            groupBox1.Controls.Add(lbl_uf);
+            groupBox1.Controls.Add(neighborhood_textBox);
+            groupBox1.Controls.Add(lbl_neighborhood);
+            groupBox1.Controls.Add(street_textBox);
+            groupBox1.Controls.Add(lbl_street);
+            groupBox1.Location = new Point(13, 207);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(774, 148);
+            groupBox1.TabIndex = 57;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Endereço";
+            // 
+            // txt_box_country
+            // 
+            txt_box_country.Location = new Point(479, 98);
+            txt_box_country.Name = "txt_box_country";
+            txt_box_country.Size = new Size(271, 23);
+            txt_box_country.TabIndex = 57;
+            // 
+            // lbl_country
+            // 
+            lbl_country.AutoSize = true;
+            lbl_country.Location = new Point(479, 80);
+            lbl_country.Name = "lbl_country";
+            lbl_country.Size = new Size(28, 15);
+            lbl_country.TabIndex = 58;
+            lbl_country.Text = "País";
+            // 
+            // txt_box_city
+            // 
+            txt_box_city.Location = new Point(24, 98);
+            txt_box_city.Name = "txt_box_city";
+            txt_box_city.Size = new Size(353, 23);
+            txt_box_city.TabIndex = 55;
+            // 
+            // lbl_city
+            // 
+            lbl_city.AutoSize = true;
+            lbl_city.Location = new Point(28, 80);
+            lbl_city.Name = "lbl_city";
+            lbl_city.Size = new Size(44, 15);
+            lbl_city.TabIndex = 56;
+            lbl_city.Text = "Cidade";
+            // 
+            // msk_text_box_cep
+            // 
+            msk_text_box_cep.Location = new Point(37, 178);
+            msk_text_box_cep.Mask = "00.000-000";
+            msk_text_box_cep.Name = "msk_text_box_cep";
+            msk_text_box_cep.Size = new Size(126, 23);
+            msk_text_box_cep.TabIndex = 58;
+            msk_text_box_cep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            msk_text_box_cep.Leave += msk_text_box_cep_Leave;
+            // 
+            // txt_box_id
+            // 
+            txt_box_id.Location = new Point(414, 178);
+            txt_box_id.Name = "txt_box_id";
+            txt_box_id.Size = new Size(349, 23);
+            txt_box_id.TabIndex = 59;
+            txt_box_id.Visible = false;
             // 
             // CreateEditClients
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(additional_informarions_textBox);
-            Controls.Add(lbl_aditional_info);
+            ClientSize = new Size(800, 513);
+            Controls.Add(txt_box_id);
+            Controls.Add(msk_text_box_cep);
+            Controls.Add(groupBox1);
+            Controls.Add(label1);
             Controls.Add(btn_save);
             Controls.Add(btn_cancel);
             Controls.Add(email_textBox);
-            Controls.Add(lbl_Email);
-            Controls.Add(celphone_textBox);
-            Controls.Add(lbl_celphone);
             Controls.Add(adress_complement_textBox);
             Controls.Add(lbl_adress_complement);
+            Controls.Add(lbl_Email);
             Controls.Add(textBox1);
+            Controls.Add(celphone_textBox);
             Controls.Add(lbl_house_number);
-            Controls.Add(neighborhood_textBox);
-            Controls.Add(lbl_neighborhood);
-            Controls.Add(street_textBox);
-            Controls.Add(lbl_street);
+            Controls.Add(lbl_celphone);
             Controls.Add(cpf_textBox);
             Controls.Add(lbl_cpf);
             Controls.Add(name_textBox);
             Controls.Add(lbl_name);
-            KeyPreview = true;
             Name = "CreateEditClients";
             StartPosition = FormStartPosition.CenterParent;
             Text = "CreateEditClients";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -264,19 +350,27 @@
         private Label lbl_Email;
         private TextBox celphone_textBox;
         private Label lbl_celphone;
-        private TextBox adress_complement_textBox;
-        private Label lbl_adress_complement;
-        private TextBox textBox1;
-        private Label lbl_house_number;
-        private TextBox neighborhood_textBox;
-        private Label lbl_neighborhood;
-        private TextBox street_textBox;
-        private Label lbl_street;
         private TextBox cpf_textBox;
         private Label lbl_cpf;
         private TextBox name_textBox;
         private Label lbl_name;
-        private TextBox additional_informarions_textBox;
-        private Label lbl_aditional_info;
+        private Label label1;
+        private Label lbl_street;
+        private TextBox street_textBox;
+        private Label lbl_neighborhood;
+        private TextBox neighborhood_textBox;
+        private Label lbl_house_number;
+        private TextBox textBox1;
+        private Label lbl_adress_complement;
+        private TextBox adress_complement_textBox;
+        private Label lbl_uf;
+        private TextBox txt_box_uf;
+        private GroupBox groupBox1;
+        private TextBox txt_box_country;
+        private Label lbl_country;
+        private TextBox txt_box_city;
+        private Label lbl_city;
+        private MaskedTextBox msk_text_box_cep;
+        private TextBox txt_box_id;
     }
 }
