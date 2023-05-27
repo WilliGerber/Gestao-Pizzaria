@@ -30,13 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clients));
             btn_add_client = new Button();
+            dataGridViewDados = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).BeginInit();
             SuspendLayout();
             // 
             // btn_add_client
             // 
             btn_add_client.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btn_add_client.Image = (Image)resources.GetObject("btn_add_client.Image");
-            btn_add_client.Location = new Point(22, 23);
+            btn_add_client.Location = new Point(818, 12);
             btn_add_client.Name = "btn_add_client";
             btn_add_client.Size = new Size(151, 76);
             btn_add_client.TabIndex = 1;
@@ -45,22 +47,34 @@
             btn_add_client.UseVisualStyleBackColor = true;
             btn_add_client.Click += add_client_Click;
             // 
+            // dataGridViewDados
+            // 
+            dataGridViewDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDados.Location = new Point(12, 12);
+            dataGridViewDados.Name = "dataGridViewDados";
+            dataGridViewDados.RowTemplate.Height = 25;
+            dataGridViewDados.Size = new Size(797, 468);
+            dataGridViewDados.TabIndex = 4;
+            // 
             // Clients
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(978, 492);
+            Controls.Add(dataGridViewDados);
             Controls.Add(btn_add_client);
             FormBorderStyle = FormBorderStyle.None;
             KeyPreview = true;
             Name = "Clients";
             Text = "Clientes";
             WindowState = FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btn_add_client;
+        private DataGridView dataGridViewDados;
     }
 }
