@@ -44,7 +44,7 @@ namespace PizzariaZe
             lbl_neighborhood = new Label();
             neighborhood_textBox = new TextBox();
             lbl_house_number = new Label();
-            textBox1 = new TextBox();
+            txt_house_number = new TextBox();
             lbl_adress_complement = new Label();
             adress_complement_textBox = new TextBox();
             lbl_uf = new Label();
@@ -72,6 +72,7 @@ namespace PizzariaZe
             btn_save.TabIndex = 11;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
+            btn_save.Click += btn_save_Click;
             // 
             // btn_cancel
             // 
@@ -202,12 +203,12 @@ namespace PizzariaZe
             lbl_house_number.TabIndex = 46;
             lbl_house_number.Text = "Número";
             // 
-            // textBox1
+            // txt_house_number
             // 
-            textBox1.Location = new Point(37, 386);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(174, 23);
-            textBox1.TabIndex = 7;
+            txt_house_number.Location = new Point(37, 386);
+            txt_house_number.Name = "txt_house_number";
+            txt_house_number.Size = new Size(174, 23);
+            txt_house_number.TabIndex = 7;
             // 
             // lbl_adress_complement
             // 
@@ -325,7 +326,7 @@ namespace PizzariaZe
             Controls.Add(adress_complement_textBox);
             Controls.Add(lbl_adress_complement);
             Controls.Add(lbl_Email);
-            Controls.Add(textBox1);
+            Controls.Add(txt_house_number);
             Controls.Add(celphone_textBox);
             Controls.Add(lbl_house_number);
             Controls.Add(lbl_celphone);
@@ -360,7 +361,7 @@ namespace PizzariaZe
         private Label lbl_neighborhood;
         private TextBox neighborhood_textBox;
         private Label lbl_house_number;
-        private TextBox textBox1;
+        private TextBox txt_house_number;
         private Label lbl_adress_complement;
         private TextBox adress_complement_textBox;
         private Label lbl_uf;

@@ -4,19 +4,28 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Configuration;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PizzariaDoZe.DAO;
 
 namespace PizzariaZe
 {
     public partial class Clients : Form
     {
+        private readonly ClienteDAO clienteDAO;
         public Clients()
         {
             InitializeComponent();
+
+            // pega os dados do banco de dados
+            string provider = ConfigurationManager.ConnectionStrings["BD"].ProviderName;
+            string strConnection = ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
+            // cria a instancia da classe da model
+            clienteDAO = new ClienteDAO(provider, strConnection);
 
             //adiciona eventos em geral, exemplo: ganhar e perder o foco
             Functions.EventoFocoCampos(this);
@@ -38,5 +47,7 @@ namespace PizzariaZe
             CreateEditClients createEditClients = new CreateEditClients();
             createEditClients.ShowDialog();
         }
+
+
     }
 }
