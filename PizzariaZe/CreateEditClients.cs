@@ -141,6 +141,9 @@ namespace PizzariaZe
             {
                 MessageBox.Show(ex.Message);
             }
+
+            Clients clients = new Clients();
+            clients.AtualizarTela();
         }
     }
 }

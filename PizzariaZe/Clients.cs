@@ -40,6 +40,8 @@ namespace PizzariaZe
             //ajuste manual de campos ou mensagens para o usuário que não puderam ser automatizadas acima
             this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");
             #endregion
+
+            AtualizarTela();
         }
 
         private void add_client_Click(object sender, EventArgs e)
@@ -47,7 +49,25 @@ namespace PizzariaZe
             CreateEditClients createEditClients = new CreateEditClients();
             createEditClients.ShowDialog();
         }
-
+        public void AtualizarTela()
+        {
+            //Instância e Preenche o objeto com os dados da view
+            var cliente = new Cliente();
+            try
+            {
+                //chama o método para buscar todos os dados da nossa camada model
+                DataTable linhas = clienteDAO.Buscar(cliente);
+                // seta o datasouce do dataGridView com os dados retornados
+                dataGridViewDados.Columns.Clear();
+                dataGridViewDados.AutoGenerateColumns = true;
+                dataGridViewDados.DataSource = linhas;
+                dataGridViewDados.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
     }
 }

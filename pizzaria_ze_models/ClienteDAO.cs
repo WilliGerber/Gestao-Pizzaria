@@ -44,4 +44,40 @@ public class ClienteDAO
         var IdGerado = comando.ExecuteScalar();
         return Convert.ToInt32(IdGerado);
     }
+    public DataTable Buscar(Cliente cliente)
+    {
+        using var conexao = factory.CreateConnection(); //Cria conexão
+        conexao!.ConnectionString = StringConexao; //Atribui a string de conexão
+        using var comando = factory.CreateCommand(); //Cria comando
+        comando!.Connection = conexao; //Atribui conexão
+                                       //verifica se tem filtro e personaliza o SQL do filtro
+        string auxSqlFiltro = "";
+        if (cliente.Id > 0)
+        {
+            auxSqlFiltro = "WHERE cc.id_cliente = " + cliente.Id + " ";
+        }
+        else if (cliente.Nome.Length > 0)
+        {
+            auxSqlFiltro = "WHERE cc.nome_cliente like '%" + cliente.Nome + "%' ";
+        }
+        conexao.Open();
+        comando.CommandText = @" " +
+        "SELECT cc.nome_cliente AS Nome, cc.telefone AS Telefone, cc.email AS 'E-mail', " +
+        "e.logradouro AS Logradouro, e.bairro AS Bairro, " +
+        "c.nome_cidade AS Cidade, " +
+        "cc.numero AS Número, cc.complemento AS Complemento, " +
+        "e.cep AS CEP, cc.cpf AS CPF " +
+        "FROM tb_clientes AS cc " +
+        "INNER JOIN tb_enderecos AS e ON e.id_endereco = cc.endereco_id " +
+        "INNER JOIN cad_cidades AS c ON c.id_cidade = e.cidade_id " +
+        "INNER JOIN cad_uf AS u ON u.id_uf = c.uf_id " +
+        "INNER JOIN cad_paises AS p ON p.id_pais = u.pais_id " +
+        auxSqlFiltro +
+        "ORDER BY cc.nome_cliente;";
+        //Executa o script na conexão e retorna as linhas afetadas.
+        var sdr = comando.ExecuteReader();
+        DataTable linhas = new();
+        linhas.Load(sdr);
+        return linhas;
+    }
 }
