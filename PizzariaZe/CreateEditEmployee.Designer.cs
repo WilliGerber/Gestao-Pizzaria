@@ -43,12 +43,11 @@ namespace PizzariaZe
             txt_box_matricula = new TextBox();
             lbl_matricula = new Label();
             lbl_validade_cnh = new Label();
-            txt_box_registration = new TextBox();
             cmb_box_grupo = new ComboBox();
             lbl_grupo = new Label();
-            textBox2 = new TextBox();
+            txt_box_cnh = new TextBox();
             lbl_cnh = new Label();
-            textBox3 = new TextBox();
+            txt_box_observacao = new TextBox();
             lbl_observacao = new Label();
             txt_box_id = new TextBox();
             msk_text_box_cep = new MaskedTextBox();
@@ -68,6 +67,7 @@ namespace PizzariaZe
             lbl_adress_complement = new Label();
             txt_house_number = new TextBox();
             lbl_house_number = new Label();
+            dateTime_cnh_validade = new DateTimePicker();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -109,7 +109,7 @@ namespace PizzariaZe
             celphone_textBox.Location = new Point(408, 252);
             celphone_textBox.Name = "celphone_textBox";
             celphone_textBox.Size = new Size(349, 23);
-            celphone_textBox.TabIndex = 9;
+            celphone_textBox.TabIndex = 10;
             // 
             // lbl_celphone
             // 
@@ -126,7 +126,7 @@ namespace PizzariaZe
             password_textBox.Name = "password_textBox";
             password_textBox.PasswordChar = '*';
             password_textBox.Size = new Size(172, 23);
-            password_textBox.TabIndex = 11;
+            password_textBox.TabIndex = 4;
             // 
             // lbl_password
             // 
@@ -145,7 +145,7 @@ namespace PizzariaZe
             btn_cancel.Location = new Point(31, 581);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
-            btn_cancel.TabIndex = 12;
+            btn_cancel.TabIndex = 14;
             btn_cancel.Text = "Cancelar";
             btn_cancel.UseVisualStyleBackColor = false;
             btn_cancel.Click += btn_cancel_Click;
@@ -160,16 +160,17 @@ namespace PizzariaZe
             btn_save.Location = new Point(619, 581);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
-            btn_save.TabIndex = 13;
+            btn_save.TabIndex = 15;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
+            btn_save.Click += btn_save_Click;
             // 
             // email_textBox
             // 
             email_textBox.Location = new Point(31, 252);
             email_textBox.Name = "email_textBox";
             email_textBox.Size = new Size(349, 23);
-            email_textBox.TabIndex = 10;
+            email_textBox.TabIndex = 9;
             // 
             // lbl_Email
             // 
@@ -185,7 +186,7 @@ namespace PizzariaZe
             txt_box_matricula.Location = new Point(31, 128);
             txt_box_matricula.Name = "txt_box_matricula";
             txt_box_matricula.Size = new Size(151, 23);
-            txt_box_matricula.TabIndex = 25;
+            txt_box_matricula.TabIndex = 3;
             // 
             // lbl_matricula
             // 
@@ -205,20 +206,13 @@ namespace PizzariaZe
             lbl_validade_cnh.TabIndex = 28;
             lbl_validade_cnh.Text = "Validade";
             // 
-            // txt_box_registration
-            // 
-            txt_box_registration.Location = new Point(31, 192);
-            txt_box_registration.Name = "txt_box_registration";
-            txt_box_registration.Size = new Size(151, 23);
-            txt_box_registration.TabIndex = 29;
-            // 
             // cmb_box_grupo
             // 
             cmb_box_grupo.FormattingEnabled = true;
             cmb_box_grupo.Location = new Point(408, 128);
             cmb_box_grupo.Name = "cmb_box_grupo";
             cmb_box_grupo.Size = new Size(161, 23);
-            cmb_box_grupo.TabIndex = 30;
+            cmb_box_grupo.TabIndex = 5;
             // 
             // lbl_grupo
             // 
@@ -229,13 +223,12 @@ namespace PizzariaZe
             lbl_grupo.TabIndex = 31;
             lbl_grupo.Text = "Grupo";
             // 
-            // textBox2
+            // txt_box_cnh
             // 
-            textBox2.Location = new Point(593, 128);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(164, 23);
-            textBox2.TabIndex = 32;
+            txt_box_cnh.Location = new Point(593, 128);
+            txt_box_cnh.Name = "txt_box_cnh";
+            txt_box_cnh.Size = new Size(164, 23);
+            txt_box_cnh.TabIndex = 6;
             // 
             // lbl_cnh
             // 
@@ -246,17 +239,17 @@ namespace PizzariaZe
             lbl_cnh.TabIndex = 33;
             lbl_cnh.Text = "CNH";
             // 
-            // textBox3
+            // txt_box_observacao
             // 
-            textBox3.Location = new Point(208, 192);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(549, 23);
-            textBox3.TabIndex = 35;
+            txt_box_observacao.Location = new Point(408, 192);
+            txt_box_observacao.Name = "txt_box_observacao";
+            txt_box_observacao.Size = new Size(349, 23);
+            txt_box_observacao.TabIndex = 8;
             // 
             // lbl_observacao
             // 
             lbl_observacao.AutoSize = true;
-            lbl_observacao.Location = new Point(208, 174);
+            lbl_observacao.Location = new Point(408, 174);
             lbl_observacao.Name = "lbl_observacao";
             lbl_observacao.Size = new Size(69, 15);
             lbl_observacao.TabIndex = 34;
@@ -276,7 +269,7 @@ namespace PizzariaZe
             msk_text_box_cep.Mask = "00.000-000";
             msk_text_box_cep.Name = "msk_text_box_cep";
             msk_text_box_cep.Size = new Size(126, 23);
-            msk_text_box_cep.TabIndex = 66;
+            msk_text_box_cep.TabIndex = 11;
             msk_text_box_cep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             msk_text_box_cep.Leave += msk_text_box_cep_Leave;
             // 
@@ -319,7 +312,7 @@ namespace PizzariaZe
             // 
             txt_box_city.Location = new Point(24, 98);
             txt_box_city.Name = "txt_box_city";
-            txt_box_city.Size = new Size(353, 23);
+            txt_box_city.Size = new Size(349, 23);
             txt_box_city.TabIndex = 55;
             // 
             // lbl_city
@@ -333,9 +326,9 @@ namespace PizzariaZe
             // 
             // txt_box_uf
             // 
-            txt_box_uf.Location = new Point(405, 98);
+            txt_box_uf.Location = new Point(401, 98);
             txt_box_uf.Name = "txt_box_uf";
-            txt_box_uf.Size = new Size(49, 23);
+            txt_box_uf.Size = new Size(53, 23);
             txt_box_uf.TabIndex = 9;
             // 
             // lbl_uf
@@ -349,9 +342,9 @@ namespace PizzariaZe
             // 
             // neighborhood_textBox
             // 
-            neighborhood_textBox.Location = new Point(405, 34);
+            neighborhood_textBox.Location = new Point(401, 34);
             neighborhood_textBox.Name = "neighborhood_textBox";
-            neighborhood_textBox.Size = new Size(345, 23);
+            neighborhood_textBox.Size = new Size(349, 23);
             neighborhood_textBox.TabIndex = 6;
             // 
             // lbl_neighborhood
@@ -367,7 +360,7 @@ namespace PizzariaZe
             // 
             street_textBox.Location = new Point(24, 34);
             street_textBox.Name = "street_textBox";
-            street_textBox.Size = new Size(353, 23);
+            street_textBox.Size = new Size(349, 23);
             street_textBox.TabIndex = 5;
             // 
             // lbl_street
@@ -393,7 +386,7 @@ namespace PizzariaZe
             adress_complement_textBox.Location = new Point(236, 525);
             adress_complement_textBox.Name = "adress_complement_textBox";
             adress_complement_textBox.Size = new Size(521, 23);
-            adress_complement_textBox.TabIndex = 61;
+            adress_complement_textBox.TabIndex = 13;
             // 
             // lbl_adress_complement
             // 
@@ -409,7 +402,7 @@ namespace PizzariaZe
             txt_house_number.Location = new Point(31, 525);
             txt_house_number.Name = "txt_house_number";
             txt_house_number.Size = new Size(174, 23);
-            txt_house_number.TabIndex = 60;
+            txt_house_number.TabIndex = 12;
             // 
             // lbl_house_number
             // 
@@ -420,11 +413,19 @@ namespace PizzariaZe
             lbl_house_number.TabIndex = 62;
             lbl_house_number.Text = "Número";
             // 
+            // dateTime_cnh_validade
+            // 
+            dateTime_cnh_validade.Location = new Point(31, 192);
+            dateTime_cnh_validade.Name = "dateTime_cnh_validade";
+            dateTime_cnh_validade.Size = new Size(349, 23);
+            dateTime_cnh_validade.TabIndex = 7;
+            // 
             // CreateEditEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 639);
+            Controls.Add(dateTime_cnh_validade);
             Controls.Add(txt_box_id);
             Controls.Add(msk_text_box_cep);
             Controls.Add(groupBox1);
@@ -433,13 +434,12 @@ namespace PizzariaZe
             Controls.Add(lbl_adress_complement);
             Controls.Add(txt_house_number);
             Controls.Add(lbl_house_number);
-            Controls.Add(textBox3);
+            Controls.Add(txt_box_observacao);
             Controls.Add(lbl_observacao);
-            Controls.Add(textBox2);
+            Controls.Add(txt_box_cnh);
             Controls.Add(lbl_cnh);
             Controls.Add(lbl_grupo);
             Controls.Add(cmb_box_grupo);
-            Controls.Add(txt_box_registration);
             Controls.Add(lbl_validade_cnh);
             Controls.Add(txt_box_matricula);
             Controls.Add(lbl_matricula);
@@ -482,12 +482,11 @@ namespace PizzariaZe
         private TextBox txt_box_matricula;
         private Label lbl_matricula;
         private Label lbl_validade_cnh;
-        private TextBox txt_box_registration;
         private ComboBox cmb_box_grupo;
         private Label lbl_grupo;
-        private TextBox textBox2;
+        private TextBox txt_box_cnh;
         private Label lbl_cnh;
-        private TextBox textBox3;
+        private TextBox txt_box_observacao;
         private Label lbl_observacao;
         private TextBox txt_box_id;
         private MaskedTextBox msk_text_box_cep;
@@ -507,5 +506,6 @@ namespace PizzariaZe
         private Label lbl_adress_complement;
         private TextBox txt_house_number;
         private Label lbl_house_number;
+        private DateTimePicker dateTime_cnh_validade;
     }
 }
