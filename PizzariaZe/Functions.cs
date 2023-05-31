@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace PizzariaDoZe
 {
@@ -174,6 +175,57 @@ namespace PizzariaDoZe
                 menu.splitContainer1.Panel2.Controls.Add(settings);
                 settings.Show();
                 ValidaConexaoDB();
+            }
+        }
+
+        public static string Sha256Hash(string senha)
+        {
+            // Create a new Stringbuilder to collect the bytes and create a string.
+            var hash = new StringBuilder();
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Convert the input string to a byte array and compute the hash.
+                byte[] data = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
+                // Loop through each byte of the hashed data and format each one as a hexadecimal string.
+                for (int i = 0; i < data.Length; i++)
+                {
+                    hash.Append(data[i].ToString("x2"));
+                }
+            }
+            // retorna o hash SHA256.
+            return hash.ToString();
+        }
+        public static void LimparFormulario(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Text = string.Empty;
+                }
+                else if (c is MaskedTextBox)
+                {
+                    if (((MaskedTextBox)c).Enabled)
+                    {
+                        ((MaskedTextBox)c).Clear();
+                    }
+                }
+                else if (c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedIndex = -1;
+                }
+                else if (c is CheckBox)
+                {
+                    ((CheckBox)c).Checked = false;
+                }
+                else if (c is RadioButton)
+                {
+                    ((RadioButton)c).Checked = false;
+                }
+                else if (c.HasChildren)
+                {
+                    LimparFormulario(c);
+                }
             }
         }
 

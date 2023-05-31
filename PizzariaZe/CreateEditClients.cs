@@ -16,6 +16,7 @@ namespace PizzariaZe
     public partial class CreateEditClients : Form
     {
         private readonly EnderecoDAO enderecoDAO;
+        private readonly ClienteDAO clienteDAO;
         public CreateEditClients()
         {
             InitializeComponent();
@@ -44,6 +45,7 @@ namespace PizzariaZe
             string strConnection = ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
             // cria a instancia da classe da model
             enderecoDAO = new EnderecoDAO(provider, strConnection);
+            clienteDAO = new ClienteDAO(provider, strConnection);
 
         }
 
@@ -96,5 +98,53 @@ namespace PizzariaZe
             }
         }
 
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            string cpf = "";
+
+            if (this.txt_box_id.Text.Length <= 0)
+            {
+                MessageBox.Show("Selecione um endereço valido!");
+                return;
+            }
+            //Instância e Preenche o objeto com os dados da view
+
+            if (this.cpf_textBox.Text.Length >= 0)
+            {
+                foreach (char c in cpf_textBox.Text)
+                {
+                    if (char.IsDigit(c))
+                    {
+                        cpf += c;
+                    }
+                }
+            }
+
+            var cliente = new Cliente
+            {
+                Id = 0,
+                Nome = name_textBox.Text,
+                Cpf = cpf,
+                Telefone = celphone_textBox.Text,
+                Email = email_textBox.Text,
+                EnderecoId = int.Parse(this.txt_box_id.Text),
+                Numero = txt_house_number.Text,
+                Complemento = adress_complement_textBox.Text,
+            };
+            try
+            {
+                // chama o método da model para inserir e capturar o ID do cliente
+                int IdClienteGerado = clienteDAO.Inserir(cliente);
+                MessageBox.Show("Cliente cadastrado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            Clients clients = new Clients();
+            clients.AtualizarTela();
+            Functions.LimparFormulario(this);
+        }
     }
 }
