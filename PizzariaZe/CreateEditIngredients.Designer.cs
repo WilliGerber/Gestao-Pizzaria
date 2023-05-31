@@ -49,6 +49,7 @@
             lbl_type.Size = new Size(30, 15);
             lbl_type.TabIndex = 29;
             lbl_type.Text = "Tipo";
+            lbl_type.Visible = false;
             // 
             // name_textBox
             // 
@@ -73,6 +74,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(349, 23);
             comboBox1.TabIndex = 2;
+            comboBox1.Visible = false;
             // 
             // lbl_only_as_ingredient
             // 
@@ -84,6 +86,7 @@
             lbl_only_as_ingredient.TabStop = true;
             lbl_only_as_ingredient.Text = "Somente Ingrediente";
             lbl_only_as_ingredient.UseVisualStyleBackColor = true;
+            lbl_only_as_ingredient.Visible = false;
             // 
             // lbl_only_as_aditional
             // 
@@ -95,6 +98,7 @@
             lbl_only_as_aditional.TabStop = true;
             lbl_only_as_aditional.Text = "Somente Adicional";
             lbl_only_as_aditional.UseVisualStyleBackColor = true;
+            lbl_only_as_aditional.Visible = false;
             // 
             // lbl_is_aditional
             // 
@@ -105,6 +109,7 @@
             lbl_is_aditional.Size = new Size(62, 15);
             lbl_is_aditional.TabIndex = 57;
             lbl_is_aditional.Text = "Adicional?";
+            lbl_is_aditional.Visible = false;
             // 
             // lbl_aditional_and_ingredient
             // 
@@ -116,6 +121,7 @@
             lbl_aditional_and_ingredient.TabStop = true;
             lbl_aditional_and_ingredient.Text = "Adicional e Ingrediente";
             lbl_aditional_and_ingredient.UseVisualStyleBackColor = true;
+            lbl_aditional_and_ingredient.Visible = false;
             // 
             // btn_save
             // 
@@ -124,7 +130,7 @@
             btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
             btn_save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
             btn_save.FlatStyle = FlatStyle.Flat;
-            btn_save.Location = new Point(248, 286);
+            btn_save.Location = new Point(248, 244);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
             btn_save.TabIndex = 7;
@@ -137,7 +143,7 @@
             btn_cancel.BackColor = Color.FromArgb(254, 152, 152);
             btn_cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
             btn_cancel.FlatStyle = FlatStyle.Flat;
-            btn_cancel.Location = new Point(37, 286);
+            btn_cancel.Location = new Point(37, 244);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
             btn_cancel.TabIndex = 6;
@@ -151,7 +157,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btn_cancel;
-            ClientSize = new Size(431, 346);
+            ClientSize = new Size(431, 307);
             Controls.Add(lbl_aditional_and_ingredient);
             Controls.Add(lbl_is_aditional);
             Controls.Add(lbl_only_as_aditional);

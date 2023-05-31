@@ -117,6 +117,14 @@ namespace PizzariaZe
             splitContainer1.Panel2.Controls.Add(employees);
             employees.Show();
         }
+        private void adresses_nav_bar_Click(object sender, EventArgs e)
+        {
+            Adresses adresses = new Adresses();
+            DisposeAllButThis(this);
+            adresses.TopLevel = false;
+            splitContainer1.Panel2.Controls.Add(adresses);
+            adresses.Show();
+        }
 
         private void settings_nav_bar_Click(object sender, EventArgs e)
         {

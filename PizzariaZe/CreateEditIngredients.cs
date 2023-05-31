@@ -77,6 +77,8 @@ namespace PizzariaZe
             {
                 ingredients.AtualizarTela();
             }
+
+            Functions.LimparFormulario(this);
         }
     }
 }

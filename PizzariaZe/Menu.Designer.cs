@@ -32,6 +32,7 @@ namespace PizzariaZe
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             splitContainer1 = new SplitContainer();
             btn_settings_nav_bar = new Button();
+            btn_adresses_nav_bar = new Button();
             pictureBox1 = new PictureBox();
             btn_products_nav_bar = new Button();
             btn_employees_nav_bar = new Button();
@@ -73,6 +74,7 @@ namespace PizzariaZe
             // 
             splitContainer1.Panel1.BackColor = Color.FromArgb(210, 229, 202);
             splitContainer1.Panel1.Controls.Add(btn_settings_nav_bar);
+            splitContainer1.Panel1.Controls.Add(btn_adresses_nav_bar);
             splitContainer1.Panel1.Controls.Add(pictureBox1);
             splitContainer1.Panel1.Controls.Add(btn_products_nav_bar);
             splitContainer1.Panel1.Controls.Add(btn_employees_nav_bar);
@@ -85,7 +87,7 @@ namespace PizzariaZe
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.ContextMenuStrip = contextMenuStripPrincipal;
-            splitContainer1.Size = new Size(800, 450);
+            splitContainer1.Size = new Size(800, 497);
             splitContainer1.SplitterDistance = 174;
             splitContainer1.TabIndex = 0;
             // 
@@ -99,16 +101,36 @@ namespace PizzariaZe
             btn_settings_nav_bar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btn_settings_nav_bar.Image = (Image)resources.GetObject("btn_settings_nav_bar.Image");
             btn_settings_nav_bar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_settings_nav_bar.Location = new Point(3, 410);
+            btn_settings_nav_bar.Location = new Point(3, 450);
             btn_settings_nav_bar.Name = "btn_settings_nav_bar";
             btn_settings_nav_bar.RightToLeft = RightToLeft.No;
             btn_settings_nav_bar.Size = new Size(170, 34);
-            btn_settings_nav_bar.TabIndex = 7;
+            btn_settings_nav_bar.TabIndex = 8;
             btn_settings_nav_bar.Text = "Configurações";
             btn_settings_nav_bar.TextAlign = ContentAlignment.MiddleLeft;
             btn_settings_nav_bar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_settings_nav_bar.UseVisualStyleBackColor = false;
             btn_settings_nav_bar.Click += settings_nav_bar_Click;
+            // 
+            // btn_adresses_nav_bar
+            // 
+            btn_adresses_nav_bar.BackColor = Color.FromArgb(210, 229, 202);
+            btn_adresses_nav_bar.Cursor = Cursors.Hand;
+            btn_adresses_nav_bar.FlatAppearance.BorderColor = Color.FromArgb(210, 229, 202);
+            btn_adresses_nav_bar.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
+            btn_adresses_nav_bar.FlatStyle = FlatStyle.Flat;
+            btn_adresses_nav_bar.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_adresses_nav_bar.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_adresses_nav_bar.Location = new Point(3, 410);
+            btn_adresses_nav_bar.Name = "btn_adresses_nav_bar";
+            btn_adresses_nav_bar.RightToLeft = RightToLeft.No;
+            btn_adresses_nav_bar.Size = new Size(170, 34);
+            btn_adresses_nav_bar.TabIndex = 7;
+            btn_adresses_nav_bar.Text = "Endereços";
+            btn_adresses_nav_bar.TextAlign = ContentAlignment.MiddleLeft;
+            btn_adresses_nav_bar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_adresses_nav_bar.UseVisualStyleBackColor = false;
+            btn_adresses_nav_bar.Click += adresses_nav_bar_Click;
             // 
             // pictureBox1
             // 
@@ -345,21 +367,21 @@ namespace PizzariaZe
             // openAppToolStripMenuItemSystemTray
             // 
             openAppToolStripMenuItemSystemTray.Name = "openAppToolStripMenuItemSystemTray";
-            openAppToolStripMenuItemSystemTray.Size = new Size(180, 22);
+            openAppToolStripMenuItemSystemTray.Size = new Size(155, 22);
             openAppToolStripMenuItemSystemTray.Text = "Abrir Aplicação";
             openAppToolStripMenuItemSystemTray.Click += openAppToolStripMenuItemSystemTray_Click;
             // 
             // exitToolStripMenuItemSystemTray
             // 
             exitToolStripMenuItemSystemTray.Name = "exitToolStripMenuItemSystemTray";
-            exitToolStripMenuItemSystemTray.Size = new Size(180, 22);
+            exitToolStripMenuItemSystemTray.Size = new Size(155, 22);
             exitToolStripMenuItemSystemTray.Text = "Encerrar";
             exitToolStripMenuItemSystemTray.Click += exitToolStripMenuItemSystemTray_Click;
             // 
             // sobreToolStripMenuItem
             // 
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(180, 22);
+            sobreToolStripMenuItem.Size = new Size(155, 22);
             sobreToolStripMenuItem.Text = "Sobre";
             // 
             // Menu
@@ -367,7 +389,7 @@ namespace PizzariaZe
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 497);
             Controls.Add(splitContainer1);
             KeyPreview = true;
             Name = "Menu";
@@ -392,7 +414,7 @@ namespace PizzariaZe
         private Button btn_clients_nav_bar;
         private Button btn_supply_nav_bar;
         private Button btn_products_nav_bar;
-        private Button btn_settings_nav_bar;
+        private Button btn_adresses_nav_bar;
         private PictureBox pictureBox1;
         private ContextMenuStrip contextMenuStripPrincipal;
         private ToolStripMenuItem startToolStripMenuItem;
@@ -409,5 +431,6 @@ namespace PizzariaZe
         private ToolStripMenuItem openAppToolStripMenuItemSystemTray;
         private ToolStripMenuItem exitToolStripMenuItemSystemTray;
         private ToolStripMenuItem sobreToolStripMenuItem;
+        private Button btn_settings_nav_bar;
     }
 }

@@ -142,8 +142,12 @@ namespace PizzariaZe
                 MessageBox.Show(ex.Message);
             }
 
-            Clients clients = new Clients();
-            clients.AtualizarTela();
+            Clients clientes = Application.OpenForms["Clients"] as Clients;
+            if (clientes != null)
+            {
+                clientes.AtualizarTela();
+            }
+
             Functions.LimparFormulario(this);
         }
     }

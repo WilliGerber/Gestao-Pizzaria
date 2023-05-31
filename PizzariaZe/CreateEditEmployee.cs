@@ -143,8 +143,14 @@ namespace PizzariaZe
             {
                 MessageBox.Show(ex.Message);
             }
-            Employees employee = new Employees();
-            employee.AtualizarTela();
+
+            Employees employee = Application.OpenForms["Employees"] as Employees;
+            if (employee != null)
+            {
+                employee.AtualizarTela();
+            }
+
+            Functions.LimparFormulario(this);
         }
 
         private void cpf_textBox_TextChanged(object sender, EventArgs e)

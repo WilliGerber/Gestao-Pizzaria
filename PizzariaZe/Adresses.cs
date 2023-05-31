@@ -1,22 +1,25 @@
-using PizzariaDoZe.DAO;
+﻿using PizzariaDoZe;
+using System.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PizzariaDoZe.DAO;
+using System.Configuration;
+using System.Runtime.ConstrainedExecution;
 
 namespace PizzariaZe
 {
-    public partial class Ingredients : Form
+    public partial class Adresses : Form
     {
-        private IngredientDAO ingredientDAO;
+        private EnderecoDAO enderecoDAO;
 
-        public Ingredients()
+        public Adresses()
         {
             InitializeComponent();
 
@@ -24,24 +27,23 @@ namespace PizzariaZe
             string provider = ConfigurationManager.ConnectionStrings["BD"].ProviderName;
             string strConnection = ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
             // cria a instancia da classe da model
-            ingredientDAO = new IngredientDAO(provider, strConnection);
+            enderecoDAO = new EnderecoDAO(provider, strConnection);
+
             AtualizarTela();
         }
-
-        private void btn_add_ingredients_Click(object sender, EventArgs e)
-        {
-            CreateEditIngredients createEditIngredients = new CreateEditIngredients();
-            createEditIngredients.ShowDialog();
-        }
-
         public void AtualizarTela()
         {
             //Instância e Preenche o objeto com os dados da view
-            var ingredient = new Ingredient();
+            var endereco = new Endereco
+            {
+                Id = 0,
+                Cep = ""
+            };
             try
             {
+
                 //chama o método para buscar todos os dados da nossa camada model
-                DataTable linhas = ingredientDAO.getIngredients(ingredient);
+                DataTable linhas = enderecoDAO.Buscar(endereco);
                 // seta o datasouce do dataGridView com os dados retornados
                 dataGridViewDados.Columns.Clear();
                 dataGridViewDados.AutoGenerateColumns = true;
