@@ -15,6 +15,8 @@ public class Funcionario
     public int EnderecoId { get; set; }
     public string Numero { get; set; }
     public string Complemento { get; set; }
+    public string GrupoDescricao { get; set; }
+
     public Funcionario(int id = 0, string nome = "", string cpf = "", string matricula = "", string senha = "", char grupo = default, string
     motorista = "", DateTime validade_motorista = default, string observacao = "", string telefone = "", string email = "", int endereco_id = 0,
     string numero = "", string complemento = "")
@@ -34,4 +36,5 @@ public class Funcionario
         Numero = numero;
         Complemento = complemento;
     }
+
 }

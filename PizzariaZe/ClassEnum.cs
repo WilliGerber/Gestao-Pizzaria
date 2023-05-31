@@ -28,3 +28,4 @@ public static class EnumExtensions
         return GenericEnum.ToString();
     }
 }
+

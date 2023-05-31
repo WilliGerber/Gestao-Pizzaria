@@ -56,10 +56,22 @@ namespace PizzariaZe
             {
                 //chama o método para buscar todos os dados da nossa camada model
                 DataTable linhas = funcionarioDAO.Buscar(funcionario);
+                linhas.Columns.Add("GrupoDescricao", typeof(string));
+
+                foreach (DataRow row in linhas.Rows)
+                {
+                    int grupoId = Convert.ToInt32(row["Grupo"]); // Obtém o ID do grupo
+                    string grupoDescricao = GetGrupoDescricao(grupoId); // Obtém a descrição do grupo usando o método auxiliar
+
+                    row["GrupoDescricao"] = grupoDescricao; // Define a descrição do grupo na coluna "GrupoDescricao"
+                }
+
                 // seta o datasouce do dataGridView com os dados retornados
                 dataGridViewDados.Columns.Clear();
                 dataGridViewDados.AutoGenerateColumns = true;
                 dataGridViewDados.DataSource = linhas;
+                dataGridViewDados.Columns["Grupo"].DataPropertyName = "GrupoDescricao";
+
                 dataGridViewDados.Refresh();
             }
             catch (Exception ex)
@@ -71,13 +83,25 @@ namespace PizzariaZe
 
         private void dataGridViewDados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == dataGridViewDados.Columns["colGroupName"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridViewDados.Columns["Grupo"].Index && e.RowIndex >= 0)
             {
                 DataGridViewCell cell = dataGridViewDados.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                EnumFuncionarioGrupo group = (EnumFuncionarioGrupo)e.Value;
-                string groupName = group.GetDescription();
-                cell.Value = groupName;
+                if (e.Value != null)
+                {
+                    string groupName = e.Value.ToString(); // Obtenha a descrição do grupo como uma string
+                    cell.Value = groupName;
+                }
             }
+        }
+        public string GetGrupoDescricao(int grupoId)
+        {
+            if (Enum.IsDefined(typeof(EnumFuncionarioGrupo), grupoId))
+            {
+                var grupo = (EnumFuncionarioGrupo)grupoId;
+                return grupo.GetDescription(); // O método GetDescription() retorna a descrição do enum
+            }
+
+            return "Desconhecido"; // Ou outro valor padrão adequado
         }
     }
 }
