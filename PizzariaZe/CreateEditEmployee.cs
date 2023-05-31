@@ -97,31 +97,30 @@ namespace PizzariaZe
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            string cpf = "";
+
             if (this.msk_text_box_cep.Text.Length <= 0)
             {
                 MessageBox.Show("Selecione um endereço valido!");
                 return;
             }
-            ////Instância e Preenche o objeto com os dados da view
-            //var selectedGroup = ' ';
-            //if (cmb_box_grupo.SelectedIndex == 0)
-            //{
-            //    selectedGroup = '1';
-            //}
-            //else if (cmb_box_grupo.SelectedIndex == 1)
-            //{
-            //    selectedGroup = '2';
-            //}
-            //else
-            //{
-            //    selectedGroup = '3';
-            //}
+
+            if (this.cpf_textBox.Text.Length >= 0)
+            {
+                foreach (char c in cpf_textBox.Text)
+                {
+                    if (char.IsDigit(c))
+                    {
+                        cpf += c;
+                    }
+                }
+            }
 
             var funcionario = new Funcionario
             {
                 Id = 0,
                 Nome = name_textBox.Text,
-                Cpf = cpf_textBox.Text,
+                Cpf = cpf,
                 Matricula = txt_box_matricula.Text,
                 Senha = Functions.Sha256Hash(password_textBox.Text),
                 Grupo = (cmb_box_grupo.SelectedIndex == 3) ? '1' : (cmb_box_grupo.SelectedIndex == 2) ? '2' : '1',
@@ -146,6 +145,11 @@ namespace PizzariaZe
             }
             Employees employee = new Employees();
             employee.AtualizarTela();
+        }
+
+        private void cpf_textBox_TextChanged(object sender, EventArgs e)
+        {
+            Masks.AplicaMascaraCPF(cpf_textBox);
         }
     }
 }

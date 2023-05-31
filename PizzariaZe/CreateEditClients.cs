@@ -144,6 +144,7 @@ namespace PizzariaZe
 
             Clients clients = new Clients();
             clients.AtualizarTela();
+            Functions.LimparFormulario(this);
         }
     }
 }

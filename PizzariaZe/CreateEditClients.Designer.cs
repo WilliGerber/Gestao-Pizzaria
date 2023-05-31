@@ -69,7 +69,7 @@ namespace PizzariaZe
             btn_save.Location = new Point(625, 454);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
-            btn_save.TabIndex = 11;
+            btn_save.TabIndex = 9;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
             btn_save.Click += btn_save_Click;
@@ -82,7 +82,7 @@ namespace PizzariaZe
             btn_cancel.Location = new Point(37, 454);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
-            btn_cancel.TabIndex = 10;
+            btn_cancel.TabIndex = 8;
             btn_cancel.Text = "Cancelar";
             btn_cancel.UseVisualStyleBackColor = false;
             btn_cancel.Click += btn_cancel_Click;
@@ -176,7 +176,7 @@ namespace PizzariaZe
             street_textBox.Location = new Point(24, 34);
             street_textBox.Name = "street_textBox";
             street_textBox.Size = new Size(353, 23);
-            street_textBox.TabIndex = 5;
+            street_textBox.TabIndex = 10;
             // 
             // lbl_neighborhood
             // 
@@ -192,7 +192,7 @@ namespace PizzariaZe
             neighborhood_textBox.Location = new Point(405, 34);
             neighborhood_textBox.Name = "neighborhood_textBox";
             neighborhood_textBox.Size = new Size(345, 23);
-            neighborhood_textBox.TabIndex = 6;
+            neighborhood_textBox.TabIndex = 11;
             // 
             // lbl_house_number
             // 
@@ -208,7 +208,7 @@ namespace PizzariaZe
             txt_house_number.Location = new Point(37, 386);
             txt_house_number.Name = "txt_house_number";
             txt_house_number.Size = new Size(174, 23);
-            txt_house_number.TabIndex = 7;
+            txt_house_number.TabIndex = 6;
             // 
             // lbl_adress_complement
             // 
@@ -224,7 +224,7 @@ namespace PizzariaZe
             adress_complement_textBox.Location = new Point(242, 386);
             adress_complement_textBox.Name = "adress_complement_textBox";
             adress_complement_textBox.Size = new Size(521, 23);
-            adress_complement_textBox.TabIndex = 8;
+            adress_complement_textBox.TabIndex = 7;
             // 
             // lbl_uf
             // 
@@ -240,7 +240,7 @@ namespace PizzariaZe
             txt_box_uf.Location = new Point(405, 98);
             txt_box_uf.Name = "txt_box_uf";
             txt_box_uf.Size = new Size(49, 23);
-            txt_box_uf.TabIndex = 9;
+            txt_box_uf.TabIndex = 13;
             // 
             // groupBox1
             // 
@@ -266,7 +266,7 @@ namespace PizzariaZe
             txt_box_country.Location = new Point(479, 98);
             txt_box_country.Name = "txt_box_country";
             txt_box_country.Size = new Size(271, 23);
-            txt_box_country.TabIndex = 57;
+            txt_box_country.TabIndex = 14;
             // 
             // lbl_country
             // 
@@ -282,7 +282,7 @@ namespace PizzariaZe
             txt_box_city.Location = new Point(24, 98);
             txt_box_city.Name = "txt_box_city";
             txt_box_city.Size = new Size(353, 23);
-            txt_box_city.TabIndex = 55;
+            txt_box_city.TabIndex = 12;
             // 
             // lbl_city
             // 
@@ -299,7 +299,7 @@ namespace PizzariaZe
             msk_text_box_cep.Mask = "00.000-000";
             msk_text_box_cep.Name = "msk_text_box_cep";
             msk_text_box_cep.Size = new Size(126, 23);
-            msk_text_box_cep.TabIndex = 58;
+            msk_text_box_cep.TabIndex = 5;
             msk_text_box_cep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             msk_text_box_cep.Leave += msk_text_box_cep_Leave;
             // 

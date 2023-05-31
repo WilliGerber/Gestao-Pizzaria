@@ -195,6 +195,39 @@ namespace PizzariaDoZe
             // retorna o hash SHA256.
             return hash.ToString();
         }
+        public static void LimparFormulario(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Text = string.Empty;
+                }
+                else if (c is MaskedTextBox)
+                {
+                    if (((MaskedTextBox)c).Enabled)
+                    {
+                        ((MaskedTextBox)c).Clear();
+                    }
+                }
+                else if (c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedIndex = -1;
+                }
+                else if (c is CheckBox)
+                {
+                    ((CheckBox)c).Checked = false;
+                }
+                else if (c is RadioButton)
+                {
+                    ((RadioButton)c).Checked = false;
+                }
+                else if (c.HasChildren)
+                {
+                    LimparFormulario(c);
+                }
+            }
+        }
 
     }
 }
