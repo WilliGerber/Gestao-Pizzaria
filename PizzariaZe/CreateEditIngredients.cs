@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
-using PizzariaZeDAO;
+using PizzariaDoZe.DAO;
 
 namespace PizzariaZe
 {
@@ -17,6 +17,8 @@ namespace PizzariaZe
     {
         private readonly IngredientDAO dao;
         private IngredientDAO ingredientDAO;
+        Ingredients ingredients = new Ingredients();
+
         public CreateEditIngredients()
         {
             InitializeComponent();
@@ -70,8 +72,11 @@ namespace PizzariaZe
             }
 
 
-            Ingredients ingredients = new Ingredients();
-            ingredients.AtualizarTela();
+            Ingredients ingredients = Application.OpenForms["Ingredients"] as Ingredients;
+            if (ingredients != null)
+            {
+                ingredients.AtualizarTela();
+            }
         }
     }
 }
