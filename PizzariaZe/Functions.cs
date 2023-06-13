@@ -228,6 +228,14 @@ namespace PizzariaDoZe
                 }
             }
         }
-
+        public static byte[] ConverteImagemParaByteArray(Image img)
+        {
+            MemoryStream ms = new();
+            if (img != null)
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            return ms.ToArray();
+        }
     }
 }

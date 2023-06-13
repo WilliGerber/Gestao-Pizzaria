@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace PizzariaZe
 {
     public partial class Flavours : Form
@@ -27,6 +29,7 @@ namespace PizzariaZe
             //ajuste manual de campos ou mensagens para o usuário que não puderam ser automatizadas acima
             this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");
             #endregion
+
         }
 
         public void DisposeAllButThis(Form form)

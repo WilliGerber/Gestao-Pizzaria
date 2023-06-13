@@ -30,18 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateEditFlavours));
             add_type = new Button();
-            type_comboBox = new ComboBox();
+            listBoxTipo = new ComboBox();
             btn_save = new Button();
             btn_cancel = new Button();
             lbl_type = new Label();
             name_textBox = new TextBox();
             lbl_name = new Label();
             button1 = new Button();
-            class_comboBox = new ComboBox();
+            listBoxCategoria = new ComboBox();
             lbl_category = new Label();
-            checkedListBox1 = new CheckedListBox();
+            checkedListBoxIngredientes = new CheckedListBox();
             add_ingredients = new Button();
             lbl_ingredients = new Label();
+            pictureBoxImagem = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxImagem).BeginInit();
             SuspendLayout();
             // 
             // add_type
@@ -55,14 +57,15 @@
             add_type.Size = new Size(29, 23);
             add_type.TabIndex = 3;
             add_type.UseVisualStyleBackColor = false;
+            add_type.Visible = false;
             // 
-            // type_comboBox
+            // listBoxTipo
             // 
-            type_comboBox.FormattingEnabled = true;
-            type_comboBox.Location = new Point(39, 110);
-            type_comboBox.Name = "type_comboBox";
-            type_comboBox.Size = new Size(125, 23);
-            type_comboBox.TabIndex = 2;
+            listBoxTipo.FormattingEnabled = true;
+            listBoxTipo.Location = new Point(39, 110);
+            listBoxTipo.Name = "listBoxTipo";
+            listBoxTipo.Size = new Size(125, 23);
+            listBoxTipo.TabIndex = 2;
             // 
             // btn_save
             // 
@@ -71,19 +74,20 @@
             btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
             btn_save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
             btn_save.FlatStyle = FlatStyle.Flat;
-            btn_save.Location = new Point(250, 388);
+            btn_save.Location = new Point(250, 433);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
             btn_save.TabIndex = 8;
             btn_save.Text = "Salvar";
             btn_save.UseVisualStyleBackColor = false;
+            btn_save.Click += btn_save_Click;
             // 
             // btn_cancel
             // 
             btn_cancel.BackColor = Color.FromArgb(254, 152, 152);
             btn_cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
             btn_cancel.FlatStyle = FlatStyle.Flat;
-            btn_cancel.Location = new Point(39, 388);
+            btn_cancel.Location = new Point(39, 433);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
             btn_cancel.TabIndex = 7;
@@ -123,40 +127,40 @@
             button1.FlatAppearance.BorderColor = Color.FromArgb(66, 153, 249);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(362, 110);
+            button1.Location = new Point(170, 173);
             button1.Name = "button1";
             button1.Size = new Size(29, 23);
             button1.TabIndex = 5;
             button1.UseVisualStyleBackColor = false;
+            button1.Visible = false;
             // 
-            // class_comboBox
+            // listBoxCategoria
             // 
-            class_comboBox.FormattingEnabled = true;
-            class_comboBox.ItemHeight = 15;
-            class_comboBox.Location = new Point(231, 110);
-            class_comboBox.Name = "class_comboBox";
-            class_comboBox.Size = new Size(125, 23);
-            class_comboBox.TabIndex = 71;
+            listBoxCategoria.FormattingEnabled = true;
+            listBoxCategoria.ItemHeight = 15;
+            listBoxCategoria.Location = new Point(39, 173);
+            listBoxCategoria.Name = "listBoxCategoria";
+            listBoxCategoria.Size = new Size(125, 23);
+            listBoxCategoria.TabIndex = 71;
             // 
             // lbl_category
             // 
             lbl_category.AutoSize = true;
             lbl_category.FlatStyle = FlatStyle.Popup;
-            lbl_category.Location = new Point(231, 92);
+            lbl_category.Location = new Point(39, 155);
             lbl_category.Name = "lbl_category";
             lbl_category.Size = new Size(58, 15);
             lbl_category.TabIndex = 70;
             lbl_category.Text = "Categoria";
             // 
-            // checkedListBox1
+            // checkedListBoxIngredientes
             // 
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.HorizontalScrollbar = true;
-            checkedListBox1.Items.AddRange(new object[] { "Bacon", "Catupiry", "Frango", "Milho", "Molho Tomate", "Presunto", "Queijo Gorgonzola", "Queijo Muzzarela", "Queijo Prato", "Tomate" });
-            checkedListBox1.Location = new Point(39, 188);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(352, 166);
-            checkedListBox1.TabIndex = 100;
+            checkedListBoxIngredientes.FormattingEnabled = true;
+            checkedListBoxIngredientes.HorizontalScrollbar = true;
+            checkedListBoxIngredientes.Location = new Point(39, 245);
+            checkedListBoxIngredientes.Name = "checkedListBoxIngredientes";
+            checkedListBoxIngredientes.Size = new Size(352, 166);
+            checkedListBoxIngredientes.TabIndex = 100;
             // 
             // add_ingredients
             // 
@@ -164,36 +168,48 @@
             add_ingredients.FlatAppearance.BorderColor = Color.FromArgb(66, 153, 249);
             add_ingredients.FlatStyle = FlatStyle.Flat;
             add_ingredients.Image = (Image)resources.GetObject("add_ingredients.Image");
-            add_ingredients.Location = new Point(362, 159);
+            add_ingredients.Location = new Point(362, 216);
             add_ingredients.Name = "add_ingredients";
             add_ingredients.Size = new Size(29, 23);
             add_ingredients.TabIndex = 6;
             add_ingredients.UseVisualStyleBackColor = false;
+            add_ingredients.Visible = false;
             add_ingredients.Click += add_ingredients_Click;
             // 
             // lbl_ingredients
             // 
             lbl_ingredients.AutoSize = true;
             lbl_ingredients.FlatStyle = FlatStyle.Popup;
-            lbl_ingredients.Location = new Point(39, 167);
+            lbl_ingredients.Location = new Point(39, 224);
             lbl_ingredients.Name = "lbl_ingredients";
             lbl_ingredients.Size = new Size(72, 15);
             lbl_ingredients.TabIndex = 75;
             lbl_ingredients.Text = "Ingredientes";
             // 
+            // pictureBoxImagem
+            // 
+            pictureBoxImagem.Location = new Point(261, 98);
+            pictureBoxImagem.Name = "pictureBoxImagem";
+            pictureBoxImagem.Size = new Size(130, 98);
+            pictureBoxImagem.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxImagem.TabIndex = 101;
+            pictureBoxImagem.TabStop = false;
+            pictureBoxImagem.Click += pictureBoxImagem_Click;
+            // 
             // CreateEditFlavours
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(433, 442);
+            ClientSize = new Size(433, 495);
+            Controls.Add(pictureBoxImagem);
             Controls.Add(lbl_ingredients);
             Controls.Add(add_ingredients);
-            Controls.Add(checkedListBox1);
+            Controls.Add(checkedListBoxIngredientes);
             Controls.Add(button1);
-            Controls.Add(class_comboBox);
+            Controls.Add(listBoxCategoria);
             Controls.Add(lbl_category);
             Controls.Add(add_type);
-            Controls.Add(type_comboBox);
+            Controls.Add(listBoxTipo);
             Controls.Add(btn_save);
             Controls.Add(btn_cancel);
             Controls.Add(lbl_type);
@@ -203,23 +219,25 @@
             Name = "CreateEditFlavours";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Sabores";
+            ((System.ComponentModel.ISupportInitialize)pictureBoxImagem).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Button add_type;
-        private ComboBox type_comboBox;
+        private ComboBox listBoxTipo;
         private Button btn_save;
         private Button btn_cancel;
         private Label lbl_type;
         private TextBox name_textBox;
         private Label lbl_name;
         private Button button1;
-        private ComboBox class_comboBox;
+        private ComboBox listBoxCategoria;
         private Label lbl_category;
-        private CheckedListBox checkedListBox1;
+        private CheckedListBox checkedListBoxIngredientes;
         private Button add_ingredients;
         private Label lbl_ingredients;
+        private PictureBox pictureBoxImagem;
     }
 }

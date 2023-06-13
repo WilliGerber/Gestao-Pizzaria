@@ -10,6 +10,20 @@ public enum EnumFuncionarioGrupo
     [Description("Entregador")]
     Entrega = 3,
 }
+public enum EnumSaborCategoria
+{
+    [Description("Tradicional")]
+    Tradicional = 'T',
+    [Description("Especial")]
+    Especial = 'E'
+}
+public enum EnumSaborTipo
+{
+    [Description("Doce")]
+    Doce = 'D',
+    [Description("Salgada")]
+    Salgada = 'S'
+}
 
 public static class EnumExtensions
 {
