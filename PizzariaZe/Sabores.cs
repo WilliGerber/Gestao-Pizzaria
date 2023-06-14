@@ -1,3 +1,4 @@
+using PizzariaDoZe;
 using PizzariaDoZe.DAO;
 using System;
 using System.Collections.Generic;
@@ -52,6 +53,26 @@ namespace PizzariaZe
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private void btn_add_flavours_Click(object sender, EventArgs e)
+        {
+            CreateEditFlavours createEditFlavours = new CreateEditFlavours();
+            createEditFlavours.ShowDialog();
+        }
+        private void DataGridViewDados_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex == this.dataGridViewDados.NewRowIndex || e.Value.ToString().Trim().Length == 0)
+            {
+                return;
+            }
+            if (this.dataGridViewDados.Columns[e.ColumnIndex].Name.Equals("Categoria"))
+            {
+                e.Value = EnumExtensions.GetDescription((EnumSaborCategoria)char.Parse(e.Value.ToString()));
+            }
+            else if (this.dataGridViewDados.Columns[e.ColumnIndex].Name.Equals("Tipo"))
+            {
+                e.Value = EnumExtensions.GetDescription((EnumSaborTipo)char.Parse(e.Value.ToString()));
             }
         }
     }

@@ -24,6 +24,17 @@ public enum EnumSaborTipo
     [Description("Salgada")]
     Salgada = 'S'
 }
+public enum EnumValorTamanho
+{
+    [Description("Pequena")]
+    Pequena = 'P',
+    [Description("Média")]
+    Media = 'M',
+    [Description("Grande")]
+    Grande = 'G',
+    [Description("Família")]
+    Familia = 'F'
+}
 
 public static class EnumExtensions
 {

@@ -42,6 +42,7 @@
             dataGridViewDados.RowTemplate.Height = 25;
             dataGridViewDados.Size = new Size(797, 468);
             dataGridViewDados.TabIndex = 5;
+            dataGridViewDados.CellFormatting += DataGridViewDados_CellFormatting;
             // 
             // btn_add_flavours
             // 
@@ -54,6 +55,7 @@
             btn_add_flavours.Text = "Adicionar Sabores";
             btn_add_flavours.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_add_flavours.UseVisualStyleBackColor = true;
+            btn_add_flavours.Click += btn_add_flavours_Click;
             // 
             // Sabores
             // 

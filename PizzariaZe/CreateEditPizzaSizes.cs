@@ -27,6 +27,8 @@ namespace PizzariaZe
             //ajuste manual de campos ou mensagens para o usuário que não puderam ser automatizadas acima
             this.Text = Properties.Resources.ResourceManager.GetString("txtTituloPrincipal");
             #endregion
+
+            CarregaEnumListBox();
         }
 
         private void add_flavours_Click(object sender, EventArgs e)
@@ -42,27 +44,24 @@ namespace PizzariaZe
 
         #region Handler KeyPress Masks
 
-        private void PizzaP_KeyPress(object sender, KeyPressEventArgs e)
+        private void valor_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Masks.AplicaMascaraMoeda2(this.PizzaP);
+            Masks.AplicaMascaraMoeda2(this.valor_textBox);
+        }
+        private void valor_borda_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Masks.AplicaMascaraMoeda2(this.valor_borda_textBox);
         }
 
-        private void PizzaM_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Masks.AplicaMascaraMoeda2(this.PizzaM);
-        }
-
-        private void PizzaG_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Masks.AplicaMascaraMoeda2(this.PizzaG);
-
-        }
-
-        private void PizzaGG_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Masks.AplicaMascaraMoeda2(this.PizzaGG);
-        }
         #endregion
-
+        private void CarregaEnumListBox()
+        {
+            //popular listBoxTipo
+            listBoxTamanho.Items.Clear();
+            listBoxTamanho.DataSource = Enum.GetValues(typeof(EnumValorTamanho));
+            //popular listBoxCategoria
+            listBoxCategoria.Items.Clear();
+            listBoxCategoria.DataSource = Enum.GetValues(typeof(EnumSaborCategoria));
+        }
     }
 }

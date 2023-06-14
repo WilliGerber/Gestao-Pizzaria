@@ -53,16 +53,17 @@ namespace PizzariaZe
 
         private void add_flavours_Click(object sender, EventArgs e)
         {
-            CreateEditFlavours createEditFlavours = new CreateEditFlavours();
-            createEditFlavours.ShowDialog();
+            Sabores sabores = new Sabores();
+            DisposeAllButThis(this);
+            sabores.TopLevel = false;
+            pannelContent.Controls.Add(sabores);
+            sabores.Show();
         }
-
         private void pizzas_sizes_Click(object sender, EventArgs e)
         {
             CreateEditPizzaSizes createEditPizzaSizes = new CreateEditPizzaSizes();
             createEditPizzaSizes.ShowDialog();
         }
-
         private void btn_ingredients_Click(object sender, EventArgs e)
         {
             Ingredients ingredients = new Ingredients();
