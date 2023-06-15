@@ -118,16 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_add_flavours.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_pizzas_sizes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAWVJREFUSEvt
-        000rBWEYh/H5DCJEknwDaztZWFqI8h4b5RNYUDbK1gZJeSkWsmIryc5GWcpLFkKRbFhxXcc8NXE6M8cZ
-        K/7168zccz8Pc5/nRP+pNJ2YxzHO8RLz2toM2lF2unCE94wO0YHUNGIBycW7mEU3GlAP/4Ep7CDZOwef
-        F80IThGaF9GGtNhjb1h3ggF8yzps2EdyY+ds3c9ScY1r7d2w8DVVeIANExbieB+UyiTseUS1hWLphU2v
-        aLZAsrxBK95g36CFUlmFjX6BWbMH12wV7lJSg1u4YNRCSsJo7lFrIUt64KInhFGZA5x9XhbiaJ5hr6ew
-        rCzDheFETMN7he8j/A62C3dlpg43cINhCyT5Bp40nzlOf4A/Sh/CJslROZo7+GzcQiVZght5ukI2Yc3P
-        iuPrX8INHZUny2vH14Rc0g839Q9dx9djyDUrcGOtWcg7juMCV2ix8BsZQjiyfyJR9AFmQHE7MVUOpgAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAATNJREFUSEvl
+        ktFtw0AMQz1KR+koGSWbdJSO0lGSe0ZewMryuc5fEQKCbZ1E8Sgvb4HPEdcR3yNuI35GfD1ynL2MjxGS
+        zoKB1J4C6pIg1ULG+2UEZ1nzJyR5bYKIEAyb1W9Ag8XVX4k6tfZxNt2LnleCXDBP3xMpoAWedgXmGQK0
+        paolr5D2FiqAMOGAzEPWQY7qwAr+7W5A+kvjHjlAObXe9hcg4LAjoNFznojp6lLMBrMBgLzeS9J5zRmx
+        wXRBAQdRy00S7qvmV+wtiO/qKUO4QbXCAZVjhQvaa0rf95TqQv1RVtBsQTaq1uE8fU87daD9gwRkNqcK
+        8qomqgXenjja4ZOIIZWIHJFQeTe4BWqzyduojHPeqeHsFHkCIncyC4ZQ+xJUyw1YvBYxGMWHfv93LMsd
+        xJeaWkGPrg8AAAAASUVORK5CYII=
 </value>
   </data>
 </root>

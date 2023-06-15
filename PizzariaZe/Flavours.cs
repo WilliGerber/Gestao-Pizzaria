@@ -44,6 +44,14 @@ namespace PizzariaZe
                 }
             }
         }
+        private void ClearPanelContent()
+        {
+            // Remove todos os controles do pannelContent
+            while (pannelContent.Controls.Count > 0)
+            {
+                pannelContent.Controls[0].Dispose();
+            }
+        }
 
         private void add_ingredients_Click(object sender, EventArgs e)
         {
@@ -53,19 +61,26 @@ namespace PizzariaZe
 
         private void add_flavours_Click(object sender, EventArgs e)
         {
+            ClearPanelContent();
             Sabores sabores = new Sabores();
             DisposeAllButThis(this);
             sabores.TopLevel = false;
             pannelContent.Controls.Add(sabores);
             sabores.Show();
         }
+        
         private void pizzas_sizes_Click(object sender, EventArgs e)
         {
-            CreateEditPizzaSizes createEditPizzaSizes = new CreateEditPizzaSizes();
-            createEditPizzaSizes.ShowDialog();
+            ClearPanelContent();
+            Tamanhos tamanhos = new Tamanhos();
+            DisposeAllButThis(this);
+            tamanhos.TopLevel = false;
+            pannelContent.Controls.Add(tamanhos);
+            tamanhos.Show();
         }
         private void btn_ingredients_Click(object sender, EventArgs e)
         {
+            ClearPanelContent();
             Ingredients ingredients = new Ingredients();
             DisposeAllButThis(this);
             ingredients.TopLevel = false;

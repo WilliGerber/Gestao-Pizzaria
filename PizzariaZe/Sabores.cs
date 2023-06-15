@@ -75,5 +75,10 @@ namespace PizzariaZe
                 e.Value = EnumExtensions.GetDescription((EnumSaborTipo)char.Parse(e.Value.ToString()));
             }
         }
+
+        private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -35,6 +35,19 @@ public enum EnumValorTamanho
     [Description("Família")]
     Familia = 'F'
 }
+public enum EnumProdutoTipo
+{
+    [Description("Refrigerante")]
+    Refrigerante = 'R',
+    [Description("Cerveja")]
+    Cerveja = 'C',
+    [Description("Suco")]
+    Suco = 'S',
+    [Description("Água")]
+    Agua = 'A',
+    [Description("Outros")]
+    Outros = 'O'
+}
 
 public static class EnumExtensions
 {

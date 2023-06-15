@@ -1,6 +1,6 @@
 ﻿namespace PizzariaZe
 {
-    partial class Sabores
+    partial class Tamanhos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sabores));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tamanhos));
             dataGridViewDados = new DataGridView();
-            btn_add_flavours = new Button();
+            btn_pizzas_sizes = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDados).BeginInit();
             SuspendLayout();
             // 
@@ -41,33 +41,31 @@
             dataGridViewDados.Name = "dataGridViewDados";
             dataGridViewDados.RowTemplate.Height = 25;
             dataGridViewDados.Size = new Size(797, 468);
-            dataGridViewDados.TabIndex = 5;
-            dataGridViewDados.CellContentClick += dataGridViewDados_CellContentClick;
-            dataGridViewDados.CellFormatting += DataGridViewDados_CellFormatting;
+            dataGridViewDados.TabIndex = 7;
             // 
-            // btn_add_flavours
+            // btn_pizzas_sizes
             // 
-            btn_add_flavours.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_add_flavours.Image = (Image)resources.GetObject("btn_add_flavours.Image");
-            btn_add_flavours.Location = new Point(817, 12);
-            btn_add_flavours.Name = "btn_add_flavours";
-            btn_add_flavours.Size = new Size(151, 76);
-            btn_add_flavours.TabIndex = 4;
-            btn_add_flavours.Text = "Adicionar Sabores";
-            btn_add_flavours.TextImageRelation = TextImageRelation.ImageAboveText;
-            btn_add_flavours.UseVisualStyleBackColor = true;
-            btn_add_flavours.Click += btn_add_flavours_Click;
+            btn_pizzas_sizes.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_pizzas_sizes.Image = (Image)resources.GetObject("btn_pizzas_sizes.Image");
+            btn_pizzas_sizes.Location = new Point(817, 12);
+            btn_pizzas_sizes.Name = "btn_pizzas_sizes";
+            btn_pizzas_sizes.Size = new Size(151, 76);
+            btn_pizzas_sizes.TabIndex = 8;
+            btn_pizzas_sizes.Text = "Adicionar Tamanhos";
+            btn_pizzas_sizes.TextImageRelation = TextImageRelation.ImageAboveText;
+            btn_pizzas_sizes.UseVisualStyleBackColor = true;
+            btn_pizzas_sizes.Click += btn_pizzas_sizes_Click;
             // 
-            // Sabores
+            // Tamanhos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(978, 492);
+            Controls.Add(btn_pizzas_sizes);
             Controls.Add(dataGridViewDados);
-            Controls.Add(btn_add_flavours);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Sabores";
-            Text = "Sabores";
+            Name = "Tamanhos";
+            Text = "Tamanhos";
             ((System.ComponentModel.ISupportInitialize)dataGridViewDados).EndInit();
             ResumeLayout(false);
         }
@@ -75,6 +73,6 @@
         #endregion
 
         private DataGridView dataGridViewDados;
-        private Button btn_add_flavours;
+        private Button btn_pizzas_sizes;
     }
 }
