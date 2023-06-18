@@ -74,7 +74,7 @@ public class ClienteDAO
         "SELECT cc.nome_cliente AS Nome, cc.telefone AS Telefone, cc.email AS 'E-mail', " +
         "e.logradouro AS Logradouro, e.bairro AS Bairro, " +
         "c.nome_cidade AS Cidade, " +
-        "cc.numero AS Número, cc.complemento AS Complemento, " +
+        "cc.numero AS Numero, cc.complemento AS Complemento, " +
         "e.cep AS CEP, cc.cpf AS CPF " +
         "FROM tb_clientes AS cc " +
         "INNER JOIN tb_enderecos AS e ON e.id_endereco = cc.endereco_id " +

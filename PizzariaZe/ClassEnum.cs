@@ -35,6 +35,19 @@ public enum EnumValorTamanho
     [Description("Família")]
     Familia = 'F'
 }
+public enum EnumBorda
+{
+    [Description("Não")]
+    Nao = 'N',
+    [Description("Catupiry")]
+    Catupiry = 'Y',
+    [Description("Cheddar")]
+    Cheddar= 'D',
+    [Description("Chocolate Branco")]
+    Branco = 'B',
+    [Description("Chocolate Preto")]
+    Preto = 'P'
+}
 public enum EnumProdutoTipo
 {
     [Description("Refrigerante")]

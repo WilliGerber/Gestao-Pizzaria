@@ -65,4 +65,21 @@ public class ValorDAO
         linhas.Load(sdr);
         return linhas;
     }
+    public DataTable BuscarTT(char tamanho, char categoria)
+    {
+
+        using var conexao = factory.CreateConnection(); //Cria conexão
+        conexao!.ConnectionString = StringConexao; //Atribui a string de conexão
+        using var comando = factory.CreateCommand(); //Cria comando
+        comando!.Connection = conexao; //Atribui conexão
+        conexao.Open();
+        comando.CommandText = @" " +
+        "SELECT valor, valor_borda FROM pizzaria_ze.tb_valor " +
+        "where tamanho = " + tamanho + " and categoria = " + categoria + ";";
+        //Executa o script na conexão e retorna as linhas afetadas.
+        var sdr = comando.ExecuteReader();
+        DataTable linha = new();
+        linha.Load(sdr);
+        return linha;
+    }
 }

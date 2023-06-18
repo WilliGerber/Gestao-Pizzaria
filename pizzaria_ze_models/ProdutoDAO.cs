@@ -57,7 +57,7 @@ public class ProdutoDAO
         }
         conexao.Open();
         comando.CommandText = @" " +
-        "SELECT id_produto AS ID, descricao_produto AS Descrição, valor AS Valor, tipo AS 'Tipo Produto', medida_unitaria AS ML " +
+        "SELECT id_produto AS ID, descricao_produto AS Descricao, valor AS Valor, tipo AS 'Tipo Produto', medida_unitaria AS ML " +
         "FROM cad_produtos AS p " +
         auxSqlFiltro +
         "ORDER BY p.descricao_produto;";
