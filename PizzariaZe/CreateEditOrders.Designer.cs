@@ -1,4 +1,4 @@
-﻿namespace PizzariaZe
+namespace PizzariaZe
 {
     partial class CreateEditOrders
     {
@@ -49,8 +49,32 @@
             lbl_street = new Label();
             btn_add_client = new Button();
             button1 = new Button();
+            groupBox3 = new GroupBox();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            button2 = new Button();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            comboBox2 = new ComboBox();
+            groupBox4 = new GroupBox();
+            label4 = new Label();
+            comboBox3 = new ComboBox();
+            label5 = new Label();
+            textBox2 = new TextBox();
+            button3 = new Button();
+            dataGridView2 = new DataGridView();
+            label6 = new Label();
+            comboBox4 = new ComboBox();
+            label7 = new Label();
+            textBox3 = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // btn_save
@@ -60,7 +84,7 @@
             btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
             btn_save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
             btn_save.FlatStyle = FlatStyle.Flat;
-            btn_save.Location = new Point(264, 492);
+            btn_save.Location = new Point(742, 682);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
             btn_save.TabIndex = 108;
@@ -72,7 +96,7 @@
             btn_cancel.BackColor = Color.FromArgb(254, 152, 152);
             btn_cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
             btn_cancel.FlatStyle = FlatStyle.Flat;
-            btn_cancel.Location = new Point(24, 492);
+            btn_cancel.Location = new Point(18, 682);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
             btn_cancel.TabIndex = 107;
@@ -135,6 +159,7 @@
             celphone_textBox.Name = "celphone_textBox";
             celphone_textBox.Size = new Size(237, 23);
             celphone_textBox.TabIndex = 111;
+            celphone_textBox.Leave += celphone_textBox_Leave;
             // 
             // lbl_celphone
             // 
@@ -151,6 +176,7 @@
             cpf_textBox.Name = "cpf_textBox";
             cpf_textBox.Size = new Size(240, 23);
             cpf_textBox.TabIndex = 110;
+            cpf_textBox.Leave += cpf_textBox_Leave;
             // 
             // lbl_cpf
             // 
@@ -230,7 +256,7 @@
             // 
             btn_add_client.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btn_add_client.Image = (Image)resources.GetObject("btn_add_client.Image");
-            btn_add_client.Location = new Point(792, 12);
+            btn_add_client.Location = new Point(792, 18);
             btn_add_client.Name = "btn_add_client";
             btn_add_client.Size = new Size(97, 48);
             btn_add_client.TabIndex = 122;
@@ -242,7 +268,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(792, 66);
+            button1.Location = new Point(792, 72);
             button1.Name = "button1";
             button1.Size = new Size(97, 48);
             button1.TabIndex = 123;
@@ -250,23 +276,232 @@
             button1.TextImageRelation = TextImageRelation.ImageAboveText;
             button1.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(label3);
+            groupBox3.Controls.Add(comboBox2);
+            groupBox3.Controls.Add(label2);
+            groupBox3.Controls.Add(textBox1);
+            groupBox3.Controls.Add(button2);
+            groupBox3.Controls.Add(dataGridView1);
+            groupBox3.Controls.Add(label1);
+            groupBox3.Controls.Add(comboBox1);
+            groupBox3.Location = new Point(12, 249);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(440, 309);
+            groupBox3.TabIndex = 124;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Pizzas";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(12, 44);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(201, 23);
+            comboBox1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 15);
+            label1.TabIndex = 120;
+            label1.Text = "Tamanho";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 83);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(258, 211);
+            dataGridView1.TabIndex = 125;
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ActiveCaption;
+            button2.BackgroundImageLayout = ImageLayout.None;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(277, 83);
+            button2.Name = "button2";
+            button2.Size = new Size(36, 33);
+            button2.TabIndex = 125;
+            button2.TextImageRelation = TextImageRelation.ImageAboveText;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(277, 271);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(149, 23);
+            textBox1.TabIndex = 126;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(277, 253);
+            label2.Name = "label2";
+            label2.Size = new Size(33, 15);
+            label2.TabIndex = 127;
+            label2.Text = "Valor";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(238, 26);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 129;
+            label3.Text = "Borda";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(238, 44);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(188, 23);
+            comboBox2.TabIndex = 128;
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(label4);
+            groupBox4.Controls.Add(comboBox3);
+            groupBox4.Controls.Add(label5);
+            groupBox4.Controls.Add(textBox2);
+            groupBox4.Controls.Add(button3);
+            groupBox4.Controls.Add(dataGridView2);
+            groupBox4.Controls.Add(label6);
+            groupBox4.Controls.Add(comboBox4);
+            groupBox4.Location = new Point(454, 249);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(440, 309);
+            groupBox4.TabIndex = 130;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Produtos";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(238, 26);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 15);
+            label4.TabIndex = 129;
+            label4.Text = "Borda";
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(238, 44);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(188, 23);
+            comboBox3.TabIndex = 128;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(277, 253);
+            label5.Name = "label5";
+            label5.Size = new Size(33, 15);
+            label5.TabIndex = 127;
+            label5.Text = "Valor";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(277, 271);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(149, 23);
+            textBox2.TabIndex = 126;
+            // 
+            // button3
+            // 
+            button3.BackColor = SystemColors.ActiveCaption;
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(277, 83);
+            button3.Name = "button3";
+            button3.Size = new Size(36, 33);
+            button3.TabIndex = 125;
+            button3.TextImageRelation = TextImageRelation.ImageAboveText;
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(12, 83);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.Size = new Size(258, 211);
+            dataGridView2.TabIndex = 125;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(12, 26);
+            label6.Name = "label6";
+            label6.Size = new Size(56, 15);
+            label6.TabIndex = 120;
+            label6.Text = "Tamanho";
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Location = new Point(12, 44);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(201, 23);
+            comboBox4.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(18, 607);
+            label7.Name = "label7";
+            label7.Size = new Size(61, 15);
+            label7.TabIndex = 131;
+            label7.Text = "Valor Total";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(18, 625);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(149, 23);
+            textBox3.TabIndex = 130;
+            // 
             // CreateEditOrders
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1127, 551);
+            BackColor = SystemColors.ControlLight;
+            ClientSize = new Size(900, 729);
+            Controls.Add(label7);
+            Controls.Add(groupBox4);
+            Controls.Add(textBox3);
+            Controls.Add(groupBox3);
             Controls.Add(button1);
             Controls.Add(btn_add_client);
             Controls.Add(groupBox1);
             Controls.Add(btn_save);
             Controls.Add(btn_cancel);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "CreateEditOrders";
             Text = "CreateEditOrders";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -290,5 +525,25 @@
         private GroupBox groupBox2;
         private Button btn_add_client;
         private Button button1;
+        private GroupBox groupBox3;
+        private Label label3;
+        private ComboBox comboBox2;
+        private Label label2;
+        private TextBox textBox1;
+        private Button button2;
+        private DataGridView dataGridView1;
+        private Label label1;
+        private ComboBox comboBox1;
+        private GroupBox groupBox4;
+        private Label label4;
+        private ComboBox comboBox3;
+        private Label label5;
+        private TextBox textBox2;
+        private Button button3;
+        private DataGridView dataGridView2;
+        private Label label6;
+        private ComboBox comboBox4;
+        private Label label7;
+        private TextBox textBox3;
     }
 }

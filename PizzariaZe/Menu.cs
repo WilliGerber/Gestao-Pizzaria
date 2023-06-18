@@ -52,6 +52,14 @@ namespace PizzariaZe
             Functions.ValidaConexaoDB();
 
         }
+        private void ClearPanelContent()
+        {
+            // Remove todos os controles do pannelContent
+            while (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls[0].Dispose();
+            }
+        }
 
 
         #region nav bar clicks manager
@@ -75,11 +83,12 @@ namespace PizzariaZe
 
         private void orders_nav_bar_Click(object sender, EventArgs e)
         {
-            Orders orders = new Orders();
+            ClearPanelContent();
+            Pedidos pedidos = new Pedidos();
             DisposeAllButThis(this);
-            orders.TopLevel = false;
-            splitContainer1.Panel2.Controls.Add(orders);
-            orders.Show();
+            pedidos.TopLevel = false;
+            splitContainer1.Panel2.Controls.Add(pedidos);
+            pedidos.Show();
         }
 
         private void products_nav_bar_Click(object sender, EventArgs e)

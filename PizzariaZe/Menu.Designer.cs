@@ -84,7 +84,7 @@ namespace PizzariaZe
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.ContextMenuStrip = contextMenuStripPrincipal;
+            splitContainer1.Panel2.ContextMenuStrip = contextMenuStripSystem;
             splitContainer1.Size = new Size(800, 450);
             splitContainer1.SplitterDistance = 174;
             splitContainer1.TabIndex = 0;
@@ -345,21 +345,21 @@ namespace PizzariaZe
             // openAppToolStripMenuItemSystemTray
             // 
             openAppToolStripMenuItemSystemTray.Name = "openAppToolStripMenuItemSystemTray";
-            openAppToolStripMenuItemSystemTray.Size = new Size(180, 22);
+            openAppToolStripMenuItemSystemTray.Size = new Size(155, 22);
             openAppToolStripMenuItemSystemTray.Text = "Abrir Aplicação";
             openAppToolStripMenuItemSystemTray.Click += openAppToolStripMenuItemSystemTray_Click;
             // 
             // exitToolStripMenuItemSystemTray
             // 
             exitToolStripMenuItemSystemTray.Name = "exitToolStripMenuItemSystemTray";
-            exitToolStripMenuItemSystemTray.Size = new Size(180, 22);
+            exitToolStripMenuItemSystemTray.Size = new Size(155, 22);
             exitToolStripMenuItemSystemTray.Text = "Encerrar";
             exitToolStripMenuItemSystemTray.Click += exitToolStripMenuItemSystemTray_Click;
             // 
             // sobreToolStripMenuItem
             // 
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(180, 22);
+            sobreToolStripMenuItem.Size = new Size(155, 22);
             sobreToolStripMenuItem.Text = "Sobre";
             // 
             // Menu

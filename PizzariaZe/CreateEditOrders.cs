@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,6 +54,63 @@ namespace PizzariaZe
                 {
                     this.celphone_textBox.Text = row["telefone"].ToString(); ;
                     this.cpf_textBox.Text = row["cpf"].ToString(); ;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Pizzaria do Zé", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void celphone_textBox_Leave(object sender, EventArgs e)
+        {
+            if (this.celphone_textBox.Text.Trim().Length <= 0)
+            {
+                return;
+            }
+            var cliente = new Cliente
+            {
+                Telefone = celphone_textBox.Text.Trim(),
+            };
+            try
+            {
+                // chama o método para buscar todos os dados da nossa camada model
+                DataTable linhas = clienteDAO.Buscar(cliente);
+                // seta os dados na tela
+                this.nome_textBox.Text = "";
+                this.cpf_textBox.Text = "";
+                foreach (DataRow row in linhas.Rows)
+                {
+                    this.nome_textBox.Text = row["nome"].ToString(); ;
+                    this.cpf_textBox.Text = row["cpf"].ToString(); ;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Pizzaria do Zé", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cpf_textBox_Leave(object sender, EventArgs e)
+        {
+            if (this.cpf_textBox.Text.Trim().Length <= 0)
+            {
+                return;
+            }
+            var cliente = new Cliente
+            {
+                Cpf = cpf_textBox.Text.Trim(),
+            };
+            try
+            {
+                // chama o método para buscar todos os dados da nossa camada model
+                DataTable linhas = clienteDAO.Buscar(cliente);
+                // seta os dados na tela
+                this.nome_textBox.Text = "";
+                this.celphone_textBox.Text = "";
+                foreach (DataRow row in linhas.Rows)
+                {
+                    this.nome_textBox.Text = row["nome"].ToString(); ;
+                    this.celphone_textBox.Text = row["telefone"].ToString(); ;
                 }
             }
             catch (Exception ex)

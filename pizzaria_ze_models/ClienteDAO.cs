@@ -62,11 +62,11 @@ public class ClienteDAO
         }
         else if (cliente.Cpf.Length > 0)
         {
-            auxSqlFiltro = "WHERE cc.cpf = " + cliente.Cpf;
+            auxSqlFiltro = "WHERE cc.cpf = " + cliente.Cpf + " ";
         }
         else if (cliente.Telefone.Length > 0)
         {
-            auxSqlFiltro = "WHERE cc.telefone = " + cliente.Telefone;
+            auxSqlFiltro = "WHERE cc.telefone = " + cliente.Telefone + " ";
         }
 
         conexao.Open();
