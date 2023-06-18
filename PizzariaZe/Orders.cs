@@ -29,9 +29,10 @@ namespace PizzariaZe
             #endregion
         }
 
-        private void add_order_Click(object sender, EventArgs e)
+        private void btn_add_order_Click(object sender, EventArgs e)
         {
-
+            CreateEditOrders createEditOrders = new CreateEditOrders();
+            createEditOrders.ShowDialog();
         }
     }
 }

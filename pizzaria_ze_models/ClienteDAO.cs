@@ -60,6 +60,15 @@ public class ClienteDAO
         {
             auxSqlFiltro = "WHERE cc.nome_cliente like '%" + cliente.Nome + "%' ";
         }
+        else if (cliente.Cpf.Length > 0)
+        {
+            auxSqlFiltro = "WHERE cc.cpf = " + cliente.Cpf;
+        }
+        else if (cliente.Telefone.Length > 0)
+        {
+            auxSqlFiltro = "WHERE cc.telefone = " + cliente.Telefone;
+        }
+
         conexao.Open();
         comando.CommandText = @" " +
         "SELECT cc.nome_cliente AS Nome, cc.telefone AS Telefone, cc.email AS 'E-mail', " +
