@@ -42,7 +42,6 @@ namespace PizzariaZe
             valorTotal = 0;
             valorProdutos = 0;
 
-
             tamanho_combo_box.DataSource = Enum.GetValues(typeof(EnumValorTamanho));
             borda_combo_box.DataSource = Enum.GetValues(typeof(EnumBorda));
             //tamanho_combo_box.DataSource = Enum.GetValues(typeof(EnumValorTamanho));
@@ -297,19 +296,47 @@ namespace PizzariaZe
 
             valorPizzas.Text = valorTotalPizzas.ToString();
         }
+        //private void checkedListBox_produto_ItemCheck(object sender, ItemCheckEventArgs e)
+        //{
+        //    valorProdutos = 0;
+        //    var elementosSelecionados = checkedListBox_produtos.SelectedItems;
+        //    foreach (var itemSelecionado in elementosSelecionados)
+        //    {
+        //        Produto produtoSelecionado = (Produto)itemSelecionado;
+        //        decimal valor = produtoSelecionado.Valor;
+        //        valorProdutos = valorProdutos + valor;
+        //    }
+        //    atualizarValorTotal();
+        //}
+
         private void checkedListBox_produto_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             valorProdutos = 0;
-            var elementosSelecionados = checkedListBox_produtos.SelectedItems;
-            foreach (var itemSelecionado in elementosSelecionados)
+
+            // Itera sobre todos os itens do CheckedListBox
+            for (int i = 0; i < checkedListBox_produtos.Items.Count; i++)
             {
-                Produto produtoSelecionado = (Produto)itemSelecionado;
-                decimal valor = produtoSelecionado.Valor;
-                valorProdutos = valorProdutos + valor;
+                // Obtém o estado atual do item
+                CheckState currentState = checkedListBox_produtos.GetItemCheckState(i);
+
+                // Verifica se o estado do item está sendo alterado no evento atual
+                if (i == e.Index)
+                {
+                    // Se sim, atualiza o estado para o novo estado (antes da alteração)
+                    currentState = (currentState == CheckState.Checked) ? CheckState.Unchecked : CheckState.Checked;
+                }
+
+                // Se o item está marcado, realiza a ação necessária
+                if (currentState == CheckState.Checked)
+                {
+                    Produto produtoSelecionado = (Produto)checkedListBox_produtos.Items[i];
+                    decimal valor = produtoSelecionado.Valor;
+                    valorProdutos += valor;
+                }
             }
+
             atualizarValorTotal();
         }
-
         private void atualizarValorTotal()
         {
             valorTotal = valorTotalPizzas + valorProdutos;
