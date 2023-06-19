@@ -65,7 +65,7 @@ public class ValorDAO
         linhas.Load(sdr);
         return linhas;
     }
-    public DataTable BuscarTT(char tamanho, char categoria)
+    public DataTable BuscarTT(char tam, char cat)
     {
 
         using var conexao = factory.CreateConnection(); //Cria conexão
@@ -74,8 +74,8 @@ public class ValorDAO
         comando!.Connection = conexao; //Atribui conexão
         conexao.Open();
         comando.CommandText = @" " +
-        "SELECT valor, valor_borda FROM pizzaria_ze.tb_valor " +
-        "where tamanho = " + tamanho + " and categoria = " + categoria + ";";
+        "SELECT valor, valor_borda FROM pizzaria_ze.tb_valor as v " +
+        "WHERE v.tamanho = '" + tam + "' and v.categoria = '" + cat + "';";
         //Executa o script na conexão e retorna as linhas afetadas.
         var sdr = comando.ExecuteReader();
         DataTable linha = new();

@@ -13,15 +13,12 @@ public class Sabor
     public char Categoria { get; set; }
     public char Tipo { get; set; }
     public List<Ingredient> SaborIngredientes { get; set; }
-    public Sabor(int id = 0, string descricao = ""
-
-    , byte[] foto = null, char
-    categoria = ' ', char tipo = ' ', List<Ingredient> saborIngredientes = null)
+    public Sabor(int id = 0, string descricao = "", char categoria = ' ', byte[] foto = null, char tipo = ' ', List<Ingredient> saborIngredientes = null)
     {
         Id = id;
         Descricao = descricao;
-        Foto = foto;
         Categoria = categoria;
+        Foto = foto;
         Tipo = tipo;
         this.SaborIngredientes = saborIngredientes;
     }

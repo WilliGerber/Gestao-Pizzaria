@@ -52,7 +52,8 @@ namespace PizzariaZe
             groupBox3 = new GroupBox();
             label9 = new Label();
             label6 = new Label();
-            textBox4 = new TextBox();
+            dataGridViewPizzas = new DataGridView();
+            valorPizzas = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -62,18 +63,17 @@ namespace PizzariaZe
             borda_combo_box = new ComboBox();
             tamanho_combo_box = new ComboBox();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
             label7 = new Label();
-            textBox3 = new TextBox();
+            textBox_valortotal = new TextBox();
             groupBox4 = new GroupBox();
             label8 = new Label();
             checkedListBox_produtos = new CheckedListBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
+            radioButton_entrega = new RadioButton();
+            radioButton_retirada = new RadioButton();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPizzas).BeginInit();
             groupBox4.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,7 +84,7 @@ namespace PizzariaZe
             btn_save.FlatAppearance.MouseDownBackColor = Color.FromArgb(210, 229, 209);
             btn_save.FlatAppearance.MouseOverBackColor = Color.FromArgb(167, 212, 167);
             btn_save.FlatStyle = FlatStyle.Flat;
-            btn_save.Location = new Point(865, 576);
+            btn_save.Location = new Point(775, 576);
             btn_save.Name = "btn_save";
             btn_save.Size = new Size(138, 35);
             btn_save.TabIndex = 108;
@@ -96,7 +96,7 @@ namespace PizzariaZe
             btn_cancel.BackColor = Color.FromArgb(254, 152, 152);
             btn_cancel.FlatAppearance.BorderColor = Color.FromArgb(255, 60, 60);
             btn_cancel.FlatStyle = FlatStyle.Flat;
-            btn_cancel.Location = new Point(648, 576);
+            btn_cancel.Location = new Point(517, 576);
             btn_cancel.Name = "btn_cancel";
             btn_cancel.Size = new Size(138, 35);
             btn_cancel.TabIndex = 107;
@@ -280,7 +280,8 @@ namespace PizzariaZe
             // 
             groupBox3.Controls.Add(label9);
             groupBox3.Controls.Add(label6);
-            groupBox3.Controls.Add(textBox4);
+            groupBox3.Controls.Add(dataGridViewPizzas);
+            groupBox3.Controls.Add(valorPizzas);
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(label4);
             groupBox3.Controls.Add(label3);
@@ -290,7 +291,7 @@ namespace PizzariaZe
             groupBox3.Controls.Add(borda_combo_box);
             groupBox3.Controls.Add(tamanho_combo_box);
             groupBox3.Controls.Add(label1);
-            groupBox3.Location = new Point(12, 249);
+            groupBox3.Location = new Point(12, 239);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(643, 309);
             groupBox3.TabIndex = 124;
@@ -300,7 +301,7 @@ namespace PizzariaZe
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(226, 254);
+            label9.Location = new Point(457, 254);
             label9.Name = "label9";
             label9.Size = new Size(33, 15);
             label9.TabIndex = 144;
@@ -309,23 +310,32 @@ namespace PizzariaZe
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(226, 75);
+            label6.Location = new Point(219, 28);
             label6.Name = "label6";
             label6.Size = new Size(74, 15);
             label6.TabIndex = 139;
             label6.Text = "Observações";
             // 
-            // textBox4
+            // dataGridViewPizzas
             // 
-            textBox4.Location = new Point(226, 272);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(149, 23);
-            textBox4.TabIndex = 143;
+            dataGridViewPizzas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPizzas.Location = new Point(219, 85);
+            dataGridViewPizzas.Name = "dataGridViewPizzas";
+            dataGridViewPizzas.RowTemplate.Height = 25;
+            dataGridViewPizzas.Size = new Size(418, 109);
+            dataGridViewPizzas.TabIndex = 125;
+            // 
+            // valorPizzas
+            // 
+            valorPizzas.Location = new Point(457, 272);
+            valorPizzas.Name = "valorPizzas";
+            valorPizzas.Size = new Size(149, 23);
+            valorPizzas.TabIndex = 143;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(457, 29);
+            label5.Location = new Point(219, 67);
             label5.Name = "label5";
             label5.Size = new Size(95, 15);
             label5.TabIndex = 138;
@@ -334,7 +344,7 @@ namespace PizzariaZe
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 75);
+            label4.Location = new Point(12, 111);
             label4.Name = "label4";
             label4.Size = new Size(48, 15);
             label4.TabIndex = 137;
@@ -343,7 +353,7 @@ namespace PizzariaZe
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(226, 29);
+            label3.Location = new Point(12, 67);
             label3.Name = "label3";
             label3.Size = new Size(38, 15);
             label3.TabIndex = 129;
@@ -351,18 +361,18 @@ namespace PizzariaZe
             // 
             // textBox_observacao
             // 
-            textBox_observacao.Location = new Point(226, 93);
+            textBox_observacao.Location = new Point(219, 43);
             textBox_observacao.Multiline = true;
             textBox_observacao.Name = "textBox_observacao";
-            textBox_observacao.Size = new Size(201, 111);
+            textBox_observacao.Size = new Size(418, 23);
             textBox_observacao.TabIndex = 138;
             // 
             // checkedListBox_sabores
             // 
             checkedListBox_sabores.FormattingEnabled = true;
-            checkedListBox_sabores.Location = new Point(12, 93);
+            checkedListBox_sabores.Location = new Point(12, 129);
             checkedListBox_sabores.Name = "checkedListBox_sabores";
-            checkedListBox_sabores.Size = new Size(201, 202);
+            checkedListBox_sabores.Size = new Size(201, 166);
             checkedListBox_sabores.TabIndex = 136;
             // 
             // add_pizza_button
@@ -372,9 +382,9 @@ namespace PizzariaZe
             add_pizza_button.FlatStyle = FlatStyle.Popup;
             add_pizza_button.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             add_pizza_button.Image = (Image)resources.GetObject("add_pizza_button.Image");
-            add_pizza_button.Location = new Point(395, 272);
+            add_pizza_button.Location = new Point(219, 215);
             add_pizza_button.Name = "add_pizza_button";
-            add_pizza_button.Size = new Size(32, 24);
+            add_pizza_button.Size = new Size(46, 34);
             add_pizza_button.TabIndex = 125;
             add_pizza_button.TextImageRelation = TextImageRelation.ImageAboveText;
             add_pizza_button.UseVisualStyleBackColor = false;
@@ -384,7 +394,7 @@ namespace PizzariaZe
             // 
             borda_combo_box.FormattingEnabled = true;
             borda_combo_box.Items.AddRange(new object[] { "Não", "Catupiry", "Cheddar", "Chocolate Branco", "Chocolate Preto" });
-            borda_combo_box.Location = new Point(226, 47);
+            borda_combo_box.Location = new Point(12, 85);
             borda_combo_box.Name = "borda_combo_box";
             borda_combo_box.Size = new Size(201, 23);
             borda_combo_box.TabIndex = 128;
@@ -392,7 +402,7 @@ namespace PizzariaZe
             // tamanho_combo_box
             // 
             tamanho_combo_box.FormattingEnabled = true;
-            tamanho_combo_box.Location = new Point(12, 47);
+            tamanho_combo_box.Location = new Point(12, 43);
             tamanho_combo_box.Name = "tamanho_combo_box";
             tamanho_combo_box.Size = new Size(201, 23);
             tamanho_combo_box.TabIndex = 0;
@@ -400,46 +410,35 @@ namespace PizzariaZe
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 29);
+            label1.Location = new Point(12, 25);
             label1.Name = "label1";
             label1.Size = new Size(56, 15);
             label1.TabIndex = 120;
             label1.Text = "Tamanho";
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(469, 296);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(173, 248);
-            dataGridView1.TabIndex = 125;
-            // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(18, 565);
+            label7.Location = new Point(694, 507);
             label7.Name = "label7";
             label7.Size = new Size(61, 15);
             label7.TabIndex = 131;
             label7.Text = "Valor Total";
             // 
-            // textBox3
+            // textBox_valortotal
             // 
-            textBox3.Location = new Point(18, 583);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(149, 23);
-            textBox3.TabIndex = 130;
+            textBox_valortotal.Location = new Point(691, 525);
+            textBox_valortotal.Name = "textBox_valortotal";
+            textBox_valortotal.Size = new Size(201, 23);
+            textBox_valortotal.TabIndex = 130;
             // 
             // groupBox4
             // 
             groupBox4.Controls.Add(label8);
             groupBox4.Controls.Add(checkedListBox_produtos);
-            groupBox4.Controls.Add(label2);
-            groupBox4.Controls.Add(textBox1);
-            groupBox4.Location = new Point(675, 249);
+            groupBox4.Location = new Point(674, 239);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(239, 309);
+            groupBox4.Size = new Size(239, 194);
             groupBox4.TabIndex = 140;
             groupBox4.TabStop = false;
             groupBox4.Text = "Produtos";
@@ -458,35 +457,44 @@ namespace PizzariaZe
             checkedListBox_produtos.FormattingEnabled = true;
             checkedListBox_produtos.Location = new Point(17, 47);
             checkedListBox_produtos.Name = "checkedListBox_produtos";
-            checkedListBox_produtos.Size = new Size(201, 202);
+            checkedListBox_produtos.Size = new Size(201, 130);
             checkedListBox_produtos.TabIndex = 140;
+            checkedListBox_produtos.ItemCheck += checkedListBox_produto_ItemCheck;
             // 
-            // label2
+            // radioButton_entrega
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(17, 253);
-            label2.Name = "label2";
-            label2.Size = new Size(33, 15);
-            label2.TabIndex = 142;
-            label2.Text = "Valor";
+            radioButton_entrega.AutoSize = true;
+            radioButton_entrega.Location = new Point(691, 463);
+            radioButton_entrega.Name = "radioButton_entrega";
+            radioButton_entrega.Size = new Size(65, 19);
+            radioButton_entrega.TabIndex = 141;
+            radioButton_entrega.TabStop = true;
+            radioButton_entrega.Text = "Entrega";
+            radioButton_entrega.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // radioButton_retirada
             // 
-            textBox1.Location = new Point(17, 271);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(149, 23);
-            textBox1.TabIndex = 141;
+            radioButton_retirada.AutoSize = true;
+            radioButton_retirada.Location = new Point(804, 463);
+            radioButton_retirada.Name = "radioButton_retirada";
+            radioButton_retirada.Size = new Size(68, 19);
+            radioButton_retirada.TabIndex = 143;
+            radioButton_retirada.TabStop = true;
+            radioButton_retirada.Text = "Retirada";
+            radioButton_retirada.UseVisualStyleBackColor = true;
             // 
             // CreateEditOrders
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1015, 625);
+            ClientSize = new Size(936, 632);
+            Controls.Add(radioButton_retirada);
+            Controls.Add(radioButton_entrega);
             Controls.Add(groupBox4);
             Controls.Add(label7);
-            Controls.Add(dataGridView1);
-            Controls.Add(textBox3);
+            Controls.Add(textBox_valortotal);
             Controls.Add(groupBox3);
             Controls.Add(button1);
             Controls.Add(btn_add_client);
@@ -502,7 +510,7 @@ namespace PizzariaZe
             groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPizzas).EndInit();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             ResumeLayout(false);
@@ -534,11 +542,11 @@ namespace PizzariaZe
         private Label label3;
         private ComboBox borda_combo_box;
         private Button add_pizza_button;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewPizzas;
         private Label label1;
         private ComboBox tamanho_combo_box;
         private Label label7;
-        private TextBox textBox3;
+        private TextBox textBox_valortotal;
         private Label label4;
         private CheckedListBox checkedListBox_sabores;
         private Label label5;
@@ -546,10 +554,10 @@ namespace PizzariaZe
         private TextBox textBox_observacao;
         private GroupBox groupBox4;
         private Label label9;
-        private TextBox textBox4;
+        private TextBox valorPizzas;
         private Label label8;
         private CheckedListBox checkedListBox_produtos;
-        private Label label2;
-        private TextBox textBox1;
+        private RadioButton radioButton_entrega;
+        private RadioButton radioButton_retirada;
     }
 }

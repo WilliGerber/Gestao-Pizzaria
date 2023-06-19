@@ -11,6 +11,7 @@ using PizzariaDoZe.DAO;
 using PizzariaDoZe;
 using System.Configuration;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PizzariaZe
 {
@@ -20,9 +21,11 @@ namespace PizzariaZe
         public ClienteDAO clienteDAO;
         public SaborDAO saborDAO;
         public ProdutoDAO produtoDAO;
-        public int valorPizzas;
+        public decimal valorTotalPizzas;
+        public decimal valorTotal;
         public List<Pizza> pizzas = new List<Pizza>();
         public ValorDAO valorDAO;
+        public decimal valorProdutos;
 
         public CreateEditOrders()
         {
@@ -34,8 +37,11 @@ namespace PizzariaZe
             clienteDAO = new ClienteDAO(provider, strConnection);
             saborDAO = new SaborDAO(provider, strConnection);
             produtoDAO = new ProdutoDAO(provider, strConnection);
-            valorPizzas = 0;
             valorDAO = new ValorDAO(provider, strConnection);
+            valorTotalPizzas = 0;
+            valorTotal = 0;
+            valorProdutos = 0;
+
 
             tamanho_combo_box.DataSource = Enum.GetValues(typeof(EnumValorTamanho));
             borda_combo_box.DataSource = Enum.GetValues(typeof(EnumBorda));
@@ -44,26 +50,6 @@ namespace PizzariaZe
             CarregaSaboresCheckedListBox();
             CarregaProdutosCheckedListBox();
         }
-        //public void CarregaSaboresCheckedListBox()
-        //{
-        //    var sabor = new Sabor();
-        //    try
-        //    {
-        //        DataTable linhas = saborDAO.Buscar(sabor);
-        //        checkedListBox_sabores.Items.Clear();
-        //        foreach (DataRow row in linhas.Rows)
-        //        {
-        //            string descricao = row["Nome"].ToString();
-        //            sabor = new Sabor();
-        //            sabor.Descricao = descricao; // Atribui o valor da coluna "Nome" à propriedade Descricao do objeto sabor
-        //            checkedListBox_sabores.Items.Add(sabor.Descricao);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
         public void CarregaSaboresCheckedListBox()
         {
             var sabor = new Sabor();
@@ -71,27 +57,25 @@ namespace PizzariaZe
             {
                 DataTable linhas = saborDAO.Buscar(sabor);
                 checkedListBox_sabores.Items.Clear();
-                var saboresDict = new Dictionary<string, Sabor>(); // Dicionário para mapear as descrições de sabor aos objetos Sabor
                 foreach (DataRow row in linhas.Rows)
                 {
                     string descricao = row["Nome"].ToString();
                     sabor = new Sabor();
                     sabor.Descricao = descricao; // Atribui o valor da coluna "Nome" à propriedade Descricao do objeto sabor
-                    saboresDict.Add(descricao, sabor); // Adiciona a descrição de sabor e o objeto Sabor ao dicionário
-                    checkedListBox_sabores.Items.Add(sabor, descricao); // Adiciona o objeto Sabor e a descrição como itens do checkedListBox_sabores
+                    checkedListBox_sabores.Items.Add(new Sabor(
+                        int.Parse(row["ID"].ToString()),
+                        row["Nome"].ToString(),
+                        char.Parse(row["Categoria"].ToString())
+                        )); ;
                 }
-
-                // Define as propriedades corretas para exibição e armazenamento
-                checkedListBox_sabores.DisplayMember = "Value"; // Propriedade a ser exibida (descrição do sabor)
-                checkedListBox_sabores.ValueMember = "Key"; // Propriedade a ser armazenada (objeto Sabor)
+                checkedListBox_sabores.DisplayMember = "Descricao";
+                checkedListBox_sabores.ValueMember = "Sabor";
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-
         public void CarregaProdutosCheckedListBox()
         {
             var produto = new Produto();
@@ -104,8 +88,14 @@ namespace PizzariaZe
                     string descricao = row["Descricao"].ToString();
                     produto = new Produto();
                     produto.Descricao = descricao; // Atribui o valor da coluna "Nome" à propriedade Descricao do objeto sabor
-                    checkedListBox_produtos.Items.Add(produto.Descricao);
+                    checkedListBox_produtos.Items.Add(new Produto(
+                        int.Parse(row["ID"].ToString()),
+                        row["Descricao"].ToString(),
+                        decimal.Parse(row["Valor"].ToString())
+                        )); ;
                 }
+                checkedListBox_produtos.DisplayMember = "Descricao";
+                checkedListBox_produtos.ValueMember = "Sabor";
             }
             catch (Exception ex)
             {
@@ -237,6 +227,9 @@ namespace PizzariaZe
 
             List<Sabor> saboresSelecionados = new List<Sabor>();
 
+            int valorPizza = 0;
+            int valorBorda = 0;
+
             foreach (Sabor itemSelecionado in checkedListBox_sabores.CheckedItems)
             {
                 saboresSelecionados.Add(itemSelecionado);
@@ -250,9 +243,21 @@ namespace PizzariaZe
                 else
                     categ = 'T';
             }
+
             char tamanho = (char)(EnumValorTamanho)Enum.Parse(typeof(EnumValorTamanho), tamanho_combo_box.Text);
-            
+
             DataTable valor = valorDAO.BuscarTT(tamanho, categ);
+
+            foreach (DataRow row in valor.Rows)
+            {
+                valorPizza = int.Parse(row["valor"].ToString());
+                if (borda_combo_box.Text != "Nao")
+                {
+                    valorBorda = int.Parse(row["valor_borda"].ToString());
+                }
+            }
+
+            valorTotalPizzas = valorTotalPizzas + valorPizza + valorBorda;
 
             //decimal valorCampo = valor.ValorPizza.value();
 
@@ -262,8 +267,53 @@ namespace PizzariaZe
                 Tamanho = tamanho,
                 Borda = (char)(EnumBorda)Enum.Parse(typeof(EnumBorda), borda_combo_box.Text),
                 Observacao = textBox_observacao.Text,
-                //Valor = decimal.Parse(valor)
-            }); ;
+                Valor = valorPizza,
+                ValorBorda = valorBorda
+            });
+            AtualizarPizzas();
+            atualizarValorTotal();
+        }
+        private void AtualizarPizzas()
+        {
+            dataGridViewPizzas.Columns.Clear();
+
+            dataGridViewPizzas.Columns.Add("SaboresColumn", "Sabores");
+            dataGridViewPizzas.Columns.Add("TamanhoColumn", "Tamanho");
+            dataGridViewPizzas.Columns.Add("ValorPizzaColumn", "Valor Pizza");
+            dataGridViewPizzas.Columns.Add("ValorBordaColumn", "Valor Borda");
+
+            foreach (var pizza in pizzas)
+            {
+                string sabores = string.Join(", ", pizza.Sabores.Select(s => s.Descricao)); // Obtém os sabores separados por vírgula
+                string tamanho = pizza.Tamanho.ToString();
+                string valorPizza = pizza.Valor.ToString();
+                string valorBorda = pizza.ValorBorda.ToString();
+
+                dataGridViewPizzas.Rows.Add(sabores, tamanho, valorPizza, valorBorda);
+            }
+
+            // Ajuste as configurações do DataGridView, se necessário
+            dataGridViewPizzas.AutoResizeColumns();
+
+            valorPizzas.Text = valorTotalPizzas.ToString();
+        }
+        private void checkedListBox_produto_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            valorProdutos = 0;
+            var elementosSelecionados = checkedListBox_produtos.SelectedItems;
+            foreach (var itemSelecionado in elementosSelecionados)
+            {
+                Produto produtoSelecionado = (Produto)itemSelecionado;
+                decimal valor = produtoSelecionado.Valor;
+                valorProdutos = valorProdutos + valor;
+            }
+            atualizarValorTotal();
+        }
+
+        private void atualizarValorTotal()
+        {
+            valorTotal = valorTotalPizzas + valorProdutos;
+            textBox_valortotal.Text = valorTotal.ToString();
         }
     }
 }
